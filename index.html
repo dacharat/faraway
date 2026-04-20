@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Faraway — Where to go, month by month</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <h1 class="hero-title">Faraway<span class="dot">.</span></h1>
+      <p class="hero-subtitle">A monthly compass for your next trip — curated destinations, climate, costs, and crowds at a glance.</p>
+      <div class="view-toggle" role="tablist" aria-label="View mode">
+        <button id="viewListBtn" class="view-btn active" role="tab" aria-selected="true">📋 List</button>
+        <button id="viewMapBtn" class="view-btn" role="tab" aria-selected="false">🗺️ Map</button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="month-tabs" aria-label="Month selector">
+    <div id="monthTabs" class="month-tabs-inner"></div>
+  </nav>
+
+  <section class="filters" aria-label="Filters">
+    <div class="filters-inner">
+      <div class="filter-group">
+        <label class="filter-label">Budget</label>
+        <div id="budgetFilter" class="pill-row" data-filter="budget">
+          <button class="pill active" data-value="all">All</button>
+          <button class="pill" data-value="budget">Budget · $0–80</button>
+          <button class="pill" data-value="mid-range">Mid-range · $80–200</button>
+          <button class="pill" data-value="luxury">Luxury · $200+</button>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <label class="filter-label">Crowd level</label>
+        <div id="crowdFilter" class="pill-row" data-filter="crowd">
+          <button class="pill active" data-value="all">All</button>
+          <button class="pill" data-value="low">Low</button>
+          <button class="pill" data-value="medium">Medium</button>
+          <button class="pill" data-value="high">High</button>
+        </div>
+      </div>
+
+      <div class="filter-group filter-group-wide">
+        <label class="filter-label">Travel style <span class="muted">(pick any)</span></label>
+        <div id="styleFilter" class="pill-row" data-filter="styles"></div>
+      </div>
+
+      <div class="filter-actions">
+        <button id="clearFilters" class="btn-clear" type="button">Clear filters</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="results">
+    <div class="stats-bar" id="statsBar">
+      <div class="stat-chip"><span class="stat-label">Destinations</span><span class="stat-value" id="statCount">—</span></div>
+      <div class="stat-chip"><span class="stat-label">Avg daily cost</span><span class="stat-value" id="statCost">—</span></div>
+      <div class="stat-chip"><span class="stat-label">Season mix</span><span class="stat-value" id="statSeason">—</span></div>
+    </div>
+
+    <div id="cardGrid" class="card-grid" aria-live="polite"></div>
+
+    <div id="mapWrap" class="map-wrap" hidden>
+      <div id="mapEl" class="map-el"></div>
+      <p class="map-hint">Hover or tap a pin to see which months are recommended and why. Click the month badge in the popup to jump straight to that month's list.</p>
+    </div>
+
+    <div id="emptyState" class="empty-state" hidden>
+      <div class="empty-emoji">🧭</div>
+      <h3>No matches for these filters</h3>
+      <p>Try a different month, widen the budget, or clear filters to start over.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>Faraway · static demo · data snapshot 2026.04</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
