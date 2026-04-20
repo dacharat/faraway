@@ -1,5 +1,89 @@
+/* =========================================================
+   TRAVEL_DATA — destination dataset + geo lookups
+   - months          : per-month list of destination entries
+   - city_coords     : [lat, lng] per city/region label (used by map view)
+   - country_coords  : [lat, lng] centroid fallback when a city is missing
+                       from city_coords
+   To add a new destination:
+     1) push it under the appropriate month in `months`
+     2) add lat/lng for any new city to `city_coords`
+        (or just add the country to `country_coords` for a quick fallback)
+   ========================================================= */
 const TRAVEL_DATA = {
   "dataset_version": "2026.04",
+  "city_coords": {
+    "Bangkok": [13.76, 100.50], "Chiang Mai": [18.79, 98.99], "Krabi": [8.08, 98.91], "Koh Lanta": [7.63, 99.08], "Railay": [8.01, 98.84],
+    "Buenos Aires": [-34.61, -58.38], "El Calafate": [-50.34, -72.26], "El Chaltén": [-49.33, -72.89], "Bariloche": [-41.13, -71.31],
+    "Mendoza": [-32.89, -68.84], "Península Valdés": [-42.50, -64.00], "Salta": [-24.78, -65.41], "Iguazú Falls": [-25.69, -54.44],
+    "Niseko": [42.80, 140.69], "Furano": [43.34, 142.38], "Sapporo": [43.07, 141.35], "Hakuba": [36.70, 137.85],
+    "Tokyo": [35.68, 139.69], "Kyoto": [35.01, 135.77], "Osaka": [34.69, 135.50], "Nara": [34.68, 135.80],
+    "Hirosaki": [40.60, 140.46], "Takayama": [36.14, 137.25], "Aomori": [40.82, 140.74], "Tokushima": [34.07, 134.55],
+    "Nikko": [36.72, 139.70], "Kamikochi": [36.25, 137.62], "Hokkaido": [43.22, 142.86],
+    "Manuel Antonio": [9.39, -84.14], "Monteverde": [10.30, -84.82], "La Fortuna": [10.47, -84.64], "Tamarindo": [10.30, -85.84],
+    "Queenstown": [-45.03, 168.66], "Wanaka": [-44.70, 169.14], "Abel Tasman": [-40.99, 173.02], "Rotorua": [-38.14, 176.25],
+    "Milford Sound": [-44.67, 167.92], "Bay of Islands": [-35.22, 174.08], "Wellington": [-41.29, 174.78],
+    "Ndutu": [-3.06, 34.85], "Ngorongoro Crater": [-3.16, 35.55], "Zanzibar": [-6.13, 39.31], "Arusha": [-3.37, 36.68],
+    "Northern Serengeti": [-1.89, 34.83], "Grumeti Reserve": [-2.12, 34.24],
+    "Oaxaca": [17.06, -96.72], "Mexico City": [19.43, -99.13], "Yucatán": [20.71, -89.09], "Baja California Sur": [26.04, -111.67],
+    "Mérida": [20.97, -89.62], "San Miguel de Allende": [20.91, -100.74],
+    "Tromsø": [69.65, 18.96], "Lofoten Islands": [68.15, 13.80], "Alta": [69.97, 23.27], "Senja": [69.35, 17.00],
+    "Hoi An": [15.88, 108.33], "Ho Chi Minh City": [10.82, 106.63], "Mekong Delta": [10.02, 105.78], "Phu Quoc": [10.22, 103.96],
+    "Da Nang": [16.05, 108.21], "Hanoi": [21.03, 105.85], "Ha Long Bay": [20.91, 107.18], "Sapa": [22.34, 103.84],
+    "Rio de Janeiro": [-22.91, -43.17], "Salvador": [-12.97, -38.51], "Olinda": [-8.01, -34.86], "São Paulo": [-23.55, -46.63],
+    "Manaus": [-3.12, -60.02], "Pantanal": [-16.30, -56.60],
+    "Sydney": [-33.87, 151.21], "Tasmania": [-41.64, 146.32], "Port Douglas": [-16.48, 145.47], "Melbourne": [-37.81, 144.96],
+    "Uluru": [-25.34, 131.04], "Cairns": [-16.92, 145.77],
+    "Petra": [30.33, 35.44], "Wadi Rum": [29.57, 35.42], "Amman": [31.95, 35.93], "Dead Sea": [31.56, 35.47],
+    "Cape Town": [-33.92, 18.42], "Kruger National Park": [-24.00, 31.50], "Stellenbosch": [-33.94, 18.88], "Garden Route": [-33.97, 22.45],
+    "Reykjavík": [64.14, -21.89], "South Coast": [63.43, -19.36], "Snæfellsnes Peninsula": [64.82, -23.78], "Jökulsárlón": [64.05, -16.18],
+    "Westfjords": [65.93, -23.16], "Akureyri": [65.68, -18.09], "Highlands": [64.63, -18.30],
+    "Kandy": [7.29, 80.64], "Ella": [6.87, 81.05], "Galle": [6.04, 80.22], "Yala National Park": [6.36, 81.52],
+    "Amsterdam": [52.37, 4.90], "Keukenhof": [52.27, 4.55], "Rotterdam": [51.92, 4.48], "The Hague": [52.08, 4.31],
+    "Cusco": [-13.53, -71.97], "Machu Picchu": [-13.16, -72.55], "Sacred Valley": [-13.32, -72.08], "Arequipa": [-16.40, -71.54],
+    "Colca Canyon": [-15.60, -71.80], "Lake Titicaca": [-15.50, -69.75],
+    "Paro": [27.43, 89.42], "Thimphu": [27.47, 89.64], "Punakha": [27.59, 89.86], "Bumthang": [27.56, 90.75],
+    "Rome": [41.90, 12.50], "Amalfi Coast": [40.63, 14.60], "Florence": [43.77, 11.25], "Puglia": [40.79, 17.10],
+    "Tuscany": [43.32, 11.33], "Venice": [45.44, 12.32],
+    "Okavango Delta": [-19.28, 22.89], "Chobe National Park": [-18.78, 24.66], "Moremi Game Reserve": [-19.28, 23.57], "Makgadikgadi Pans": [-20.80, 25.20],
+    "Paris": [48.85, 2.35], "French Riviera": [43.70, 7.27], "Provence": [43.95, 4.80], "Loire Valley": [47.47, 0.50],
+    "Bali": [-8.34, 115.09], "Yogyakarta": [-7.80, 110.36], "Komodo": [-8.55, 119.49], "Lombok": [-8.65, 116.32],
+    "Nusa Penida": [-8.73, 115.54], "Gili Islands": [-8.35, 116.04], "Komodo National Park": [-8.55, 119.49],
+    "Vancouver": [49.28, -123.12], "Banff": [51.18, -115.57], "Lake Louise": [51.43, -116.18], "Quebec City": [46.81, -71.21],
+    "Québec City": [46.81, -71.21], "Niagara": [43.09, -79.08], "Jasper": [52.87, -118.08], "Montréal": [45.50, -73.57],
+    "Masai Mara": [-1.48, 35.14], "Amboseli": [-2.65, 37.26], "Samburu": [0.62, 37.54], "Lamu": [-2.27, 40.90],
+    "Ljubljana": [46.06, 14.51], "Lake Bled": [46.37, 14.11], "Soča Valley": [46.25, 13.73], "Piran": [45.53, 13.57],
+    "Ulaanbaatar": [47.89, 106.91], "Gobi Desert": [42.80, 103.00], "Terelj National Park": [47.98, 107.47],
+    "Khövsgöl Lake": [50.50, 100.30], "Kharkhorin": [47.20, 102.83],
+    "Santorini": [36.39, 25.46], "Crete": [35.24, 24.81], "Milos": [36.75, 24.42], "Athens": [37.98, 23.73],
+    "Valencia": [39.47, -0.38], "Buñol": [39.42, -0.79], "San Sebastián": [43.32, -1.98], "Mallorca": [39.70, 2.99], "Barcelona": [41.39, 2.17],
+    "Jungfrau Region": [46.54, 7.98], "Zermatt": [46.02, 7.75], "Lucerne": [47.05, 8.31], "Engadine": [46.50, 9.84],
+    "Denali National Park": [63.33, -150.50], "Kenai Fjords": [59.88, -149.90], "Katmai": [58.50, -155.00], "Anchorage": [61.22, -149.90],
+    "Vermont": [44.56, -72.58], "White Mountains": [44.27, -71.30], "Acadia": [44.35, -68.20], "Upstate New York": [43.00, -75.00],
+    "Istanbul": [41.01, 28.98], "Cappadocia": [38.65, 34.83], "Ephesus": [37.94, 27.34], "Antalya": [36.90, 30.69], "Pamukkale": [37.92, 29.12],
+    "Volcanoes National Park": [-1.48, 29.49], "Kigali": [-1.94, 30.06], "Nyungwe Forest": [-2.47, 29.15], "Lake Kivu": [-2.04, 29.17],
+    "Kathmandu": [27.71, 85.32], "Kathmandu Valley": [27.71, 85.32], "Annapurna region": [28.60, 83.82],
+    "Khumbu region": [27.95, 86.80], "Upper Mustang": [29.18, 83.97], "Pokhara": [28.21, 83.98],
+    "Everest Base Camp": [28.00, 86.85], "Annapurna Circuit": [28.60, 84.00],
+    "Munich": [48.14, 11.58], "Berlin": [52.52, 13.40], "Romantic Road": [49.37, 10.18], "Black Forest": [48.00, 8.25],
+    "Nuremberg": [49.45, 11.08], "Dresden": [51.05, 13.74], "Cologne": [50.94, 6.96],
+    "Etosha National Park": [-18.85, 16.33], "Sossusvlei": [-24.76, 15.29], "Swakopmund": [-22.68, 14.53], "Damaraland": [-20.50, 14.50],
+    "Muscat": [23.59, 58.41], "Wahiba Sands": [22.02, 58.88], "Jebel Akhdar": [23.05, 57.66], "Musandam Peninsula": [26.20, 56.25],
+    "Jaipur": [26.92, 75.79], "Rajasthan": [27.02, 74.22], "Varanasi": [25.32, 83.01], "Delhi": [28.61, 77.21], "Kerala backwaters": [9.50, 76.34],
+    "Rovaniemi": [66.50, 25.73], "Levi": [67.80, 24.82], "Helsinki": [60.17, 24.94], "Saariselkä": [68.42, 27.43],
+    "Lalibela": [12.03, 39.04], "Gondar": [12.60, 37.47], "Simien Mountains": [13.18, 38.03], "Addis Ababa": [9.03, 38.74]
+  },
+  "country_coords": {
+    "Thailand": [15.87, 100.99], "Argentina": [-38.42, -63.62], "Japan": [36.20, 138.25], "Costa Rica": [9.75, -83.75],
+    "New Zealand": [-41.0, 174.0], "Tanzania": [-6.37, 34.89], "Mexico": [23.63, -102.55], "Norway": [60.47, 8.47],
+    "Vietnam": [14.06, 108.28], "Brazil": [-14.24, -51.92], "Australia": [-25.27, 133.78], "Jordan": [30.59, 36.24],
+    "South Africa": [-30.56, 22.94], "Iceland": [64.96, -19.02], "Sri Lanka": [7.87, 80.77], "Netherlands": [52.13, 5.29],
+    "Peru": [-9.19, -75.02], "Bhutan": [27.51, 90.43], "Italy": [41.87, 12.57], "Botswana": [-22.33, 24.68],
+    "France": [46.23, 2.21], "Indonesia": [-0.79, 113.92], "Canada": [56.13, -106.35], "Kenya": [-0.02, 37.91],
+    "Slovenia": [46.15, 14.99], "Mongolia": [46.86, 103.85], "Greece": [39.07, 21.82], "Spain": [40.46, -3.75],
+    "Switzerland": [46.82, 8.23], "United States": [39.83, -98.58], "Turkey": [38.96, 35.24], "Rwanda": [-1.94, 29.87],
+    "Nepal": [28.39, 84.12], "Germany": [51.17, 10.45], "Namibia": [-22.96, 18.49], "Oman": [21.47, 55.98],
+    "India": [20.59, 78.96], "Finland": [61.92, 25.75], "Ethiopia": [9.15, 40.49]
+  },
   "currency": "USD",
   "months": {
     "January": [
