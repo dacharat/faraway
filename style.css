@@ -39,6 +39,8 @@
   --s-wildlife: #fef3c7;    --s-wildlife-fg: #92400e;
   --s-skiing: #e0f2fe;      --s-skiing-fg: #075985;
   --s-wellness: #f1f5f9;    --s-wellness-fg: #334155;
+  --s-history: #fef9c3;     --s-history-fg: #854d0e;
+  --s-music: #fce7f3;       --s-music-fg: #9d174d;
 
   /* Layout */
   --radius: 14px;
@@ -463,6 +465,8 @@ html, body {
 .style-wildlife { background: var(--s-wildlife); color: var(--s-wildlife-fg); }
 .style-skiing { background: var(--s-skiing); color: var(--s-skiing-fg); }
 .style-wellness { background: var(--s-wellness); color: var(--s-wellness-fg); }
+.style-history { background: var(--s-history); color: var(--s-history-fg); }
+.style-music { background: var(--s-music); color: var(--s-music-fg); }
 
 /* pros / cons */
 .proscons {

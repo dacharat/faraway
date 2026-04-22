@@ -1,0 +1,14 @@
+# Local Claude / editor state
+.claude/
+.vscode/
+.idea/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Node (only if anyone adds tooling later)
+node_modules/
+
+# One-shot build/merge scripts (kept out of repo by convention)
+_*.js

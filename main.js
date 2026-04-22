@@ -14,8 +14,8 @@
   ];
 
   const TRAVEL_STYLES = [
-    'beach', 'culture', 'adventure', 'nature', 'food',
-    'nightlife', 'wildlife', 'skiing', 'wellness'
+    'beach', 'culture', 'history', 'adventure', 'nature', 'food',
+    'nightlife', 'music', 'wildlife', 'skiing', 'wellness'
   ];
 
   // City + country coordinates live in data.js (TRAVEL_DATA.city_coords /
