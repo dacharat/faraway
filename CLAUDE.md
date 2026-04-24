@@ -72,6 +72,16 @@ Each `<entry>`:
 1. Push an entry into `TRAVEL_DATA.months["<Month>"]`.
 2. Add new cities to `city_coords`; add new countries to `country_coords`.
 3. Bump `total_entries`.
+4. **If the country is new**, also add it to two lookup maps at the top of
+   `main.js`:
+   - `COUNTRY_FLAGS` — `"<Country>": "🇫🇱"` (used in card headers, map
+     tooltips/popups, search dropdown, and the selected-place chip)
+   - `COUNTRY_CONTINENT` — `"<Country>": "Asia"` (one of
+     `Asia | Europe | Africa | North America | South America | Oceania`).
+     Transcontinental countries follow the most travel-relevant bucket
+     (Russia → Europe, Turkey/Georgia → Asia).
+   Missing entries in either map mean the country silently drops out of the
+   continent filter and renders without a flag.
 
 No rebuild — refresh the browser.
 
@@ -107,6 +117,56 @@ the user can eyeball the result.
 Do **not** just `.push(...entries)` verbatim — that will create duplicate
 `(month, country)` pairs (the "Bangkok case" the user has flagged before).
 
+## Filters
+
+Four filter groups live in the sticky filter bar, applied additively by
+`applyFilters()` in `main.js`:
+
+| Filter    | Type         | State field       | Source of options                     |
+| --------- | ------------ | ----------------- | ------------------------------------- |
+| Continent | single-pill  | `state.continent` | `CONTINENTS` (fixed 6)                |
+| Budget    | single-pill  | `state.budget`    | `budget_category` on entries          |
+| Crowd     | single-pill  | `state.crowd`     | `crowd_level` on entries              |
+| Style     | multi-select | `state.styles`    | `TRAVEL_STYLES` (fixed array in JS)   |
+
+Any pill row that uses `data-filter="<key>"` is auto-wired by `bindFilterPills()`
+for single-select behavior — to add a new single-select filter, just drop a
+`<div class="pill-row" data-filter="newkey">` in the HTML and initialize
+`state.newkey` alongside the others. Multi-select (like Style) is built
+imperatively in `buildStyleFilter()`.
+
+**Clear button** resets every filter group — keep `bindClearButton()` in sync
+when adding a new filter.
+
+**Active-count badge** on the mobile filter toggle is computed in
+`updateFilterCountBadge()` — also add any new filter there.
+
+## Views
+
+Three views, switched via the hero tablist (`setView()` in `main.js`):
+
+- **List** — default. Month tabs + filter bar visible.
+- **Map** — Leaflet world map. Month tabs + filter bar visible; filters also
+  apply to pin aggregation in `aggregateByCity()`.
+- **Search** — a country/city autocomplete answers "when should I visit X?".
+  Month tabs **and** the filter bar are hidden (by design — the query is
+  the sole filter). Filter state is preserved, so switching back to List
+  restores the user's last selection.
+
+## Mobile UX specifics
+
+- **Month tabs** (`≤ 639px`): single horizontal scroll row (`flex-wrap: nowrap`,
+  `scroll-snap-type: x proximity`, hidden scrollbar) instead of wrapping to
+  4 rows. Desktop keeps the wrap + centered layout.
+- **Filter bar** (`≤ 639px`): collapsed by default behind a `⚙️ Filters` button
+  with an active-count badge. Toggling adds/removes `.open` on the section.
+  Desktop (`≥ 640px`): button hidden, panel always visible.
+- **Filter grid on desktop**: 2 rows — Continent spans full width on top,
+  Budget/Crowd/Style/Clear share the bottom row (grid-template-areas). This
+  keeps the wider continent pills from squeezing the other columns.
+- `align-items: start` on `.filters-inner` so filter labels line up at the top
+  instead of floating in empty space above short pill rows.
+
 ## Dark mode
 
 Dark mode is live. Key pieces:
@@ -122,6 +182,10 @@ Dark mode is live. Key pieces:
   (card/stat-chip/pill/month-tab backgrounds, soft-badge foreground colors,
   event pill, Leaflet popup, etc.). When adding new styles with hard-coded
   colors, **also add a `[data-theme="dark"]` override** in that same file.
+- **Hero gradient is always dark** — `.hero` uses hardcoded hex values
+  (`#1e293b → #0f172a`) instead of `var(--navy)` because `--navy` is flipped
+  in dark mode for the filter pill active state. Don't re-introduce
+  `var(--navy)` in the hero background or you'll re-break dark mode there.
 - **Toggle**: `#themeToggleBtn` in the hero; `bindThemeToggle()` in `main.js`
   flips the attribute, persists to localStorage, and listens for OS theme
   changes (only auto-applies them if the user hasn't explicitly chosen).

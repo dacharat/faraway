@@ -47,6 +47,41 @@
     return COUNTRY_FLAGS[country] || '';
   }
 
+  // Country → continent. Transcontinental countries (Russia, Turkey, Georgia)
+  // are bucketed into the continent travellers most commonly associate them
+  // with — Russia → Europe (most tourist-relevant regions are European);
+  // Turkey & Georgia → Asia.
+  const COUNTRY_CONTINENT = {
+    'Argentina': 'South America', 'Australia': 'Oceania', 'Austria': 'Europe',
+    'Belgium': 'Europe', 'Belize': 'North America', 'Bhutan': 'Asia',
+    'Botswana': 'Africa', 'Brazil': 'South America', 'Cambodia': 'Asia',
+    'Canada': 'North America', 'Chile': 'South America', 'China': 'Asia',
+    'Colombia': 'South America', 'Costa Rica': 'North America',
+    'Croatia': 'Europe', 'Cuba': 'North America', 'Czech Republic': 'Europe',
+    'Denmark': 'Europe', 'Egypt': 'Africa', 'England': 'Europe',
+    'Ethiopia': 'Africa', 'Finland': 'Europe', 'France': 'Europe',
+    'Georgia': 'Asia', 'Germany': 'Europe', 'Greece': 'Europe',
+    'Hungary': 'Europe', 'Iceland': 'Europe', 'India': 'Asia',
+    'Indonesia': 'Asia', 'Ireland': 'Europe', 'Italy': 'Europe',
+    'Japan': 'Asia', 'Jordan': 'Asia', 'Kenya': 'Africa', 'Laos': 'Asia',
+    'Maldives': 'Asia', 'Malta': 'Europe', 'Mexico': 'North America',
+    'Mongolia': 'Asia', 'Morocco': 'Africa', 'Myanmar': 'Asia',
+    'Namibia': 'Africa', 'Nepal': 'Asia', 'Netherlands': 'Europe',
+    'New Zealand': 'Oceania', 'Norway': 'Europe', 'Oman': 'Asia',
+    'Peru': 'South America', 'Philippines': 'Asia', 'Poland': 'Europe',
+    'Portugal': 'Europe', 'Russia': 'Europe', 'Rwanda': 'Africa',
+    'Scotland': 'Europe', 'Slovenia': 'Europe', 'South Africa': 'Africa',
+    'South Korea': 'Asia', 'Spain': 'Europe', 'Sri Lanka': 'Asia',
+    'Sweden': 'Europe', 'Switzerland': 'Europe', 'Tanzania': 'Africa',
+    'Thailand': 'Asia', 'Turkey': 'Asia',
+    'United Arab Emirates': 'Asia', 'United States': 'North America',
+    'Vietnam': 'Asia'
+  };
+  const CONTINENTS = ['Asia', 'Europe', 'Africa', 'North America', 'South America', 'Oceania'];
+  function continentOf(country) {
+    return COUNTRY_CONTINENT[country] || null;
+  }
+
   // City + country coordinates live in data.js (TRAVEL_DATA.city_coords /
   // TRAVEL_DATA.country_coords) so the dataset and its geo-lookups stay
   // together. Adding a new destination means editing only data.js.
@@ -58,6 +93,7 @@
   const state = {
     view: 'list',                          // 'list' | 'map' | 'search'
     month: MONTHS[new Date().getMonth()],  // default = current month
+    continent: 'all',
     budget: 'all',
     crowd: 'all',
     styles: new Set(), // multi-select
@@ -105,6 +141,10 @@
 
   const themeToggleBtn = document.getElementById('themeToggleBtn');
 
+  const filtersSectionEl = document.getElementById('filtersSection');
+  const filterToggleBtn = document.getElementById('filterToggleBtn');
+  const filterCountBadgeEl = document.getElementById('filterCountBadge');
+
   // ---- Init ---------------------------------------------------------------
   function init() {
     buildMonthTabs();
@@ -113,9 +153,38 @@
     bindClearButton();
     bindViewToggle();
     bindThemeToggle();
+    bindFilterToggle();
     buildSearchIndex();
     bindSearch();
     render();
+  }
+
+  // ---- Filter panel collapse (mobile) ------------------------------------
+  // On narrow viewports the filter bar is collapsed behind a "Filters" button
+  // with an active-count badge. On desktop the button is hidden and the full
+  // panel renders inline (see CSS @media query).
+  function bindFilterToggle() {
+    if (!filterToggleBtn || !filtersSectionEl) return;
+    filterToggleBtn.addEventListener('click', () => {
+      const open = filtersSectionEl.classList.toggle('open');
+      filterToggleBtn.setAttribute('aria-expanded', String(open));
+    });
+    updateFilterCountBadge();
+  }
+
+  function updateFilterCountBadge() {
+    if (!filterCountBadgeEl) return;
+    let n = 0;
+    if (state.continent !== 'all') n++;
+    if (state.budget !== 'all') n++;
+    if (state.crowd !== 'all') n++;
+    n += state.styles.size;
+    if (n > 0) {
+      filterCountBadgeEl.textContent = String(n);
+      filterCountBadgeEl.hidden = false;
+    } else {
+      filterCountBadgeEl.hidden = true;
+    }
   }
 
   // ---- Theme toggle -------------------------------------------------------
@@ -173,6 +242,10 @@
     // "All months" aggregates). Search ignores them.
     monthTabsNavEl.hidden = (view === 'search');
     searchPanelEl.hidden = (view !== 'search');
+    // Search uses the query as its sole filter — hide the filter bar to
+    // keep the view focused and avoid nonsensical combinations (e.g.
+    // "Japan" + continent=Europe).
+    if (filtersSectionEl) filtersSectionEl.hidden = (view === 'search');
 
     if (view === 'search') {
       // Focus input on entry — keeps discovery zero-click.
@@ -231,12 +304,14 @@
     });
   }
 
-  // ---- Wire up the budget + crowd pill rows ------------------------------
+  // ---- Wire up single-select pill rows (continent + budget + crowd) ------
   function bindFilterPills() {
-    document.querySelectorAll('[data-filter="budget"] .pill, [data-filter="crowd"] .pill').forEach(pill => {
+    document.querySelectorAll(
+      '[data-filter="continent"] .pill, [data-filter="budget"] .pill, [data-filter="crowd"] .pill'
+    ).forEach(pill => {
       pill.addEventListener('click', () => {
         const row = pill.parentElement;
-        const key = row.dataset.filter; // "budget" | "crowd"
+        const key = row.dataset.filter; // "continent" | "budget" | "crowd"
         row.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
         pill.classList.add('active');
         state[key] = pill.dataset.value;
@@ -247,11 +322,14 @@
 
   function bindClearButton() {
     clearBtn.addEventListener('click', () => {
+      state.continent = 'all';
       state.budget = 'all';
       state.crowd = 'all';
       state.styles.clear();
       // reset UI
-      document.querySelectorAll('[data-filter="budget"] .pill, [data-filter="crowd"] .pill').forEach(p => {
+      document.querySelectorAll(
+        '[data-filter="continent"] .pill, [data-filter="budget"] .pill, [data-filter="crowd"] .pill'
+      ).forEach(p => {
         p.classList.toggle('active', p.dataset.value === 'all');
       });
       styleFilterEl.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
@@ -263,6 +341,7 @@
   // Core filter logic shared by list / map / search. Operates on raw entries.
   function applyFilters(entries) {
     return entries.filter(d => {
+      if (state.continent !== 'all' && continentOf(d.country) !== state.continent) return false;
       if (state.budget !== 'all' && d.budget_category !== state.budget) return false;
       if (state.crowd !== 'all' && d.crowd_level !== state.crowd) return false;
       if (state.styles.size > 0) {
@@ -324,6 +403,7 @@
 
   // ---- Render -------------------------------------------------------------
   function render() {
+    updateFilterCountBadge();
     if (state.view === 'map') {
       renderMap();
       return;
@@ -436,6 +516,7 @@
     monthsToScan.forEach(month => {
       const monthData = (TRAVEL_DATA.months && TRAVEL_DATA.months[month]) || [];
       monthData.forEach(d => {
+        if (state.continent !== 'all' && continentOf(d.country) !== state.continent) return;
         if (state.budget !== 'all' && d.budget_category !== state.budget) return;
         if (state.crowd !== 'all' && d.crowd_level !== state.crowd) return;
         if (state.styles.size > 0) {

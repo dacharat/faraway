@@ -66,8 +66,34 @@
     </div>
   </section>
 
-  <section class="filters" aria-label="Filters">
-    <div class="filters-inner">
+  <section class="filters" id="filtersSection" aria-label="Filters">
+    <button
+      id="filterToggleBtn"
+      class="filter-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="filtersInner">
+      <span class="filter-toggle-label">
+        <span aria-hidden="true">⚙️</span>
+        <span>Filters</span>
+        <span id="filterCountBadge" class="filter-count-badge" hidden>0</span>
+      </span>
+      <span class="filter-toggle-chevron" aria-hidden="true">▾</span>
+    </button>
+    <div class="filters-inner" id="filtersInner">
+      <div class="filter-group">
+        <label class="filter-label">Continent</label>
+        <div id="continentFilter" class="pill-row" data-filter="continent">
+          <button class="pill active" data-value="all">All</button>
+          <button class="pill" data-value="Asia">🌏 Asia</button>
+          <button class="pill" data-value="Europe">🏰 Europe</button>
+          <button class="pill" data-value="Africa">🦁 Africa</button>
+          <button class="pill" data-value="North America">🌎 N. America</button>
+          <button class="pill" data-value="South America">🗿 S. America</button>
+          <button class="pill" data-value="Oceania">🏝️ Oceania</button>
+        </div>
+      </div>
+
       <div class="filter-group">
         <label class="filter-label">Budget</label>
         <div id="budgetFilter" class="pill-row" data-filter="budget">

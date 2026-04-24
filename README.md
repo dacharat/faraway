@@ -17,8 +17,13 @@ map of every recommended city.
 ## Features
 
 - **Month tabs** — Jan→Dec pill selector, defaults to the current month
-- **Filter bar** — budget · crowd level · travel-style multi-select
-- **🔎 Search mode** — type a country or city for instant autocomplete
+  (horizontal-scroll single row on mobile, wrap on desktop)
+- **Filter bar** — continent · budget · crowd level · travel-style multi-select,
+  with a live count badge; collapsible behind a toggle on mobile
+- **🔎 Search mode** — type a country or city for instant autocomplete,
+  returns every month that place is recommended
+- **🏳️ Flag emojis** — every country in the grid, tooltip, popup, and search
+  dropdown is labelled with its flag
 - **Live stats** — destinations found, average daily cost range, season mix
 - **Card grid** — climate badges, key events, pros/cons, responsive 1→2→3 cols
 - **🗺️ Map view** — every recommended city plotted on a world map; hover for
@@ -96,7 +101,11 @@ in **`data.js`** so the site stays dynamic by data alone.
    country centroid in `country_coords` (so they always appear *somewhere*
    on the map).
 3. If the entry references a **new country**, add it to
-   `TRAVEL_DATA.country_coords`.
+   `TRAVEL_DATA.country_coords`, and also to the two lookup maps at the top
+   of `main.js`:
+   - `COUNTRY_FLAGS` — `"<Country>": "🇫🇱"` (flag emoji)
+   - `COUNTRY_CONTINENT` — `"<Country>": "Asia"` (one of Asia · Europe ·
+     Africa · North America · South America · Oceania)
 4. Bump `TRAVEL_DATA.total_entries`.
 
 That's it — no rebuild, just refresh.
