@@ -11,7 +11,7 @@
    ========================================================= */
 const TRAVEL_DATA = {
   "dataset_version": "2026.04",
-  "total_entries": 132,
+  "total_entries": 189,
   "currency": "USD",
   "city_coords": {
     "Bangkok": [
@@ -448,7 +448,7 @@ const TRAVEL_DATA = {
     ],
     "Rome": [
       41.9,
-      12.5
+      12.49
     ],
     "Amalfi Coast": [
       40.63,
@@ -456,19 +456,19 @@ const TRAVEL_DATA = {
     ],
     "Florence": [
       43.77,
-      11.25
+      11.26
     ],
     "Puglia": [
       40.79,
-      17.1
+      17.11
     ],
     "Tuscany": [
-      43.32,
-      11.33
+      43.77,
+      11.26
     ],
     "Venice": [
       45.44,
-      12.32
+      12.33
     ],
     "Okavango Delta": [
       -19.28,
@@ -487,20 +487,20 @@ const TRAVEL_DATA = {
       25.2
     ],
     "Paris": [
-      48.85,
+      48.86,
       2.35
     ],
     "French Riviera": [
-      43.7,
-      7.27
+      43.71,
+      7.26
     ],
     "Provence": [
-      43.95,
-      4.8
+      43.93,
+      5.34
     ],
     "Loire Valley": [
-      47.47,
-      0.5
+      47.51,
+      0.63
     ],
     "Bali": [
       -8.34,
@@ -644,11 +644,11 @@ const TRAVEL_DATA = {
     ],
     "Mallorca": [
       39.7,
-      2.99
+      2.97
     ],
     "Barcelona": [
       41.39,
-      2.17
+      2.15
     ],
     "Jungfrau Region": [
       46.54,
@@ -775,12 +775,12 @@ const TRAVEL_DATA = {
       13.4
     ],
     "Romantic Road": [
-      49.37,
-      10.18
+      48.43,
+      10.72
     ],
     "Black Forest": [
-      48,
-      8.25
+      48.05,
+      8.17
     ],
     "Nuremberg": [
       49.45,
@@ -899,16 +899,16 @@ const TRAVEL_DATA = {
       30.72
     ],
     "Alentejo": [
-      38.5,
-      -7.85
+      38.37,
+      -8.07
     ],
     "Algarve": [
-      37.05,
-      -8.13
+      37.13,
+      -8.54
     ],
     "Alsace": [
       48.32,
-      7.45
+      7.44
     ],
     "Amazon": [
       -3.74,
@@ -951,12 +951,12 @@ const TRAVEL_DATA = {
       -68.2
     ],
     "Ayutthaya": [
-      14.36,
-      100.58
+      14.35,
+      100.57
     ],
     "Azores": [
       37.74,
-      -25.66
+      -25.68
     ],
     "Baa Atoll": [
       5.2,
@@ -1008,7 +1008,7 @@ const TRAVEL_DATA = {
     ],
     "Cairngorms": [
       57.08,
-      -3.67
+      -3.66
     ],
     "Cairo": [
       30.04,
@@ -1063,8 +1063,8 @@ const TRAVEL_DATA = {
       -10.27
     ],
     "Douro Valley": [
-      41.16,
-      -7.79
+      41.17,
+      -7.74
     ],
     "Draa Valley": [
       30.32,
@@ -1163,7 +1163,7 @@ const TRAVEL_DATA = {
       96.91
     ],
     "Isle of Skye": [
-      57.27,
+      57.53,
       -6.22
     ],
     "Kakheti Wine Region": [
@@ -1199,8 +1199,8 @@ const TRAVEL_DATA = {
       103.27
     ],
     "Koh Samui": [
-      9.51,
-      100.01
+      9.54,
+      100.06
     ],
     "Kruger": [
       -24,
@@ -1219,7 +1219,7 @@ const TRAVEL_DATA = {
       -9.14
     ],
     "Loch Lomond": [
-      56.1,
+      56.09,
       -4.62
     ],
     "Luang Prabang": [
@@ -1304,7 +1304,7 @@ const TRAVEL_DATA = {
     ],
     "Orkney": [
       59,
-      -3
+      -3.06
     ],
     "Ottawa": [
       45.42,
@@ -1312,19 +1312,19 @@ const TRAVEL_DATA = {
     ],
     "Pai": [
       19.36,
-      98.45
+      98.44
     ],
     "Palawan": [
       9.84,
       118.74
     ],
     "Paros": [
-      37.08,
-      25.15
+      37.07,
+      25.12
     ],
     "Pelion": [
-      39.43,
-      23.05
+      39.36,
+      23.08
     ],
     "Phnom Penh": [
       11.55,
@@ -1347,8 +1347,8 @@ const TRAVEL_DATA = {
       81
     ],
     "Porto": [
-      41.16,
-      -8.62
+      41.15,
+      -8.61
     ],
     "Puno": [
       -15.84,
@@ -1371,8 +1371,8 @@ const TRAVEL_DATA = {
       55.94
     ],
     "Rhine Valley": [
-      50.07,
-      7.71
+      49.92,
+      7.92
     ],
     "Rhodes": [
       36.43,
@@ -1380,7 +1380,7 @@ const TRAVEL_DATA = {
     ],
     "Rovinj": [
       45.08,
-      13.63
+      13.64
     ],
     "San Cristóbal de las Casas": [
       16.74,
@@ -1484,7 +1484,7 @@ const TRAVEL_DATA = {
     ],
     "Vis": [
       43.06,
-      16.18
+      16.19
     ],
     "Viñales": [
       22.62,
@@ -1665,6 +1665,606 @@ const TRAVEL_DATA = {
     "Xinjiang": [
       41.12,
       85.24
+    ],
+    "Seoul": [
+      37.57,
+      126.98
+    ],
+    "Gyeongbokgung": [
+      37.58,
+      126.98
+    ],
+    "Busan": [
+      35.18,
+      129.08
+    ],
+    "Jeju Island": [
+      33.49,
+      126.53
+    ],
+    "Gyeongju": [
+      35.86,
+      129.22
+    ],
+    "Jinhae": [
+      35.14,
+      128.64
+    ],
+    "Nami Island": [
+      37.79,
+      127.52
+    ],
+    "Seoraksan NP": [
+      38.12,
+      128.46
+    ],
+    "Jirisan NP": [
+      35.34,
+      127.73
+    ],
+    "Andong": [
+      36.57,
+      128.73
+    ],
+    "Sokcho": [
+      38.21,
+      128.59
+    ],
+    "Daegu": [
+      35.87,
+      128.6
+    ],
+    "Incheon": [
+      37.46,
+      126.71
+    ],
+    "Gangwon-do": [
+      37.88,
+      128.23
+    ],
+    "Pyeongchang": [
+      37.37,
+      128.39
+    ],
+    "Jeonju": [
+      35.82,
+      127.15
+    ],
+    "Tongyeong": [
+      34.85,
+      128.43
+    ],
+    "Ulleungdo Island": [
+      37.49,
+      130.87
+    ],
+    "Moscow": [
+      55.75,
+      37.62
+    ],
+    "Saint Petersburg": [
+      59.95,
+      30.32
+    ],
+    "Lake Baikal": [
+      53.5,
+      108.17
+    ],
+    "Irkutsk": [
+      52.29,
+      104.3
+    ],
+    "Olkhon Island": [
+      53.15,
+      107.37
+    ],
+    "Kamchatka": [
+      53.02,
+      158.65
+    ],
+    "Altai Mountains": [
+      50.7,
+      86.5
+    ],
+    "Vladivostok": [
+      43.12,
+      131.89
+    ],
+    "Sochi": [
+      43.6,
+      39.73
+    ],
+    "Kazan": [
+      55.79,
+      49.12
+    ],
+    "Murmansk": [
+      68.97,
+      33.07
+    ],
+    "Suzdal": [
+      56.42,
+      40.45
+    ],
+    "Sergiev Posad": [
+      56.31,
+      38.13
+    ],
+    "Yekaterinburg": [
+      56.84,
+      60.61
+    ],
+    "Kizhi Island": [
+      62.07,
+      35.22
+    ],
+    "Peterhof": [
+      59.89,
+      29.91
+    ],
+    "Kola Peninsula": [
+      67.57,
+      32.8
+    ],
+    "Novosibirsk": [
+      54.99,
+      82.9
+    ],
+    "Ulan-Ude": [
+      51.83,
+      107.61
+    ],
+    "Phuket": [
+      7.88,
+      98.39
+    ],
+    "Koh Tao": [
+      10.09,
+      99.84
+    ],
+    "Koh Phangan": [
+      9.74,
+      100.03
+    ],
+    "Chiang Rai": [
+      19.91,
+      99.83
+    ],
+    "Kanchanaburi": [
+      14,
+      99.53
+    ],
+    "Hua Hin": [
+      12.57,
+      99.96
+    ],
+    "Sukhothai": [
+      17.01,
+      99.82
+    ],
+    "Khao Yai NP": [
+      14.43,
+      101.37
+    ],
+    "Ubon Ratchathani": [
+      15.24,
+      104.85
+    ],
+    "Koh Lipe": [
+      6.49,
+      99.3
+    ],
+    "Similan Islands": [
+      8.64,
+      97.64
+    ],
+    "Koh Chang": [
+      12.07,
+      102.33
+    ],
+    "Koh Samet": [
+      12.56,
+      101.65
+    ],
+    "Erawan Falls": [
+      14.37,
+      99.14
+    ],
+    "Mae Hong Son": [
+      19.3,
+      97.97
+    ],
+    "Nan": [
+      18.78,
+      100.77
+    ],
+    "Phang Nga Bay": [
+      8.45,
+      98.53
+    ],
+    "Vienna": [
+      48.21,
+      16.37
+    ],
+    "Salzburg": [
+      47.8,
+      13.04
+    ],
+    "Innsbruck": [
+      47.27,
+      11.4
+    ],
+    "Hallstatt": [
+      47.56,
+      13.65
+    ],
+    "Kitzbühel": [
+      47.45,
+      12.39
+    ],
+    "Zell am See": [
+      47.33,
+      12.8
+    ],
+    "St. Anton": [
+      47.13,
+      10.27
+    ],
+    "Brussels": [
+      50.85,
+      4.35
+    ],
+    "Bruges": [
+      51.21,
+      3.22
+    ],
+    "Ghent": [
+      51.05,
+      3.72
+    ],
+    "Antwerp": [
+      51.22,
+      4.4
+    ],
+    "Liège": [
+      50.63,
+      5.57
+    ],
+    "Dinant": [
+      50.26,
+      4.91
+    ],
+    "Šibenik": [
+      43.74,
+      15.9
+    ],
+    "Prague": [
+      50.08,
+      14.44
+    ],
+    "Český Krumlov": [
+      48.81,
+      14.31
+    ],
+    "Brno": [
+      49.2,
+      16.61
+    ],
+    "Karlovy Vary": [
+      50.23,
+      12.87
+    ],
+    "Copenhagen": [
+      55.68,
+      12.57
+    ],
+    "Aarhus": [
+      56.16,
+      10.21
+    ],
+    "Bornholm": [
+      55.1,
+      14.91
+    ],
+    "Roskilde": [
+      55.64,
+      12.08
+    ],
+    "Odense": [
+      55.4,
+      10.39
+    ],
+    "London": [
+      51.51,
+      -0.13
+    ],
+    "Cotswolds": [
+      51.83,
+      -1.8
+    ],
+    "Bath": [
+      51.38,
+      -2.36
+    ],
+    "Lake District": [
+      54.46,
+      -3.08
+    ],
+    "York": [
+      53.96,
+      -1.08
+    ],
+    "Oxford": [
+      51.75,
+      -1.26
+    ],
+    "Cambridge": [
+      52.21,
+      0.12
+    ],
+    "Brighton": [
+      50.83,
+      -0.14
+    ],
+    "Cornwall": [
+      50.26,
+      -5.05
+    ],
+    "Stratford-upon-Avon": [
+      52.19,
+      -1.71
+    ],
+    "Nice": [
+      43.7,
+      7.27
+    ],
+    "Marseille": [
+      43.3,
+      5.37
+    ],
+    "Lyon": [
+      45.75,
+      4.83
+    ],
+    "Bordeaux": [
+      44.84,
+      -0.58
+    ],
+    "Strasbourg": [
+      48.57,
+      7.75
+    ],
+    "Cannes": [
+      43.55,
+      7.02
+    ],
+    "Normandy": [
+      49.18,
+      -0.36
+    ],
+    "Chamonix": [
+      45.92,
+      6.87
+    ],
+    "Épernay": [
+      49.04,
+      3.96
+    ],
+    "Hamburg": [
+      53.55,
+      10
+    ],
+    "Heidelberg": [
+      49.4,
+      8.69
+    ],
+    "Rothenburg ob der Tauber": [
+      49.38,
+      10.18
+    ],
+    "Freiburg": [
+      47.99,
+      7.85
+    ],
+    "Bavarian Alps": [
+      47.6,
+      12.9
+    ],
+    "Mykonos": [
+      37.45,
+      25.33
+    ],
+    "Meteora": [
+      39.72,
+      21.63
+    ],
+    "Delphi": [
+      38.48,
+      22.5
+    ],
+    "Thessaloniki": [
+      40.64,
+      22.94
+    ],
+    "Corfu": [
+      39.62,
+      19.92
+    ],
+    "Budapest": [
+      47.5,
+      19.04
+    ],
+    "Eger": [
+      47.9,
+      20.38
+    ],
+    "Pécs": [
+      46.07,
+      18.23
+    ],
+    "Lake Balaton": [
+      46.84,
+      17.74
+    ],
+    "Milan": [
+      45.46,
+      9.19
+    ],
+    "Sicily": [
+      37.6,
+      14.01
+    ],
+    "Cinque Terre": [
+      44.13,
+      9.71
+    ],
+    "Dolomites": [
+      46.49,
+      11.93
+    ],
+    "Naples": [
+      40.85,
+      14.27
+    ],
+    "Bologna": [
+      44.49,
+      11.34
+    ],
+    "Verona": [
+      45.44,
+      10.99
+    ],
+    "Lake Como": [
+      45.98,
+      9.26
+    ],
+    "Umbria": [
+      42.93,
+      12.7
+    ],
+    "Positano": [
+      40.63,
+      14.48
+    ],
+    "Valletta": [
+      35.9,
+      14.51
+    ],
+    "Gozo": [
+      36.05,
+      14.25
+    ],
+    "Mdina": [
+      35.89,
+      14.4
+    ],
+    "Blue Lagoon": [
+      36.01,
+      14.34
+    ],
+    "Delft": [
+      52.01,
+      4.36
+    ],
+    "Utrecht": [
+      52.09,
+      5.12
+    ],
+    "Kraków": [
+      50.06,
+      19.94
+    ],
+    "Warsaw": [
+      52.23,
+      21.01
+    ],
+    "Wrocław": [
+      51.11,
+      17.04
+    ],
+    "Gdańsk": [
+      54.35,
+      18.65
+    ],
+    "Zakopane": [
+      49.3,
+      19.95
+    ],
+    "Sintra": [
+      38.8,
+      -9.39
+    ],
+    "Évora": [
+      38.57,
+      -7.91
+    ],
+    "Loch Ness": [
+      57.32,
+      -4.43
+    ],
+    "Inverness": [
+      57.48,
+      -4.22
+    ],
+    "Stirling": [
+      56.12,
+      -3.94
+    ],
+    "St Andrews": [
+      56.34,
+      -2.8
+    ],
+    "Glencoe": [
+      56.68,
+      -5.1
+    ],
+    "Highland Games (Braemar)": [
+      57.01,
+      -3.4
+    ],
+    "Madrid": [
+      40.42,
+      -3.7
+    ],
+    "Granada": [
+      37.18,
+      -3.6
+    ],
+    "Ibiza": [
+      38.91,
+      1.43
+    ],
+    "Pamplona": [
+      42.82,
+      -1.64
+    ],
+    "Toledo": [
+      39.86,
+      -4.03
+    ],
+    "Stockholm": [
+      59.33,
+      18.07
+    ],
+    "Gothenburg": [
+      57.71,
+      11.97
+    ],
+    "Visby": [
+      57.63,
+      18.29
+    ],
+    "Midsommar Villages": [
+      61,
+      14.5
+    ],
+    "Swedish Lapland": [
+      67.86,
+      20.23
+    ],
+    "Dalarna": [
+      61,
+      14.5
     ]
   },
   "country_coords": {
@@ -1895,6 +2495,50 @@ const TRAVEL_DATA = {
     "China": [
       35.86,
       104.2
+    ],
+    "South Korea": [
+      35.91,
+      127.77
+    ],
+    "Russia": [
+      61.52,
+      105.32
+    ],
+    "Austria": [
+      47.52,
+      14.55
+    ],
+    "Belgium": [
+      50.5,
+      4.47
+    ],
+    "Czech Republic": [
+      49.82,
+      15.47
+    ],
+    "Denmark": [
+      56.26,
+      9.5
+    ],
+    "England": [
+      52.36,
+      -1.17
+    ],
+    "Hungary": [
+      47.16,
+      19.5
+    ],
+    "Malta": [
+      35.94,
+      14.38
+    ],
+    "Poland": [
+      51.92,
+      19.15
+    ],
+    "Sweden": [
+      60.13,
+      18.64
     ]
   },
   "months": {
@@ -1908,7 +2552,7 @@ const TRAVEL_DATA = {
           "Krabi",
           "Koh Lanta"
         ],
-        "why_visit": "January is peak dry season with clear skies and comfortable temperatures across the country. The Andaman islands are at their most idyllic, Chiang Mai nights are pleasantly cool, and Bangkok is endlessly vibrant without the tropical heat.",
+        "why_visit": "January is Thailand's finest month — cool, dry, and sunny nationwide. Chiang Mai's nights are refreshingly cool for temple-hopping and market-browsing, while the Andaman coast's Koh Lanta and Krabi offer calm turquoise seas with excellent diving visibility and far fewer party crowds than Koh Samui.",
         "climate": {
           "avg_temp_c": "24–32",
           "rainfall_level": "low",
@@ -1921,24 +2565,36 @@ const TRAVEL_DATA = {
         "key_events": [
           "Bo Sang Umbrella Festival (Chiang Mai, late Jan)",
           "Chinese New Year prep in Bangkok Chinatown",
-          "Chiang Mai Flower Festival (early Feb lead-up)"
+          "Chiang Mai Flower Festival (early Feb lead-up)",
+          "Bo Sang Umbrella Festival, Chiang Mai (late Jan)",
+          "Chiang Mai Flower Festival lead-up",
+          "Andaman diving high season (Similan Islands open)",
+          "Bangkok street food scene at peak"
         ],
         "travel_styles": [
           "beach",
           "food",
           "culture",
-          "nightlife"
+          "nightlife",
+          "nature"
         ],
         "pros": [
           "Near-perfect dry-season weather",
           "Excellent value — food, transport, lodging cheap",
           "Wide variety of beach and cultural options",
-          "Domestic flight network efficient"
+          "Domestic flight network efficient",
+          "Near-perfect dry-season weather across the entire country",
+          "Chiang Mai cool and comfortable for temple and market visits",
+          "Andaman coast best diving visibility of the year",
+          "Excellent value — food, transport, and budget lodging very cheap"
         ],
         "cons": [
           "Popular islands heavily crowded",
           "Accommodation prices at yearly high",
-          "Air quality deteriorates in the north late month"
+          "Air quality deteriorates in the north late month",
+          "Peak-season accommodation prices",
+          "Popular islands and Bangkok heavily crowded",
+          "Advance bookings essential for popular properties"
         ]
       },
       {
@@ -2363,6 +3019,221 @@ const TRAVEL_DATA = {
           "Harbin extreme cold (-20°C) requires specialist layering",
           "Domestic flights pricey as Chinese New Year approaches",
           "Spring Festival week sees mass domestic migration — transport chaos"
+        ]
+      },
+      {
+        "month": "January",
+        "country": "South Korea",
+        "best_cities_or_regions": [
+          "Seoul",
+          "Gangwon-do",
+          "Pyeongchang",
+          "Jeju Island"
+        ],
+        "why_visit": "January is South Korea's heart of winter — Gangwon-do's ski resorts (Alpensia, Yongpyong, High1) are at peak snow conditions, Seoul's palaces look spectacular under fresh snowfall, and Seollal (Lunar New Year) preparations begin filling markets with traditional tteok and jeon. Jeju's southern coast stays milder for those avoiding snow.",
+        "climate": {
+          "avg_temp_c": "-6–5",
+          "rainfall_level": "low",
+          "humidity": "low"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "90–170",
+        "season_type": "high",
+        "crowd_level": "medium",
+        "key_events": [
+          "Hwacheon Sancheoneo Ice Festival (Gangwon-do, Jan–Feb) — ice fishing & snow sculptures",
+          "Korea Ski Season peak (all major resorts)",
+          "Seollal (Lunar New Year) preparations & temple visits",
+          "Seoul Lantern Festival winter edition"
+        ],
+        "travel_styles": [
+          "skiing",
+          "culture",
+          "food",
+          "adventure"
+        ],
+        "pros": [
+          "World-class ski resorts at peak conditions",
+          "Snow-covered palaces and temples photogenic",
+          "Fewer international tourists — authentic local experience",
+          "Excellent winter street food (hotteok, tteokbokki, Korean fried chicken)"
+        ],
+        "cons": [
+          "Very cold — Seoul averages -3°C, Gangwon-do can hit -15°C",
+          "Seollal week (late Jan/early Feb) major transport chaos",
+          "Outdoor sightseeing uncomfortable without proper layering"
+        ]
+      },
+      {
+        "month": "January",
+        "country": "Russia",
+        "best_cities_or_regions": [
+          "Saint Petersburg",
+          "Moscow",
+          "Lake Baikal",
+          "Murmansk"
+        ],
+        "why_visit": "January is Russia's most magical winter month — Red Square is dressed in Christmas lights, Lake Baikal begins freezing into its famous crystal-clear ice, and Murmansk on the Kola Peninsula offers the best Northern Lights viewing in Russia during polar night. St. Petersburg's frozen canals and snow-draped baroque palaces are extraordinary.",
+        "climate": {
+          "avg_temp_c": "-15–-5",
+          "rainfall_level": "low",
+          "humidity": "low"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "80–160",
+        "season_type": "shoulder",
+        "crowd_level": "low",
+        "key_events": [
+          "Russian Orthodox Christmas (Jan 7) — cathedral midnight services",
+          "Old New Year (Jan 14) — uniquely Russian celebration",
+          "Lake Baikal freezing begins (mid-Jan)",
+          "Murmansk Northern Lights peak (Nov–Feb)"
+        ],
+        "travel_styles": [
+          "culture",
+          "adventure",
+          "nature",
+          "wellness"
+        ],
+        "pros": [
+          "Hermitage Museum and Kremlin without summer crowds",
+          "Northern Lights viewing in Murmansk during polar night",
+          "Banya (steam bath) culture at its most authentic in deep winter",
+          "Lower prices than summer peak"
+        ],
+        "cons": [
+          "Extreme cold (-20°C or below in Siberia) requires specialist gear",
+          "Short daylight hours (4–6 hrs in Moscow, zero in Murmansk)",
+          "Visa and travel logistics require significant advance planning"
+        ]
+      },
+      {
+        "month": "January",
+        "country": "Austria",
+        "best_cities_or_regions": [
+          "St. Anton",
+          "Kitzbühel",
+          "Innsbruck",
+          "Salzburg"
+        ],
+        "why_visit": "January is Austria's peak ski month — St. Anton's Arlberg is arguably Europe's finest ski area, Kitzbühel's legendary Hahnenkamm World Cup downhill race draws elite crowds, and Salzburg's baroque old town dusted in snow is a genuine fairy tale. Après-ski culture in the Tyrolean Alps is unmatched anywhere in Europe.",
+        "climate": {
+          "avg_temp_c": "-5–3",
+          "rainfall_level": "medium",
+          "humidity": "medium"
+        },
+        "budget_category": "luxury",
+        "estimated_daily_cost_usd": "250–500",
+        "season_type": "high",
+        "crowd_level": "high",
+        "key_events": [
+          "Hahnenkamm World Cup Downhill Race, Kitzbühel (mid-Jan)",
+          "Vienna Philharmonic New Year Concert aftermath",
+          "Mozartwoche classical music festival, Salzburg (late Jan)",
+          "Austrian ski season peak — all lifts and pistes open"
+        ],
+        "travel_styles": [
+          "skiing",
+          "culture",
+          "food",
+          "wellness"
+        ],
+        "pros": [
+          "World-class skiing in the Arlberg and Kitzbühel regions",
+          "Hahnenkamm race a spectacular free spectator event",
+          "Salzburg snow-dusted baroque architecture stunning",
+          "Excellent schnitzel, glühwein, and Tyrolean après-ski culture"
+        ],
+        "cons": [
+          "Peak-season ski resort prices — very expensive",
+          "Kitzbühel race week fully booked 12 months ahead",
+          "Very cold — valley temperatures often below -5°C"
+        ]
+      },
+      {
+        "month": "January",
+        "country": "Portugal",
+        "best_cities_or_regions": [
+          "Lisbon",
+          "Algarve",
+          "Évora",
+          "Porto"
+        ],
+        "why_visit": "January is Portugal's most peaceful and affordable month — Lisbon's sun-warmed miradouros are explored with almost no queues, the Algarve's dramatic sea cliffs are walked in 16°C warmth while northern Europe shivers, and Porto's wine cellars in Vila Nova de Gaia offer atmospheric port tastings by firelight.",
+        "climate": {
+          "avg_temp_c": "8–16",
+          "rainfall_level": "medium",
+          "humidity": "medium"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "90–170",
+        "season_type": "low",
+        "crowd_level": "low",
+        "key_events": [
+          "Lisbon Film Festival (IndieLisboa preparations)",
+          "Algarve coastal walk season (warm, uncrowded)",
+          "Porto Carnival preparations begin",
+          "Carnaval de Loulé preparations (Algarve's biggest)"
+        ],
+        "travel_styles": [
+          "culture",
+          "food",
+          "wellness",
+          "nature"
+        ],
+        "pros": [
+          "Lowest prices of the year — 40% cheaper than summer",
+          "Virtually no queues at Jerónimos Monastery, Sintra, or Torre de Belém",
+          "Algarve mild enough for cliff walks and surf watching",
+          "Lisbon's fado bars and pastéis de nata culture at authentic best"
+        ],
+        "cons": [
+          "Rain possible — north wetter than south",
+          "Sea too cold for swimming",
+          "Some coastal restaurants and hotels operate reduced hours"
+        ]
+      },
+      {
+        "month": "January",
+        "country": "Malta",
+        "best_cities_or_regions": [
+          "Valletta",
+          "Gozo",
+          "Mdina",
+          "Blue Lagoon"
+        ],
+        "why_visit": "Malta in January is a Mediterranean secret — while the rest of Europe freezes, Valletta enjoys 16°C sunshine, allowing visits to the extraordinary Grand Master's Palace, Caravaggio's cathedral paintings, and Gozo's prehistoric temples without a single queue. Europe's smallest and most underrated capital is a cultural treasure at its most intimate.",
+        "climate": {
+          "avg_temp_c": "12–16",
+          "rainfall_level": "medium",
+          "humidity": "medium"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "100–180",
+        "season_type": "low",
+        "crowd_level": "low",
+        "key_events": [
+          "Valletta European Capital of Culture legacy events",
+          "Feast of St Paul's Shipwreck (Feb 10 — preparations begin)",
+          "Malta Fireworks Festival (Apr, but Jan prep events)",
+          "Valletta International Arts Festival programming"
+        ],
+        "travel_styles": [
+          "culture",
+          "wellness",
+          "food",
+          "nature"
+        ],
+        "pros": [
+          "Mild Mediterranean sunshine while Europe is in deep winter",
+          "Valletta uncrowded — UNESCO World Heritage capital to yourself",
+          "Caravaggio's masterpieces in St John's Co-Cathedral without summer heat",
+          "Excellent value — easily Europe's most affordable winter-sun destination"
+        ],
+        "cons": [
+          "Sea too cold for swimming (16°C)",
+          "Occasional winter rain and strong wind",
+          "Some dive operators and boat tours limited in January"
         ]
       }
     ],
@@ -2826,6 +3697,264 @@ const TRAVEL_DATA = {
           "Many shops and restaurants close for CNY holiday",
           "Prices double or triple for accommodation during peak period"
         ]
+      },
+      {
+        "month": "February",
+        "country": "South Korea",
+        "best_cities_or_regions": [
+          "Jeju Island",
+          "Seoul",
+          "Gangwon-do",
+          "Jinhae"
+        ],
+        "why_visit": "February brings the Seollal (Lunar New Year, Feb 17, 2026) with lantern-lit palaces and market fairs across Seoul, while Jeju's iconic yellow canola (yuche) flowers begin blooming — the earliest spring blossoms in Korea. Ski resorts are still running strong and winter festivals wrap up with spectacular ice sculptures.",
+        "climate": {
+          "avg_temp_c": "-4–7",
+          "rainfall_level": "low",
+          "humidity": "low"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "90–170",
+        "season_type": "high",
+        "crowd_level": "high",
+        "key_events": [
+          "Seollal / Lunar New Year (Feb 17, 2026) — palace ceremonies and folk games",
+          "Jeju Canola Flower Festival (late Feb–Mar)",
+          "Hwacheon Ice Festival finale",
+          "Taean Tulip Festival preparations"
+        ],
+        "travel_styles": [
+          "culture",
+          "nature",
+          "skiing",
+          "food"
+        ],
+        "pros": [
+          "Seollal temple ceremonies and folk village experiences unique",
+          "Jeju canola flowers beginning — earliest spring blooms in Korea",
+          "Ski resorts at peak snow with CNY festive atmosphere",
+          "Budget travelers benefit from low-season prices outside CNY"
+        ],
+        "cons": [
+          "Seollal week transport chaos — book trains and flights 2 months ahead",
+          "Many restaurants and shops close during holiday",
+          "Still very cold in Seoul and northern Korea"
+        ]
+      },
+      {
+        "month": "February",
+        "country": "Russia",
+        "best_cities_or_regions": [
+          "Lake Baikal",
+          "Olkhon Island",
+          "Irkutsk",
+          "Saint Petersburg"
+        ],
+        "why_visit": "February is the prime month to walk on frozen Lake Baikal — the world's clearest and deepest lake freezes to 1–1.5m thick, creating turquoise ice caves, pressure ridges, and the eerie sound of cracking ice. Olkhon Island's shamanic rock formations emerge from ice plains in pure Siberian solitude.",
+        "climate": {
+          "avg_temp_c": "-17–-5",
+          "rainfall_level": "low",
+          "humidity": "low"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "80–160",
+        "season_type": "high",
+        "crowd_level": "medium",
+        "key_events": [
+          "Lake Baikal frozen surface walk peak season (Feb–Mar)",
+          "Baikal Ice Festival on Olkhon Island",
+          "Maslenitsa (Pancake Week) — pre-Lent celebration across Russia",
+          "Russian Carnival (Maslenitsa, late Feb)"
+        ],
+        "travel_styles": [
+          "adventure",
+          "nature",
+          "culture",
+          "wellness"
+        ],
+        "pros": [
+          "Walking on frozen Baikal — otherworldly and unique experience",
+          "Crystal-clear blue ice caves form naturally in February",
+          "Maslenitsa folk festival with blini, bonfires and singing",
+          "Siberia in peak winter with surprisingly sunny skies"
+        ],
+        "cons": [
+          "Extreme cold (-20 to -30°C at Lake Baikal)",
+          "Limited and expensive accommodation on Olkhon Island in winter",
+          "Remote — long journey from Moscow (5-hr flight + transfer)"
+        ]
+      },
+      {
+        "month": "February",
+        "country": "Thailand",
+        "best_cities_or_regions": [
+          "Chiang Mai",
+          "Koh Phangan",
+          "Similan Islands",
+          "Pai"
+        ],
+        "why_visit": "February is peak dry season across all of Thailand — Chiang Mai Flower Festival fills the city with blooms and parades, the Similan Islands offer some of Asia's best diving at maximum clarity, and Pai's mountain valley is cool and flower-filled. Crowds are slightly lower than January without sacrificing any weather quality.",
+        "climate": {
+          "avg_temp_c": "21–34",
+          "rainfall_level": "low",
+          "humidity": "low"
+        },
+        "budget_category": "budget",
+        "estimated_daily_cost_usd": "40–80",
+        "season_type": "high",
+        "crowd_level": "high",
+        "key_events": [
+          "Chiang Mai Flower Festival (1st weekend of Feb) — parade and floral displays",
+          "Makha Bucha Day — full moon Buddhist observance",
+          "Similan Islands diving peak season",
+          "Valentine's Day on beach resorts — romantic packages"
+        ],
+        "travel_styles": [
+          "beach",
+          "nature",
+          "culture",
+          "adventure",
+          "wellness"
+        ],
+        "pros": [
+          "Chiang Mai Flower Festival one of Thailand's most colourful events",
+          "Similan Islands: world-class diving, whale sharks possible",
+          "Pai valley cool, flower-filled and relaxing — ideal slow travel",
+          "Perfect weather coast to coast with long dry days"
+        ],
+        "cons": [
+          "Similan Islands accommodation books out 3 months ahead",
+          "Chiang Mai Flower Festival weekend very crowded",
+          "High-season prices across the south"
+        ]
+      },
+      {
+        "month": "February",
+        "country": "France",
+        "best_cities_or_regions": [
+          "Nice",
+          "Chamonix",
+          "Paris",
+          "Alsace"
+        ],
+        "why_visit": "Nice Carnival (Feb 14–28, 2026) is Europe's third-largest carnival — two weeks of flower battles, illuminated floats, and Mardi Gras celebrations along the Promenade des Anglais. Chamonix's ski season is at its finest, and Paris offers world-class museums without high-season queues.",
+        "climate": {
+          "avg_temp_c": "4–13",
+          "rainfall_level": "medium",
+          "humidity": "medium"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "130–260",
+        "season_type": "high",
+        "crowd_level": "high",
+        "key_events": [
+          "Nice Carnival (Feb 14–28, 2026) — Bataille des Fleurs and illuminated floats",
+          "Chamonix skiing peak season",
+          "Paris Fashion Week (late Feb — mostly trade, but city buzz)",
+          "Bordeaux wine salon Vinexpo preparations"
+        ],
+        "travel_styles": [
+          "culture",
+          "skiing",
+          "food",
+          "nightlife"
+        ],
+        "pros": [
+          "Nice Carnival among Europe's most spectacular and free to watch on street",
+          "Chamonix powder skiing with Mont Blanc as backdrop",
+          "Paris museums uncrowded — Louvre and Musée d'Orsay peaceful",
+          "Côte d'Azur mild (13°C) while northern Europe still grey"
+        ],
+        "cons": [
+          "Nice accommodation triples during Carnival",
+          "Chamonix ski passes expensive",
+          "Paris cold and often grey in February"
+        ]
+      },
+      {
+        "month": "February",
+        "country": "Czech Republic",
+        "best_cities_or_regions": [
+          "Prague",
+          "Český Krumlov",
+          "Karlovy Vary"
+        ],
+        "why_visit": "February is Prague at its most romantic and affordable — snow-dusted Gothic spires, empty Charles Bridge at dawn, cosy wine bars in Vinohrady, and Masopust (Czech Carnival) bringing folk processions to village squares. Český Krumlov's fairy-tale castle is virtually tourists-free under a blanket of snow.",
+        "climate": {
+          "avg_temp_c": "-2–5",
+          "rainfall_level": "low",
+          "humidity": "low"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "90–170",
+        "season_type": "low",
+        "crowd_level": "low",
+        "key_events": [
+          "Masopust (Czech Carnival, pre-Lent) — folk parades and masks",
+          "Karlovy Vary winter spa season peak",
+          "Prague winter classical music season (Smetana and Dvořák halls)",
+          "Prague Beer Festival fringe events"
+        ],
+        "travel_styles": [
+          "culture",
+          "food",
+          "wellness",
+          "nightlife"
+        ],
+        "pros": [
+          "Charles Bridge and Old Town Square virtually crowd-free",
+          "Lowest hotel prices of the year — 50% below summer rates",
+          "Cosy wine bar and cellar culture at its most atmospheric",
+          "Český Krumlov in snow — one of Central Europe's most magical scenes"
+        ],
+        "cons": [
+          "Very cold (-5°C at night)",
+          "Short daylight hours (8–9 hrs)",
+          "Some outdoor attractions have reduced hours"
+        ]
+      },
+      {
+        "month": "February",
+        "country": "Spain",
+        "best_cities_or_regions": [
+          "Cádiz",
+          "Tenerife",
+          "Seville",
+          "Granada"
+        ],
+        "why_visit": "Cádiz Carnival (Feb 2026) is Spain's most authentic and raucous — satirical street choirs (chirigota) roast politicians and celebrities openly through the old town. Meanwhile Tenerife's subtropical beaches are warm at 22°C, and Granada's Alhambra is explored without summer's oppressive queues.",
+        "climate": {
+          "avg_temp_c": "10–22",
+          "rainfall_level": "low",
+          "humidity": "low"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "100–190",
+        "season_type": "shoulder",
+        "crowd_level": "medium",
+        "key_events": [
+          "Cádiz Carnival (Feb 2026) — Spain's funniest and most irreverent",
+          "Tenerife Carnival (Feb 2026) — Europe's second-largest after Rio",
+          "Granada Alhambra in off-season with pre-dawn snow on the Sierra Nevada",
+          "Seville off-season flamenco shows in intimate venues"
+        ],
+        "travel_styles": [
+          "culture",
+          "beach",
+          "nightlife",
+          "food"
+        ],
+        "pros": [
+          "Cádiz Carnival is free, street-based, and deeply local",
+          "Tenerife beach holiday at 22°C when northern Spain is cold",
+          "Alhambra tickets available without 3-month advance booking",
+          "Seville's tapas bars and flamenco caves at their authentic best"
+        ],
+        "cons": [
+          "Cádiz and Tenerife accommodation books out for Carnival",
+          "Chilly evenings in northern Spain",
+          "Some coastal towns in mainland Spain quiet and half-closed"
+        ]
       }
     ],
     "March": [
@@ -3047,9 +4176,10 @@ const TRAVEL_DATA = {
           "Alentejo",
           "Lisbon",
           "Douro Valley",
-          "Algarve"
+          "Algarve",
+          "Porto"
         ],
-        "why_visit": "March brings longer days and spring blossoms to Portugal — the Algarve coast wakes up with almond and orange blossoms, and Lisbon is explored without August's tourist crush at Belém and São Jorge Castle.",
+        "why_visit": "March brings Portugal's spring blooms to life — the Alentejo's plains turn golden with wildflowers, Lisbon's bougainvillea begins trailing castle walls in purple, and the Algarve's famous Ria Formosa Natural Park is perfect for birdwatching and coastal hiking. Prices remain low and sites uncrowded.",
         "climate": {
           "avg_temp_c": "11–18",
           "rainfall_level": "medium",
@@ -3062,7 +4192,10 @@ const TRAVEL_DATA = {
         "key_events": [
           "Semana Santa processions in Braga and Óbidos",
           "Lisbon Half Marathon (Mar)",
-          "Algarve spring almond blossom season"
+          "Algarve spring almond blossom season",
+          "Algarve wildflower and almond blossom season peak",
+          "Semana Santa processions in Braga (one of Europe's finest)",
+          "Porto spring Douro River opening cruises"
         ],
         "travel_styles": [
           "culture",
@@ -3074,12 +4207,19 @@ const TRAVEL_DATA = {
           "Low crowds at all major sights",
           "Reasonable shoulder-season prices",
           "Spring wildflowers across Alentejo and Algarve",
-          "Excellent pastéis de nata and wine trail"
+          "Excellent pastéis de nata and wine trail",
+          "Wildflower meadows in Alentejo among Europe's most beautiful in spring",
+          "Algarve warm enough for hiking and cliff walks (17°C)",
+          "Very low prices — shoulder season deals",
+          "Lisbon's miradouros in spring light with almost no queues"
         ],
         "cons": [
           "Rain still possible, especially in north",
           "Sea too cold for swimming in most areas",
-          "Some resort infrastructure still closed"
+          "Some resort infrastructure still closed",
+          "Rain still possible — especially in the north",
+          "Sea cold for swimming",
+          "Some summer-focused coastal businesses not yet open"
         ]
       },
       {
@@ -3293,6 +4433,220 @@ const TRAVEL_DATA = {
           "Wuhan cherry blossom crowds are enormous",
           "Some mountain trails still cold and slippery"
         ]
+      },
+      {
+        "month": "March",
+        "country": "South Korea",
+        "best_cities_or_regions": [
+          "Jinhae",
+          "Jeju Island",
+          "Gyeongju",
+          "Seoul"
+        ],
+        "why_visit": "Cherry blossom season begins in Korea in March — Jinhae hosts the country's most famous cherry blossom festival with 380,000 trees lining naval base streets in a pink tunnel, Jeju blooms earliest, and Seoul's Han River parks become outdoor picnic parties.",
+        "climate": {
+          "avg_temp_c": "3–13",
+          "rainfall_level": "medium",
+          "humidity": "medium"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "90–170",
+        "season_type": "high",
+        "crowd_level": "high",
+        "key_events": [
+          "Jinhae Gunhangje Cherry Blossom Festival (late Mar–early Apr)",
+          "Jeju Cherry Blossom Festival (mid-late Mar)",
+          "Gyeongju World Culture Expo",
+          "Seokchon Lake cherry blossoms, Seoul (late Mar)"
+        ],
+        "travel_styles": [
+          "nature",
+          "culture",
+          "food",
+          "wellness"
+        ],
+        "pros": [
+          "Korea's most iconic cherry blossom festival at Jinhae",
+          "Mild spring temperatures ideal for temple and palace visits",
+          "Jeju at its most flower-filled — canola + cherry blossoms simultaneously",
+          "Prices lower than April peak"
+        ],
+        "cons": [
+          "Yellow dust (hwangsa) from Gobi Desert affects air quality — bring a mask",
+          "Jinhae festival extremely crowded — accommodation books out months ahead",
+          "Unpredictable spring weather — warm one day, cold the next"
+        ]
+      },
+      {
+        "month": "March",
+        "country": "Russia",
+        "best_cities_or_regions": [
+          "Lake Baikal",
+          "Olkhon Island",
+          "Irkutsk",
+          "Moscow"
+        ],
+        "why_visit": "March is the last chance to walk on frozen Lake Baikal's ice before spring thaw — the ice is thickest but already cracking into dramatic pressure ridges and fissures. In Moscow and St. Petersburg, Maslenitsa (Pancake Week) brings outdoor folk festivals and the first hint of spring energy.",
+        "climate": {
+          "avg_temp_c": "-10–2",
+          "rainfall_level": "low",
+          "humidity": "low"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "80–160",
+        "season_type": "shoulder",
+        "crowd_level": "low",
+        "key_events": [
+          "Maslenitsa Pancake Festival (late Feb/early Mar)",
+          "Last ice-walking season on Lake Baikal (late Mar deadline)",
+          "International Women's Day (Mar 8) — major national celebration",
+          "Moscow spring cultural season begins"
+        ],
+        "travel_styles": [
+          "adventure",
+          "culture",
+          "nature",
+          "food"
+        ],
+        "pros": [
+          "Last window for Baikal ice walking — dramatic thaw cracks and ridges",
+          "International Women's Day celebrated with flowers and feasts citywide",
+          "Shoulder season pricing across Moscow and St. Petersburg",
+          "Hermitage and Tretyakov galleries uncrowded"
+        ],
+        "cons": [
+          "Baikal ice unpredictable in late March — guided tours essential",
+          "Spring thaw makes city streets muddy ('Rasputitsa' mud season begins)",
+          "Still cold — Moscow averages 0°C"
+        ]
+      },
+      {
+        "month": "March",
+        "country": "Thailand",
+        "best_cities_or_regions": [
+          "Koh Tao",
+          "Kanchanaburi",
+          "Sukhothai",
+          "Phang Nga Bay"
+        ],
+        "why_visit": "March is Thailand's hot season opener — Koh Tao's shallow turquoise bays are still crystal clear for diving, Kanchanaburi's Death Railway Bridge and jungle waterfalls are accessible in dry conditions, and Sukhothai's UNESCO ruins are explored at sunrise before midday heat. Gulf coast islands transition to off-season prices.",
+        "climate": {
+          "avg_temp_c": "24–36",
+          "rainfall_level": "low",
+          "humidity": "medium"
+        },
+        "budget_category": "budget",
+        "estimated_daily_cost_usd": "35–75",
+        "season_type": "shoulder",
+        "crowd_level": "medium",
+        "key_events": [
+          "Koh Tao dive season (excellent visibility, whale sharks possible)",
+          "Erawan Falls and Kanchanaburi dry-season hiking",
+          "Poi Sang Long Festival, Mae Hong Son (Mar–Apr) — young novice monks",
+          "Bangkok International Motor Show (late Mar)"
+        ],
+        "travel_styles": [
+          "adventure",
+          "culture",
+          "beach",
+          "nature"
+        ],
+        "pros": [
+          "Koh Tao diving excellent — calm seas and great visibility",
+          "Crowds noticeably lower than Nov–Feb peak season",
+          "Prices drop 20–30% from high-season rates",
+          "Sukhothai and historic sites without tourist pressure"
+        ],
+        "cons": [
+          "Getting hot — Bangkok reaches 35°C+ during the day",
+          "Air quality worsens in the north (burning season Mar–Apr)",
+          "Chiang Mai haze can be severe — visibility and health concerns"
+        ]
+      },
+      {
+        "month": "March",
+        "country": "Hungary",
+        "best_cities_or_regions": [
+          "Budapest",
+          "Eger",
+          "Lake Balaton"
+        ],
+        "why_visit": "March sees Budapest emerge from winter — the Danube is high and dramatic, thermal bath culture is at its coziest before summer crowds, the Hungarian State Opera's spring season is in full swing, and Eger's wine cellars in the Valley of Beautiful Women are blissfully uncrowded.",
+        "climate": {
+          "avg_temp_c": "3–13",
+          "rainfall_level": "medium",
+          "humidity": "medium"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "80–150",
+        "season_type": "shoulder",
+        "crowd_level": "low",
+        "key_events": [
+          "Budapest Spring Festival (Mar–Apr) — classical music and opera",
+          "Hungarian National Day (Mar 15) — parades on Chain Bridge",
+          "Eger wine cellar tours reopening season",
+          "Széchenyi Baths spring bathing culture"
+        ],
+        "travel_styles": [
+          "culture",
+          "food",
+          "wellness",
+          "nightlife"
+        ],
+        "pros": [
+          "Thermal baths at their most atmospheric in late-winter cool",
+          "Budapest Spring Festival world-class classical programming",
+          "National Day parade on Chain Bridge — patriotic and spectacular",
+          "Extremely affordable for a European capital"
+        ],
+        "cons": [
+          "Cold and sometimes wet — unpredictable spring weather",
+          "Short days, though improving",
+          "Lake Balaton still closed for the season"
+        ]
+      },
+      {
+        "month": "March",
+        "country": "Greece",
+        "best_cities_or_regions": [
+          "Athens",
+          "Delphi",
+          "Meteora",
+          "Thessaloniki"
+        ],
+        "why_visit": "March is the finest month for mainland Greece and ancient sites — mild temperatures perfect for exploring the Acropolis, Delphi's oracle sanctuary, and Meteora's sky monasteries without summer's 38°C heat and crowds. Greek Independence Day (Mar 25) brings military parades through Athens and Thessaloniki.",
+        "climate": {
+          "avg_temp_c": "10–18",
+          "rainfall_level": "medium",
+          "humidity": "medium"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "90–170",
+        "season_type": "shoulder",
+        "crowd_level": "low",
+        "key_events": [
+          "Greek Independence Day (Mar 25) — military parade in Athens",
+          "Apokries (Greek Carnival) — parades in Patras and Athens",
+          "Meteora monasteries in morning mist — peak atmosphere",
+          "Athens Epidaurus Festival preparations begin"
+        ],
+        "travel_styles": [
+          "culture",
+          "nature",
+          "food",
+          "adventure"
+        ],
+        "pros": [
+          "Acropolis and Ancient Agora without summer crowds",
+          "Meteora monasteries in cloud and mist — most cinematic conditions",
+          "Greek Independence Day parade in Athens — free and atmospheric",
+          "30–40% cheaper than June–August"
+        ],
+        "cons": [
+          "Sea still cold for swimming on mainland coast",
+          "Islands limited — most ferries not yet on full schedule",
+          "Occasional rain in northern Greece"
+        ]
       }
     ],
     "April": [
@@ -3346,9 +4700,11 @@ const TRAVEL_DATA = {
           "Keukenhof/Lisse",
           "Amsterdam",
           "Rotterdam",
-          "The Hague"
+          "The Hague",
+          "Keukenhof",
+          "Delft"
         ],
-        "why_visit": "April is peak tulip season at Keukenhof Gardens and the bulb fields of Lisse, culminating in the nationwide orange-clad street party of King's Day (Koningsdag) on April 27 with free markets on every canal.",
+        "why_visit": "April is the Netherlands at its most iconic — Keukenhof's 7 million tulips blaze across 32 hectares in peak bloom, and King's Day (Koningsdag, Apr 27) turns every canal, park and street in the country into an enormous orange street party with flea markets, live music, and boat processions.",
         "climate": {
           "avg_temp_c": "5–13",
           "rainfall_level": "medium",
@@ -3362,7 +4718,11 @@ const TRAVEL_DATA = {
           "Keukenhof Gardens open season",
           "Koningsdag (Apr 27)",
           "Bloemencorso Bollenstreek flower parade (late April)",
-          "Delft Spring Art Weekend"
+          "Delft Spring Art Weekend",
+          "Keukenhof Gardens open (late Mar–mid-May, peak Apr)",
+          "Koningsdag / King's Day (Apr 27) — nationwide street party",
+          "Bloemencorso Bollenstreek flower parade (late Apr)",
+          "World Press Photo Exhibition, Amsterdam (Apr)"
         ],
         "travel_styles": [
           "culture",
@@ -3374,12 +4734,19 @@ const TRAVEL_DATA = {
           "Iconic tulip fields in full bloom",
           "Vibrant King's Day celebration nationwide",
           "Compact, bike-friendly cities",
-          "Excellent museums (Rijksmuseum, Van Gogh)"
+          "Excellent museums (Rijksmuseum, Van Gogh)",
+          "Tulip fields and Keukenhof — Europe's most spectacular spring display",
+          "King's Day: one of the world's most joyful national day celebrations",
+          "Amsterdam's canals and cycling culture at spring best",
+          "Excellent Dutch cheese, herring, and craft beer scene"
         ],
         "cons": [
           "Very crowded at Keukenhof and Amsterdam",
           "Unpredictable showers and cool temps",
-          "Accommodation prices spike around Koningsdag"
+          "Accommodation prices spike around Koningsdag",
+          "Keukenhof very crowded — book timed entry in advance",
+          "Amsterdam accommodation spikes around King's Day",
+          "Unpredictable showers — bring a good rain jacket"
         ]
       },
       {
@@ -3389,9 +4756,10 @@ const TRAVEL_DATA = {
           "Chiang Mai",
           "Ayutthaya",
           "Bangkok",
-          "Pai"
+          "Pai",
+          "Koh Samui"
         ],
-        "why_visit": "Songkran (Thai New Year, Apr 13–15) is the world's biggest water festival — Chiang Mai's moat road becomes the most epic multi-day water fight on earth. Despite the heat, this cultural experience is unmissable.",
+        "why_visit": "Songkran (Apr 13–15) is the world's biggest water festival — Chiang Mai's moat road becomes an all-day water battle that goes on for five days. Bangkok's Khao San Road and Silom transform into giant street parties. Koh Samui on the Gulf coast stays mostly dry while the Andaman side begins receiving rain.",
         "climate": {
           "avg_temp_c": "28–36",
           "rainfall_level": "low",
@@ -3404,7 +4772,11 @@ const TRAVEL_DATA = {
         "key_events": [
           "Songkran (Apr 13–15)",
           "Pattaya Songkran festival",
-          "Thai New Year temple ceremonies"
+          "Thai New Year temple ceremonies",
+          "Songkran (Thai New Year, Apr 13–15) — nationwide water festival",
+          "Chiang Mai Songkran (Apr 13–18) — Thailand's most epic",
+          "Bangkok Grand Palace Songkran ceremony",
+          "Ayutthaya Songkran with ancient temple backdrop"
         ],
         "travel_styles": [
           "culture",
@@ -3416,12 +4788,19 @@ const TRAVEL_DATA = {
           "Iconic Songkran water festival experience",
           "Great value for money year-round",
           "Fascinating Buddhist New Year temple rituals",
-          "Excellent Northern Thailand cuisine"
+          "Excellent Northern Thailand cuisine",
+          "Songkran is one of Asia's unmissable festival experiences",
+          "Chiang Mai's water festival lasts 5 days — non-stop street celebration",
+          "Koh Samui Gulf coast stays dry while Andaman quiets down",
+          "Great value on budget accommodation outside festival dates"
         ],
         "cons": [
           "Very hot (35°C+) outside water fights",
           "Road travel dangerous around Songkran",
-          "Many businesses close during holiday"
+          "Many businesses close during holiday",
+          "Extremely hot (38°C+) outside the water-fight zones",
+          "Road travel dangerous during Songkran — 'Seven Dangerous Days'",
+          "Chiang Mai air quality can still be poor early April"
         ]
       },
       {
@@ -3642,9 +5021,10 @@ const TRAVEL_DATA = {
           "Seville",
           "Córdoba",
           "Barcelona",
-          "San Sebastián"
+          "San Sebastián",
+          "Granada"
         ],
-        "why_visit": "April is Spain's most magical month — Semana Santa in Seville features the world's most intense Holy Week processions, followed immediately by the Feria de Abril (spring fair) with flamenco, horses, and fino sherry.",
+        "why_visit": "April is Spain's most theatrical month — Seville's Semana Santa Holy Week delivers the world's most intense religious processions with 60+ brotherhoods carrying giant floats through medieval streets, followed immediately by the Feria de Abril flamenco fair. Córdoba's Patio Festival and Barcelona's Sant Jordi (Apr 23) add further unmissable events.",
         "climate": {
           "avg_temp_c": "14–23",
           "rainfall_level": "medium",
@@ -3657,7 +5037,10 @@ const TRAVEL_DATA = {
         "key_events": [
           "Semana Santa Seville (week before Easter)",
           "Feria de Abril, Seville (2 weeks after Easter)",
-          "Córdoba Patio Festival (May, books in April)"
+          "Córdoba Patio Festival (May, books in April)",
+          "Semana Santa Seville (Holy Week, week before Easter)",
+          "Córdoba Patio Festival (May, but April buildup and ticket booking)",
+          "Sant Jordi — Catalan Valentine's Day (Apr 23) — books and roses"
         ],
         "travel_styles": [
           "culture",
@@ -3669,12 +5052,19 @@ const TRAVEL_DATA = {
           "Semana Santa is one of the world's great religious spectacles",
           "Feria de Abril is a week-long flamenco party",
           "Warm spring weather across Andalusia",
-          "Excellent tapas and sherry culture"
+          "Excellent tapas and sherry culture",
+          "Semana Santa Seville is one of the world's great cultural spectacles — free to watch",
+          "Feria de Abril: a week of flamenco, horses, and sherry from morning to 6am",
+          "Barcelona's Sant Jordi book and rose tradition charming and free",
+          "Ideal spring weather across Andalusia (22°C, sunny)"
         ],
         "cons": [
           "Seville hotels triple in price during Semana Santa",
           "Procession routes cause major congestion",
-          "Booking essential 6+ months ahead"
+          "Booking essential 6+ months ahead",
+          "Seville Holy Week hotels book out and triple in price — book 6+ months ahead",
+          "Feria de Abril is largely private casetas — need an invitation for the best tents",
+          "Easter travel surge across Spain"
         ]
       },
       {
@@ -3761,6 +5151,135 @@ const TRAVEL_DATA = {
           "Jiuzhaigou permits can sell out — book 2–3 weeks ahead",
           "Southern China still rainy and humid"
         ]
+      },
+      {
+        "month": "April",
+        "country": "South Korea",
+        "best_cities_or_regions": [
+          "Seoul",
+          "Gyeongju",
+          "Jirisan NP",
+          "Nami Island"
+        ],
+        "why_visit": "April is South Korea's finest month — cherry blossoms peak in Seoul's Yeouido and Gyeongju's ancient Silla tombs, forsythia and azaleas carpet mountainsides, and Gyeongju's Buddhist temples are surrounded by pink canopy. The entire country transforms into a spring garden.",
+        "climate": {
+          "avg_temp_c": "8–18",
+          "rainfall_level": "medium",
+          "humidity": "medium"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "100–190",
+        "season_type": "high",
+        "crowd_level": "high",
+        "key_events": [
+          "Seoul Yeouido Cherry Blossom Festival (early Apr)",
+          "Gyeongju Cherry Blossom along Bomun Lake",
+          "Lotus Lantern Festival preparations (Buddha's Birthday — May, but Apr events begin)",
+          "Jinhae Gunhangje Festival end / Gyeongju Cultural Festival"
+        ],
+        "travel_styles": [
+          "nature",
+          "culture",
+          "food",
+          "wellness"
+        ],
+        "pros": [
+          "Cherry blossoms at peak — arguably Asia's most beautiful spring display",
+          "Gyeongju combines ancient Silla history with spectacular blossom scenery",
+          "Mild, perfect outdoor temperatures (12–18°C)",
+          "All national parks fully open and at their most photogenic"
+        ],
+        "cons": [
+          "April is Korea's busiest tourist month — all popular sites crowded",
+          "Hotels in Seoul and Gyeongju at yearly price peak",
+          "Yellow dust (hwangsa) still possible early April"
+        ]
+      },
+      {
+        "month": "April",
+        "country": "Russia",
+        "best_cities_or_regions": [
+          "Saint Petersburg",
+          "Moscow",
+          "Suzdal",
+          "Kazan"
+        ],
+        "why_visit": "April brings Russia's spring thaw — St. Petersburg's Neva River opens and the first Neva cruise boats launch, Moscow's parks and squares burst with early flowers, and Suzdal's golden-domed monasteries reflect in flowing river water. The Golden Ring towns are gloriously uncrowded.",
+        "climate": {
+          "avg_temp_c": "2–12",
+          "rainfall_level": "medium",
+          "humidity": "medium"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "80–160",
+        "season_type": "shoulder",
+        "crowd_level": "low",
+        "key_events": [
+          "Neva River ice breaks up — first cruise boats launch St. Petersburg",
+          "Easter (Orthodox, Apr 2026) — spectacular midnight cathedral services",
+          "May Day approaches — spring festival preparations in Moscow",
+          "Kazan spring cultural season opens"
+        ],
+        "travel_styles": [
+          "culture",
+          "nature",
+          "wellness",
+          "food"
+        ],
+        "pros": [
+          "Orthodox Easter celebrations among Europe's most dramatic",
+          "Golden Ring (Suzdal, Sergiev Posad, Vladimir) at spring best — minimal crowds",
+          "St. Petersburg canals opening — first canal boat rides of the season",
+          "Lower prices than June–August summer peak"
+        ],
+        "cons": [
+          "Mud season ('Rasputitsa') — unpaved rural roads difficult",
+          "Still cold, especially in northern Russia",
+          "Daylight improving but still variable weather"
+        ]
+      },
+      {
+        "month": "April",
+        "country": "Italy",
+        "best_cities_or_regions": [
+          "Amalfi Coast",
+          "Rome",
+          "Sicily",
+          "Puglia"
+        ],
+        "why_visit": "April is Italy at its spring finest — the Amalfi Coast is blooming with lemon blossom and bougainvillea without August's gridlock, Rome celebrates Easter with the Pope's Urbi et Orbi blessing from St. Peter's, and Sicily's Valley of the Temples is carpeted in wildflowers that bloom for just a few weeks each year.",
+        "climate": {
+          "avg_temp_c": "12–20",
+          "rainfall_level": "medium",
+          "humidity": "medium"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "130–250",
+        "season_type": "high",
+        "crowd_level": "high",
+        "key_events": [
+          "Easter (Pasqua) and Pope's Urbi et Orbi blessing, Vatican (Apr)",
+          "Valley of the Temples wildflower bloom, Sicily (Mar–Apr)",
+          "Amalfi Coast spring lemon blossom season",
+          "Vinitaly wine fair, Verona (Apr)"
+        ],
+        "travel_styles": [
+          "culture",
+          "food",
+          "beach",
+          "nature"
+        ],
+        "pros": [
+          "Valley of the Temples wildflowers — ancient Greek ruins in an almond blossom sea",
+          "Amalfi Coast before summer gridlock — spectacular spring colours",
+          "Pope's Easter blessing from St. Peter's — powerful and free to attend",
+          "Puglia's trulli, olive groves, and burrata at their most peaceful"
+        ],
+        "cons": [
+          "Easter week expensive and crowded throughout Italy",
+          "Rome accommodation very expensive at Easter",
+          "Cinque Terre trails still muddy from winter rains"
+        ]
       }
     ],
     "May": [
@@ -3771,9 +5290,11 @@ const TRAVEL_DATA = {
           "Rome",
           "Amalfi Coast",
           "Tuscany",
-          "Puglia"
+          "Puglia",
+          "Lake Como",
+          "Cinque Terre"
         ],
-        "why_visit": "May is Italy's golden month — warm enough for swimming on the Amalfi Coast, wildflowers blanketing Tuscany, and pre-June prices that make shoulder-season travel dramatically more affordable than summer.",
+        "why_visit": "May is arguably Italy's finest month — Tuscany's countryside blazes with poppies and cypress-lined roads, Lake Como's village gardens are in full bloom, and the Amalfi Coast is warm enough to swim without August's chaos. Giro d'Italia brings pelotons of cyclists through some of the world's most beautiful landscapes.",
         "climate": {
           "avg_temp_c": "14–23",
           "rainfall_level": "low",
@@ -3787,24 +5308,36 @@ const TRAVEL_DATA = {
           "Giro d'Italia (May)",
           "Italian Open tennis Rome",
           "Infiorata flower-carpet festivals (Genzano, Noto)",
-          "Maggio Musicale Fiorentino"
+          "Maggio Musicale Fiorentino",
+          "Giro d'Italia cycling race (May) — free roadside viewing across the country",
+          "Tuscany poppy season (mid-late May)",
+          "Infiorata flower-carpet festivals (Genzano, Noto, Spello, late May)",
+          "Italian Open tennis, Rome (May)"
         ],
         "travel_styles": [
           "culture",
           "food",
           "beach",
-          "wellness"
+          "wellness",
+          "nature"
         ],
         "pros": [
           "Ideal weather, warm seas without August heat",
           "Lower prices than June–August",
           "Lush green countryside and blooming landscapes",
-          "Outdoor dining in perfect conditions"
+          "Outdoor dining in perfect conditions",
+          "Tuscany in late May with poppies — most photogenic month of the year",
+          "Amalfi Coast swimmable (22°C) without August's crowds and prices",
+          "Giro d'Italia free roadside viewing across gorgeous landscapes",
+          "Lake Como flower season — villas and gardens at their finest"
         ],
         "cons": [
           "Rome and Florence already very busy",
           "Sea still cool in early May",
-          "Popular coastal villages fill quickly on weekends"
+          "Popular coastal villages fill quickly on weekends",
+          "Getting busy at key sites (Cinque Terre, Amalfi Coast)",
+          "Prices rising toward summer peak",
+          "Popular restaurants need advance booking"
         ]
       },
       {
@@ -3986,7 +5519,7 @@ const TRAVEL_DATA = {
           "Plitvice Lakes",
           "Rovinj"
         ],
-        "why_visit": "May hits Croatia's sweet spot — warm enough to swim in the Adriatic, Plitvice Lakes at their most vivid, and Dubrovnik fully alive but 30% fewer tourists than July's peak invasion.",
+        "why_visit": "May is Croatia's sweet spot — Plitvice Lakes' waterfalls are thundering at full post-spring flow with vivid turquoise pools, Rovinj's Venetian old town is explored without July's crowds, and Hvar's lavender begins blooming across fragrant hillsides while the Adriatic is just warm enough to swim.",
         "climate": {
           "avg_temp_c": "14–24",
           "rainfall_level": "medium",
@@ -3999,24 +5532,36 @@ const TRAVEL_DATA = {
         "key_events": [
           "Dubrovnik Summer Festival preparations",
           "Hvar music and sailing events begin",
-          "Rowing at Omiš Regatta"
+          "Rowing at Omiš Regatta",
+          "Plitvice Lakes waterfalls at maximum flow (spring melt peak)",
+          "Rovinj Arts Festival (spring edition)",
+          "Hvar lavender blooming season begins",
+          "Ultra Europe Music Festival preparations"
         ],
         "travel_styles": [
           "beach",
           "culture",
           "food",
-          "adventure"
+          "adventure",
+          "nature"
         ],
         "pros": [
           "Adriatic just warm enough to swim",
           "30% less crowded than summer",
           "Lower prices than July/August",
-          "Plitvice waterfalls at their fullest from spring rains"
+          "Plitvice waterfalls at their fullest from spring rains",
+          "Plitvice Lakes most dramatic — 100m waterfalls at full power",
+          "Adriatic warm enough to swim without August's wall-to-wall crowds",
+          "30% cheaper than July/August peak",
+          "Dubrovnik walls and Old Town walkable without cruise-ship sardine effect"
         ],
         "cons": [
           "Some remote islands still limited services",
           "Dubrovnik still busy on weekends",
-          "Peak prices in 2nd half of May increasing"
+          "Peak prices in 2nd half of May increasing",
+          "Plitvice Lakes still busy on weekends — buy timed tickets in advance",
+          "Some island services still on limited schedule early May",
+          "Late afternoon rain showers possible"
         ]
       },
       {
@@ -4228,6 +5773,178 @@ const TRAVEL_DATA = {
           "Labour Day Golden Week (May 1–5) extremely crowded at top sites",
           "Humid and occasionally rainy across the south",
           "Zhangjiajie glass bridge and scenic areas crowded all month"
+        ]
+      },
+      {
+        "month": "May",
+        "country": "South Korea",
+        "best_cities_or_regions": [
+          "Seoul",
+          "Andong",
+          "Seoraksan NP",
+          "Jeonju"
+        ],
+        "why_visit": "May is Korea's most festive spring month — the Lotus Lantern Festival in Seoul (Buddha's Birthday) lights Jogyesa Temple in cascading paper lanterns and sends a grand parade through Insadong. Seoraksan National Park is lush green and perfect for hiking, and Jeonju's hanok village is alive with spring crafts and bibimbap culture.",
+        "climate": {
+          "avg_temp_c": "13–23",
+          "rainfall_level": "medium",
+          "humidity": "medium"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "90–170",
+        "season_type": "high",
+        "crowd_level": "high",
+        "key_events": [
+          "Lotus Lantern Festival / Yeon Deung Hoe (Buddha's Birthday, May 2026)",
+          "Jeonju International Film Festival (late Apr/May)",
+          "Children's Day & Parents' Day (May 5 & 8) — family travel peak",
+          "Damyang Bamboo Festival (May)"
+        ],
+        "travel_styles": [
+          "culture",
+          "nature",
+          "food",
+          "adventure"
+        ],
+        "pros": [
+          "Lotus Lantern Festival Grand Parade in Seoul world-class cultural event",
+          "Perfect hiking weather in national parks — green, warm, no monsoon yet",
+          "Jeonju hanok village and bibimbap culture at its most vibrant",
+          "Long spring daylight for full sightseeing days"
+        ],
+        "cons": [
+          "Children's Day (May 5) causes domestic travel surge",
+          "Buddha's Birthday weekend fully booked in Seoul",
+          "Pre-monsoon humidity starting to build"
+        ]
+      },
+      {
+        "month": "May",
+        "country": "Russia",
+        "best_cities_or_regions": [
+          "Saint Petersburg",
+          "Moscow",
+          "Sochi",
+          "Altai Mountains"
+        ],
+        "why_visit": "May is Russia's most celebratory month — Victory Day (May 9) brings enormous parades through Red Square and along St. Petersburg's Nevsky Prospect, and St. Petersburg approaches its famous White Nights. Sochi's Black Sea resort season opens with warm temperatures and blooming subtropical gardens.",
+        "climate": {
+          "avg_temp_c": "8–18",
+          "rainfall_level": "medium",
+          "humidity": "medium"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "90–170",
+        "season_type": "shoulder",
+        "crowd_level": "medium",
+        "key_events": [
+          "Victory Day (May 9) — WWII commemoration parade on Red Square",
+          "White Nights beginning in St. Petersburg (late May)",
+          "Sochi beach season opening",
+          "Altai Mountains spring trekking season"
+        ],
+        "travel_styles": [
+          "culture",
+          "adventure",
+          "beach",
+          "nature"
+        ],
+        "pros": [
+          "Victory Day parade on Red Square — one of Russia's greatest spectacles",
+          "White Nights approaching — extended daylight in St. Petersburg",
+          "Sochi beach season open — Black Sea warm and uncrowded",
+          "Altai Mountains accessible with spring wildflowers"
+        ],
+        "cons": [
+          "Victory Day week causes major hotel and transport congestion in Moscow",
+          "St. Petersburg prices rising toward summer peak",
+          "Mud season tapering but still present in rural areas"
+        ]
+      },
+      {
+        "month": "May",
+        "country": "Thailand",
+        "best_cities_or_regions": [
+          "Koh Samui",
+          "Koh Phangan",
+          "Pai",
+          "Bangkok"
+        ],
+        "why_visit": "May is Thailand's shoulder season — Gulf of Thailand islands like Koh Samui and Koh Phangan are still dry and uncrowded, prices drop 30–40% across the country, and the Rocket Festival in the northeast (Bun Bang Fai) sees bamboo rockets launched into the sky to bring monsoon rains. Bangkok's rooftops and markets are at their best value.",
+        "climate": {
+          "avg_temp_c": "26–34",
+          "rainfall_level": "medium",
+          "humidity": "high"
+        },
+        "budget_category": "budget",
+        "estimated_daily_cost_usd": "35–70",
+        "season_type": "shoulder",
+        "crowd_level": "low",
+        "key_events": [
+          "Visakha Bucha Day (Buddha's Birthday, May 2026) — temple processions",
+          "Bun Bang Fai Rocket Festival (Ubon Ratchathani, May)",
+          "Koh Samui Gulf season still dry",
+          "Royal Ploughing Ceremony, Bangkok"
+        ],
+        "travel_styles": [
+          "beach",
+          "culture",
+          "food",
+          "wellness"
+        ],
+        "pros": [
+          "Prices drop 30–40% from high season — best value window",
+          "Koh Samui and Gulf islands still sunny while Andaman quietens",
+          "Rocket Festival in the northeast unique and unmissable",
+          "Bangkok temples and markets without heavy tourist pressure"
+        ],
+        "cons": [
+          "Andaman coast (Phuket, Krabi) entering rainy season — seas rough",
+          "Hot and increasingly humid across the country",
+          "Some beach tours and dive sites reducing operations on Andaman side"
+        ]
+      },
+      {
+        "month": "May",
+        "country": "England",
+        "best_cities_or_regions": [
+          "London",
+          "Cotswolds",
+          "Bath",
+          "Cornwall"
+        ],
+        "why_visit": "May is Britain's best shoulder month — Chelsea Flower Show turns London into a global garden showcase, the Cotswolds' wildflower meadows and honey-stone villages are lush and green, and Cornwall's coastal paths above turquoise coves are at their most dramatic before summer crowds arrive.",
+        "climate": {
+          "avg_temp_c": "10–18",
+          "rainfall_level": "medium",
+          "humidity": "medium"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "150–280",
+        "season_type": "shoulder",
+        "crowd_level": "medium",
+        "key_events": [
+          "Chelsea Flower Show, London (late May) — world's most prestigious garden event",
+          "Brighton Festival (May) — arts and culture",
+          "Hay Festival of Literature, Wales (late May)",
+          "Bank Holiday weekends fill Cotswolds and National Parks"
+        ],
+        "travel_styles": [
+          "culture",
+          "nature",
+          "food",
+          "wellness"
+        ],
+        "pros": [
+          "Chelsea Flower Show the world's greatest horticultural spectacle",
+          "Cotswolds in May — bluebells, lambs, and lush hedgerows",
+          "Cornwall's coastal paths in spring wildflowers — stunning",
+          "Long May daylight (up to 16 hrs in Scotland)"
+        ],
+        "cons": [
+          "Chelsea Flower Show tickets expensive and timed",
+          "Bank Holiday weekends bring domestic travel surges",
+          "Unpredictable weather — warm one day, rainy the next"
         ]
       }
     ],
@@ -4619,9 +6336,11 @@ const TRAVEL_DATA = {
           "Athens",
           "Crete",
           "Rhodes",
-          "Zakynthos"
+          "Zakynthos",
+          "Santorini",
+          "Naxos"
         ],
-        "why_visit": "June offers the best balance of Greek summer — hot and sunny days, a warm Aegean Sea, and 30% fewer visitors than July/August peak, with full ferry schedules for island hopping and the Athens Epidaurus Festival starting.",
+        "why_visit": "June is the ideal month for the Greek islands — reliably hot and sunny without July/August's absolute peak prices, schools still in session in Europe so beaches are uncrowded, ferries fully operational, and the Aegean at 25°C. Athens Epidaurus Festival opens with ancient drama performed outdoors under stars.",
         "climate": {
           "avg_temp_c": "20–30",
           "rainfall_level": "low",
@@ -4634,25 +6353,37 @@ const TRAVEL_DATA = {
         "key_events": [
           "Athens Epidaurus Festival opens (Jun–Aug)",
           "Zakynthos loggerhead turtle nesting season",
-          "Rockwave Festival (Athens, late Jun)"
+          "Rockwave Festival (Athens, late Jun)",
+          "Athens Epidaurus Festival opens (Jun–Aug) — ancient drama under stars",
+          "Aegean sea reaches 25°C — swimming at peak",
+          "Crete Renaissance Festival, Rethymno (Jul–Aug prep, Jun events)",
+          "Meltemi winds season begins — ideal for sailing"
         ],
         "travel_styles": [
           "beach",
           "culture",
           "food",
           "nightlife",
-          "wildlife"
+          "wildlife",
+          "wellness"
         ],
         "pros": [
           "Hot sunny beach weather with warm seas",
           "Full island ferry schedules",
           "Ancient sites performed live at Epidaurus",
-          "30% less crowded than August"
+          "30% less crowded than August",
+          "Peak sun and warm sea without July/August absolute peak prices",
+          "Epidaurus ancient theatre performances extraordinary",
+          "Naxos best for beaches without Santorini's crowds and prices",
+          "Sailing season at peak — Meltemi winds excellent for charterers"
         ],
         "cons": [
           "Santorini still very busy",
           "Meltemi winds can disrupt island-hopping",
-          "Top accommodation nearly fully booked"
+          "Top accommodation nearly fully booked",
+          "Santorini already approaching very crowded and expensive",
+          "Accommodation rising fast toward summer peak",
+          "Athenian heat uncomfortable for extensive city walking (27°C+)"
         ]
       },
       {
@@ -4696,6 +6427,221 @@ const TRAVEL_DATA = {
           "Tibet requires a special Tibet Travel Permit (arrange 2–4 weeks ahead)",
           "Altitude sickness risk — Lhasa sits at 3,650m",
           "Expensive guided tours mandatory throughout Tibet"
+        ]
+      },
+      {
+        "month": "June",
+        "country": "South Korea",
+        "best_cities_or_regions": [
+          "Busan",
+          "Tongyeong",
+          "Jeju Island",
+          "Jeonju"
+        ],
+        "why_visit": "June is the shoulder season before monsoon — Busan's beaches and seafood markets are warming up without summer crowds, Tongyeong's scenic island archipelago is at its most vivid green, and Jeju's waterfalls and hiking trails are lush. Crowds have thinned dramatically after spring peak.",
+        "climate": {
+          "avg_temp_c": "18–27",
+          "rainfall_level": "medium",
+          "humidity": "high"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "85–160",
+        "season_type": "shoulder",
+        "crowd_level": "low",
+        "key_events": [
+          "Busan summer beach season begins",
+          "Muju Firefly Festival (Gangwon-do, Jun)",
+          "Gyeongbokgung Palace night viewing (Jun–Jul session)",
+          "Tongyeong International Music Festival"
+        ],
+        "travel_styles": [
+          "beach",
+          "food",
+          "culture",
+          "nature"
+        ],
+        "pros": [
+          "Busan beaches open without August crowds",
+          "Prices significantly lower than peak spring or summer",
+          "Gyeongbokgung night viewing — palace dramatically lit",
+          "Green, lush Korean countryside at its most beautiful"
+        ],
+        "cons": [
+          "Monsoon (Jangma) can begin late June — prepare for heavy showers",
+          "Humidity rising sharply — uncomfortable in cities",
+          "Jeju can receive early monsoon rains"
+        ]
+      },
+      {
+        "month": "June",
+        "country": "Russia",
+        "best_cities_or_regions": [
+          "Saint Petersburg",
+          "Moscow",
+          "Kizhi Island",
+          "Peterhof"
+        ],
+        "why_visit": "June is Russia's most magical month for St. Petersburg — White Nights (mid-Jun solstice) bring near-24-hour daylight, the Scarlet Sails ceremony lights up the Neva River in spectacular red, and Peterhof's gilded fountains and gardens are fully open. Moscow's parks and canal rides are at their summery best.",
+        "climate": {
+          "avg_temp_c": "14–24",
+          "rainfall_level": "medium",
+          "humidity": "medium"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "100–200",
+        "season_type": "high",
+        "crowd_level": "high",
+        "key_events": [
+          "Scarlet Sails (Алые паруса) — St. Petersburg White Nights graduation ceremony",
+          "White Nights Festival (June–July) — opera, ballet, concerts",
+          "St. Petersburg City Day (May 27)",
+          "Kizhi Island UNESCO wooden church season (Jun–Sep)"
+        ],
+        "travel_styles": [
+          "culture",
+          "nightlife",
+          "nature",
+          "wellness"
+        ],
+        "pros": [
+          "White Nights — St. Petersburg at midnight as bright as noon, extraordinary",
+          "Scarlet Sails event one of the world's most spectacular celebrations",
+          "Peterhof fountains and Lower Park at full glory",
+          "Kizhi Island wooden architecture accessible by hydrofoil"
+        ],
+        "cons": [
+          "St. Petersburg is at its most crowded and expensive",
+          "Accommodation books out 3–4 months ahead for Scarlet Sails weekend",
+          "Mosquitoes significant near rivers and forests"
+        ]
+      },
+      {
+        "month": "June",
+        "country": "Thailand",
+        "best_cities_or_regions": [
+          "Koh Samui",
+          "Koh Tao",
+          "Koh Chang",
+          "Hua Hin"
+        ],
+        "why_visit": "June is the quiet season everywhere except the Gulf of Thailand coast — Koh Samui, Koh Tao, and Koh Chang enjoy their own dry season while the Andaman side is wet. Koh Tao's dive sites have excellent visibility and accommodations at 40% below high-season rates — the best value diving in Southeast Asia.",
+        "climate": {
+          "avg_temp_c": "26–33",
+          "rainfall_level": "high",
+          "humidity": "high"
+        },
+        "budget_category": "budget",
+        "estimated_daily_cost_usd": "35–70",
+        "season_type": "low",
+        "crowd_level": "low",
+        "key_events": [
+          "Koh Tao dive season — excellent visibility on Gulf side",
+          "Hua Hin Jazz Festival (Jun/Jul)",
+          "Khao Phansa (Buddhist Lent begins) — temple candle festivals",
+          "Low-season deals across Gulf coast resorts"
+        ],
+        "travel_styles": [
+          "beach",
+          "adventure",
+          "wellness",
+          "nature"
+        ],
+        "pros": [
+          "Koh Tao: world's most affordable scuba diving with great visibility",
+          "Gulf islands dry while Andaman wet — insider knowledge advantage",
+          "Lowest prices of the year — budget travelers thrive",
+          "Hua Hin relaxed royal beach town — quiet and affordable"
+        ],
+        "cons": [
+          "Andaman coast (Phuket, Krabi, Koh Lanta) wet and rough seas",
+          "Hot and very humid nationwide",
+          "Some beach bars and tour operators on Andaman side reduce operations"
+        ]
+      },
+      {
+        "month": "June",
+        "country": "Sweden",
+        "best_cities_or_regions": [
+          "Stockholm",
+          "Dalarna",
+          "Gothenburg",
+          "Visby"
+        ],
+        "why_visit": "Midsommar (June 20–21, 2026) is Sweden's most cherished celebration — the entire country gathers in flower-crowned village greens to raise maypoles, dance around bonfires, and eat herring under skies that barely darken. Stockholm's archipelago is at its most beautiful with 20+ hours of daylight.",
+        "climate": {
+          "avg_temp_c": "14–22",
+          "rainfall_level": "low",
+          "humidity": "medium"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "160–290",
+        "season_type": "high",
+        "crowd_level": "high",
+        "key_events": [
+          "Midsommar (Jun 20–21, 2026) — nationwide summer solstice celebration",
+          "Gothenburg Culture Festival (Jun)",
+          "Stockholm Archipelago summer season peak",
+          "Sweden Rock Festival (Jun)"
+        ],
+        "travel_styles": [
+          "culture",
+          "nature",
+          "food",
+          "wellness"
+        ],
+        "pros": [
+          "Midsommar a uniquely Swedish experience — flower crowns, dancing, and midnight sun",
+          "Stockholm archipelago by kayak or ferry — extraordinary Nordic scenery",
+          "Longest daylight of the year — 20+ hours in Stockholm",
+          "Dalarna village celebrations the most authentic Midsommar experience"
+        ],
+        "cons": [
+          "Midsommar week accommodation books out months ahead",
+          "Sweden expensive — meals and alcohol especially",
+          "Public transport quieter over Midsommar holiday weekend"
+        ]
+      },
+      {
+        "month": "June",
+        "country": "England",
+        "best_cities_or_regions": [
+          "London",
+          "Glastonbury (Somerset)",
+          "Lake District",
+          "Oxford"
+        ],
+        "why_visit": "June is England's peak cultural month — Glastonbury Festival (June 2026) is the world's greatest music event with 200,000 people in Somerset, Trooping the Colour marks the King's official birthday in London with full Household Cavalry pageantry, and the Lake District's fells are lush and long-lit for 16-hour hiking days.",
+        "climate": {
+          "avg_temp_c": "13–22",
+          "rainfall_level": "medium",
+          "humidity": "medium"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "150–280",
+        "season_type": "high",
+        "crowd_level": "high",
+        "key_events": [
+          "Glastonbury Festival, Somerset (late Jun 2026) — world's greatest music festival",
+          "Trooping the Colour, London (Jun) — King's Birthday parade",
+          "Wimbledon starts (late Jun/early Jul)",
+          "Royal Ascot horse racing (Jun)"
+        ],
+        "travel_styles": [
+          "culture",
+          "music",
+          "nature",
+          "nightlife"
+        ],
+        "pros": [
+          "Glastonbury Festival — nothing compares in scale and atmosphere",
+          "Trooping the Colour free to watch along The Mall",
+          "Lake District long summer evenings — hiking until 10pm",
+          "Peak English summer with longest daylight"
+        ],
+        "cons": [
+          "Glastonbury tickets sell out in minutes — resale market only",
+          "London very crowded and expensive in peak summer",
+          "British summer weather can disappoint — rain is always possible"
         ]
       }
     ],
@@ -4790,9 +6736,11 @@ const TRAVEL_DATA = {
           "Paris",
           "Tour de France routes",
           "Brittany",
-          "Loire Valley"
+          "Loire Valley",
+          "Provence",
+          "French Riviera"
         ],
-        "why_visit": "Tour de France (late June/July) sends a carnival of cyclists through stunning countryside and into Paris for the grand finale on the Champs-Élysées. Bastille Day (Jul 14) delivers one of the world's great national day celebrations.",
+        "why_visit": "July 14 (Bastille Day) is France's greatest national celebration — Eiffel Tower fireworks over the Seine are jaw-dropping, military parade on the Champs-Élysées is free to watch, and the Tour de France reaches its finale. Provence's lavender fields are at peak purple bloom in a two-week window.",
         "climate": {
           "avg_temp_c": "18–27",
           "rainfall_level": "low",
@@ -4806,24 +6754,36 @@ const TRAVEL_DATA = {
           "Bastille Day (Jul 14)",
           "Tour de France finale on Champs-Élysées",
           "Avignon Festival (theatre, Jul)",
-          "Francofolies de La Rochelle (Jul)"
+          "Francofolies de La Rochelle (Jul)",
+          "Bastille Day (Jul 14) — Eiffel Tower fireworks and Champs-Élysées parade",
+          "Tour de France finale, Champs-Élysées (mid-late Jul)",
+          "Provence lavender peak bloom (early–mid Jul, Valensole Plateau)",
+          "Avignon Festival (Jul) — world-class theatre, 1,200+ shows"
         ],
         "travel_styles": [
           "culture",
           "food",
           "nightlife",
-          "adventure"
+          "adventure",
+          "nature"
         ],
         "pros": [
           "Bastille Day fireworks from the Eiffel Tower",
           "Tour de France roadside viewing is free and joyful",
           "Loire Valley châteaux in summer light",
-          "Best outdoor café and market season"
+          "Best outdoor café and market season",
+          "Bastille Day fireworks — free, spectacular, quintessentially French",
+          "Provence lavender bloom: two weeks of purple perfection",
+          "Avignon Festival — world's largest theatre festival after Edinburgh",
+          "Tour de France finale viewing from Champs-Élysées (free)"
         ],
         "cons": [
           "Paris extremely crowded and hot",
           "Many Parisians leave — service quality can drop",
-          "Beach resorts very expensive"
+          "Beach resorts very expensive",
+          "Paris extremely crowded and hot (sometimes 35°C+)",
+          "Riviera accommodation at yearly price peak",
+          "Many Parisian restaurants close as locals go on holiday"
         ]
       },
       {
@@ -4921,7 +6881,7 @@ const TRAVEL_DATA = {
           "Split",
           "Vis"
         ],
-        "why_visit": "July is Croatia in full summer glory — hot clear days, warm Adriatic perfect for island-hopping by catamaran, and Hvar's lavender fields in bloom with world-class yacht parties in Paklinski Islands.",
+        "why_visit": "July is Croatia at its absolute height — the Adriatic hits 27°C and is spectacularly clear, Hvar's lavender fields are in full bloom with the island's famous yachting scene in full swing, and Split's Diocletian's Palace buzzes with outdoor concerts. Vis island offers a more serene, crowd-free Adriatic experience.",
         "climate": {
           "avg_temp_c": "22–33",
           "rainfall_level": "low",
@@ -4934,7 +6894,10 @@ const TRAVEL_DATA = {
         "key_events": [
           "Dubrovnik Summer Festival (Jul–Aug)",
           "Ultra Europe music festival, Split (Jul)",
-          "Hvar lavender harvest season"
+          "Hvar lavender harvest season",
+          "Dubrovnik Summer Festival (Jul–Aug) — outdoor theatre and concerts",
+          "Hvar Lavender Festival",
+          "Moreška Sword Dance, Korčula (Jul)"
         ],
         "travel_styles": [
           "beach",
@@ -4947,12 +6910,19 @@ const TRAVEL_DATA = {
           "Perfect beach and sailing weather",
           "Adriatic at its warmest (27°C)",
           "Lavender harvest on Hvar",
-          "World-class nightlife on Hvar and Dubrovnik"
+          "World-class nightlife on Hvar and Dubrovnik",
+          "Adriatic at 27°C — clearest and warmest for sailing and swimming",
+          "Dubrovnik Summer Festival: theatre in city walls and sea-facing fortresses",
+          "Hvar lavender harvest — fragrant and photogenic",
+          "Island-hopping by catamaran at its most varied and frequent"
         ],
         "cons": [
           "Dubrovnik massively overcrowded — cruise ships daily",
           "Accommodation prices at yearly peak",
-          "Parking and traffic in coastal cities nightmarish"
+          "Parking and traffic in coastal cities nightmarish",
+          "Dubrovnik massively overcrowded — cruise ship day-trippers and heat combine",
+          "Peak prices everywhere — accommodation often double April costs",
+          "Split and Hvar parking and traffic nightmarish"
         ]
       },
       {
@@ -5166,6 +7136,178 @@ const TRAVEL_DATA = {
           "Xinjiang requires careful research on current travel advisories",
           "Hulunbuir remote — long train or flight from major cities",
           "July heat in Xinjiang cities can reach 40°C+"
+        ]
+      },
+      {
+        "month": "July",
+        "country": "South Korea",
+        "best_cities_or_regions": [
+          "Busan",
+          "Boryeong",
+          "Jeju Island",
+          "Sokcho"
+        ],
+        "why_visit": "July brings Korea's summer beach season at full throttle — Busan's Haeundae Beach becomes Asia's busiest beach, and the Boryeong Mud Festival (Daecheon Beach) is one of Asia's most exuberant beach events with mud pools, slides, and K-pop concerts. Jeju's waterfalls roar with monsoon power.",
+        "climate": {
+          "avg_temp_c": "24–32",
+          "rainfall_level": "high",
+          "humidity": "high"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "90–170",
+        "season_type": "high",
+        "crowd_level": "high",
+        "key_events": [
+          "Boryeong Mud Festival (mid-Jul, Daecheon Beach) — 2 million visitors",
+          "Busan Haeundae Beach summer season peak",
+          "Jangma monsoon season (late Jun–late Jul)",
+          "Jeju waterfalls peak flow (Jeongbang, Cheonjiyeon)"
+        ],
+        "travel_styles": [
+          "beach",
+          "nightlife",
+          "culture",
+          "nature"
+        ],
+        "pros": [
+          "Boryeong Mud Festival — one of Asia's most fun beach events",
+          "Busan summer beach culture authentic and energetic",
+          "Jeju monsoon waterfalls powerful and photogenic",
+          "Long daylight hours for full beach and culture days"
+        ],
+        "cons": [
+          "Monsoon (Jangma) brings heavy sustained rain in late June–July",
+          "Hot and very humid (feels 35°C+ with humidity)",
+          "Haeundae Beach massively overcrowded in peak summer"
+        ]
+      },
+      {
+        "month": "July",
+        "country": "Russia",
+        "best_cities_or_regions": [
+          "Lake Baikal",
+          "Kamchatka",
+          "Altai Mountains",
+          "Sochi"
+        ],
+        "why_visit": "July is Russia at its warmest and most adventurous — Lake Baikal's shoreline is swimmable (18°C), Kamchatka's valley of volcanoes and geysers is at peak accessibility, and the Altai Mountains offer epic trekking through taiga forests and alpine meadows. Sochi's Black Sea beaches rival Mediterranean destinations.",
+        "climate": {
+          "avg_temp_c": "15–25",
+          "rainfall_level": "medium",
+          "humidity": "medium"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "90–180",
+        "season_type": "high",
+        "crowd_level": "high",
+        "key_events": [
+          "Kamchatka bear salmon-watching season begins",
+          "Altai summer trekking and rafting season peak",
+          "Lake Baikal swimming and kayaking peak season",
+          "Sochi summer beach season peak"
+        ],
+        "travel_styles": [
+          "adventure",
+          "nature",
+          "wildlife",
+          "beach"
+        ],
+        "pros": [
+          "Kamchatka: volcanic eruptions, geysers, and brown bear watching",
+          "Baikal swimmable — turquoise water and forest hikes at their best",
+          "Altai Mountains trekking: scenery rivals Swiss Alps at a fraction of cost",
+          "Sochi Black Sea beach holiday — warm Mediterranean-feel destination"
+        ],
+        "cons": [
+          "Kamchatka very expensive to reach and tour (permit-heavy)",
+          "Mosquitoes intense in Siberian taiga in July",
+          "Sochi resorts crowded during Russian domestic summer peak"
+        ]
+      },
+      {
+        "month": "July",
+        "country": "Thailand",
+        "best_cities_or_regions": [
+          "Koh Samui",
+          "Koh Phangan",
+          "Koh Tao",
+          "Nan"
+        ],
+        "why_visit": "July is low season for most of Thailand but the Gulf of Thailand coast (Koh Samui, Koh Phangan, Koh Tao) enjoys its dry season — Full Moon Party on Koh Phangan draws thousands monthly, while Nan Province's remote northern valleys host the unique Candle Festival Procession. Best value window of the year.",
+        "climate": {
+          "avg_temp_c": "26–34",
+          "rainfall_level": "high",
+          "humidity": "high"
+        },
+        "budget_category": "budget",
+        "estimated_daily_cost_usd": "35–70",
+        "season_type": "low",
+        "crowd_level": "low",
+        "key_events": [
+          "Full Moon Party, Koh Phangan (monthly, peak in July)",
+          "Asanha Bucha Day & Khao Phansa (Buddhist Lent candle festivals)",
+          "Ubon Ratchathani Candle Festival (Jul) — UNESCO-recognized",
+          "Nan Candle Procession (Nan Province)"
+        ],
+        "travel_styles": [
+          "beach",
+          "nightlife",
+          "culture",
+          "wellness"
+        ],
+        "pros": [
+          "Gulf islands sunny and dry — excellent hidden-season diving",
+          "Full Moon Party legendary beach party experience",
+          "Ubon Ratchathani Candle Festival: spectacular hand-carved wax floats",
+          "Best prices of the year across all accommodation types"
+        ],
+        "cons": [
+          "Andaman coast heavy rain — avoid Phuket and Krabi in July",
+          "Jellyfish risk increases on some Gulf beaches",
+          "Oppressively hot and humid across the country"
+        ]
+      },
+      {
+        "month": "July",
+        "country": "Scotland",
+        "best_cities_or_regions": [
+          "Edinburgh",
+          "Isle of Skye",
+          "Cairngorms",
+          "Orkney"
+        ],
+        "why_visit": "July brings Scotland its best weather with 18+ hours of daylight, puffin colonies at peak season on coastal cliffs, and Highland Games season in full swing — culminating in the Lonach Highland Gathering. Edinburgh is building toward August's world-famous Fringe while the Cairngorms offer Scotland's finest summer hiking.",
+        "climate": {
+          "avg_temp_c": "12–20",
+          "rainfall_level": "medium",
+          "humidity": "medium"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "140–260",
+        "season_type": "high",
+        "crowd_level": "high",
+        "key_events": [
+          "Highland Games season peak (Jul–Sep across the Highlands)",
+          "Puffin watching season peak — Isle of May, Handa Island",
+          "T in the Park (Scottish music festival)",
+          "Edinburgh Military Tattoo ticket sales open"
+        ],
+        "travel_styles": [
+          "nature",
+          "culture",
+          "adventure",
+          "wildlife"
+        ],
+        "pros": [
+          "Best weather Scotland offers — 18+ hours daylight and mild temperatures",
+          "Puffin colonies on coastal islands at their most active",
+          "Highland Games — caber tossing, pipe bands, whisky in dramatic Highland settings",
+          "Isle of Skye at its most accessible — all routes and ferries operating"
+        ],
+        "cons": [
+          "Midges (biting insects) at their worst July–August on west coast",
+          "Isle of Skye roads congested — very busy at key viewpoints",
+          "Accommodation in the Highlands limited and books out months ahead"
         ]
       }
     ],
@@ -5429,9 +7571,11 @@ const TRAVEL_DATA = {
           "Edinburgh",
           "Isle of Skye",
           "Cairngorms",
-          "Orkney"
+          "Orkney",
+          "Glencoe",
+          "St Andrews"
         ],
-        "why_visit": "Edinburgh in August is transformed by the world's largest arts festival — the Edinburgh Festival Fringe, International Festival, and Military Tattoo fill every venue and street corner with performers from 50+ countries.",
+        "why_visit": "Edinburgh in August is the world's greatest festival city — the Fringe, International Festival, Military Tattoo, Book Festival, and Art Festival run simultaneously, filling every street, pub, and theatre with 2 million+ performers and visitors from across the globe. Meanwhile the rest of Scotland is at its warmest and greenest.",
         "climate": {
           "avg_temp_c": "12–20",
           "rainfall_level": "medium",
@@ -5445,7 +7589,11 @@ const TRAVEL_DATA = {
           "Edinburgh Festival Fringe (world's largest arts festival, Aug)",
           "Edinburgh International Festival",
           "Royal Edinburgh Military Tattoo",
-          "Edinburgh Art Festival"
+          "Edinburgh Art Festival",
+          "Edinburgh Festival Fringe (Aug) — world's largest arts festival",
+          "Edinburgh International Festival (Aug)",
+          "Royal Edinburgh Military Tattoo (Aug) — castle esplanade spectacular",
+          "Braemar Highland Gathering (early Sep — tickets sell in Aug)"
         ],
         "travel_styles": [
           "culture",
@@ -5457,12 +7605,19 @@ const TRAVEL_DATA = {
           "World's largest arts festival — extraordinary variety",
           "Mild summer weather ideal for Highland day trips",
           "Whisky distillery tours in full swing",
-          "Isle of Skye at its most accessible"
+          "Isle of Skye at its most accessible",
+          "Edinburgh Fringe — 3,500+ shows, from brilliant stand-up to absurdist theatre",
+          "Military Tattoo against castle backdrop: extraordinary pageantry",
+          "Rest of Scotland warm, green, and hike-ready",
+          "World's greatest concentration of arts per square mile"
         ],
         "cons": [
           "Edinburgh accommodation prices treble during Fringe",
           "City extremely crowded — book 6+ months ahead",
-          "Scottish midges at their worst in August"
+          "Scottish midges at their worst in August",
+          "Edinburgh accommodation prices triple — book 6+ months ahead",
+          "City extremely crowded — plan restaurant bookings far in advance",
+          "Scottish midges still at their worst on west coast"
         ]
       },
       {
@@ -5634,6 +7789,221 @@ const TRAVEL_DATA = {
           "Huangshan cable cars queue for 2–3 hours on weekends",
           "Typhoon risk on eastern and southern coasts"
         ]
+      },
+      {
+        "month": "August",
+        "country": "South Korea",
+        "best_cities_or_regions": [
+          "Busan",
+          "Jeju Island",
+          "Sokcho",
+          "Ulleungdo Island"
+        ],
+        "why_visit": "August is Korea's hottest beach month — Busan's Haeundae Beach is at peak energy with midnight swimming and seafood BBQ on the shore, and Ulleungdo Island (Korea's most remote inhabited island) offers dramatic volcanic cliffs and pristine waters for those seeking an escape from mainland summer crowds.",
+        "climate": {
+          "avg_temp_c": "24–33",
+          "rainfall_level": "medium",
+          "humidity": "high"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "90–170",
+        "season_type": "high",
+        "crowd_level": "high",
+        "key_events": [
+          "Busan International Rock Festival (Aug)",
+          "Gyeongbokgung Palace night viewing (second session)",
+          "Independence Day (Aug 15) — Gwangbokjeol parade and events",
+          "Sokcho summer beach and Seoraksan hiking"
+        ],
+        "travel_styles": [
+          "beach",
+          "culture",
+          "food",
+          "adventure"
+        ],
+        "pros": [
+          "Busan beach culture at full energy — excellent seafood and nightlife",
+          "Independence Day celebrations vibrant and patriotic",
+          "Ulleungdo Island an incredible off-the-beaten-path escape",
+          "Warm sea temperature across all Korean coasts"
+        ],
+        "cons": [
+          "Hottest and most humid month — feels 38°C+ with humidity",
+          "Typhoon risk increases from August",
+          "Haeundae Beach shoulder-to-shoulder crowded on summer weekends"
+        ]
+      },
+      {
+        "month": "August",
+        "country": "Russia",
+        "best_cities_or_regions": [
+          "Kamchatka",
+          "Lake Baikal",
+          "Altai Mountains",
+          "Vladivostok"
+        ],
+        "why_visit": "August is peak wilderness season in Russia — Kamchatka's famous Kuril Lake sees brown bears catching sockeye salmon in early August, Baikal's waters are at maximum warmth for swimming and kayaking, and Vladivostok's seaside culture on the Pacific coast offers Russia's most unique Far East city experience.",
+        "climate": {
+          "avg_temp_c": "14–24",
+          "rainfall_level": "medium",
+          "humidity": "medium"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "90–200",
+        "season_type": "high",
+        "crowd_level": "medium",
+        "key_events": [
+          "Kamchatka brown bear salmon run (Kuril Lake, peak Aug)",
+          "Vladivostok City Day (Jul 2) celebrations extending into Aug",
+          "Baikal Music Festival (Aug)",
+          "Altai rafting and multi-day trek peak season"
+        ],
+        "travel_styles": [
+          "wildlife",
+          "adventure",
+          "nature",
+          "culture"
+        ],
+        "pros": [
+          "Kamchatka bear watching rivals Katmai Alaska at fraction of Alaska prices",
+          "Baikal warmest for swimming and island camping on Olkhon",
+          "Vladivostok — Russia's Pacific gateway, Asian food culture, and seafood",
+          "Altai Mountains: Siberia's most stunning alpine trekking"
+        ],
+        "cons": [
+          "Kamchatka expensive (permit-heavy) and weather unpredictable",
+          "Mosquitoes still intense in Siberian wilderness",
+          "Vladivostok accommodation limited — book early"
+        ]
+      },
+      {
+        "month": "August",
+        "country": "Thailand",
+        "best_cities_or_regions": [
+          "Koh Samui",
+          "Koh Phangan",
+          "Koh Tao",
+          "Khao Yai NP"
+        ],
+        "why_visit": "August keeps the Gulf coast dry and excellent — Koh Samui resorts are busy but less crowded than European summer destinations at half the price. Khao Yai National Park receives rain but stays accessible for wildlife watching, with gibbons and elephants sighted regularly in the lush wet-season jungle.",
+        "climate": {
+          "avg_temp_c": "26–33",
+          "rainfall_level": "high",
+          "humidity": "high"
+        },
+        "budget_category": "budget",
+        "estimated_daily_cost_usd": "35–75",
+        "season_type": "low",
+        "crowd_level": "low",
+        "key_events": [
+          "Full Moon Party, Koh Phangan (monthly)",
+          "Khao Phansa Buddhist Lent — wax candle festival season",
+          "Queen's Birthday / Mother's Day (Aug 12)",
+          "Koh Tao dive season continues (Gulf side)"
+        ],
+        "travel_styles": [
+          "beach",
+          "wildlife",
+          "nightlife",
+          "nature"
+        ],
+        "pros": [
+          "Gulf coast still dry — hidden-season beach bargains",
+          "Khao Yai wildlife spectacular in wet season — elephants and gibbons",
+          "Full Moon Party legendary monthly experience on Koh Phangan",
+          "Lowest hotel rates of the year across Thailand"
+        ],
+        "cons": [
+          "Andaman coast (Phuket, Krabi, Koh Lanta) heavy rain",
+          "Flooding possible in some northern and central areas",
+          "Bangkok heat and humidity at oppressive peak"
+        ]
+      },
+      {
+        "month": "August",
+        "country": "Germany",
+        "best_cities_or_regions": [
+          "Munich",
+          "Berlin",
+          "Hamburg",
+          "Rhine Valley"
+        ],
+        "why_visit": "August in Germany is peak summer — Berlin's outdoor culture erupts with open-air cinema, rooftop bars, and Tempelhof field picnics, Rhine Valley wine villages host harvest festivals, and Bavaria's beer garden culture is at its most exuberant ahead of Oktoberfest.",
+        "climate": {
+          "avg_temp_c": "16–26",
+          "rainfall_level": "medium",
+          "humidity": "medium"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "130–250",
+        "season_type": "high",
+        "crowd_level": "high",
+        "key_events": [
+          "Berlin International Film Festival aftermath events",
+          "Schleswig-Holstein Music Festival (Jul–Aug)",
+          "Rhine in Flames river fireworks (Aug edition)",
+          "Berlin Outdoor cinema festival season"
+        ],
+        "travel_styles": [
+          "culture",
+          "food",
+          "nightlife",
+          "nature"
+        ],
+        "pros": [
+          "Berlin summer culture — rooftops, parks, and legendary club scene",
+          "Rhine Valley wine villages in summer sunshine",
+          "Long daylight for castle and vineyard tours",
+          "Bavaria beer garden season at full swing"
+        ],
+        "cons": [
+          "Berlin and Munich busy and accommodation expensive",
+          "Heat can be uncomfortable in cities",
+          "Oktoberfest preparation causes Munich hotel shortage late August"
+        ]
+      },
+      {
+        "month": "August",
+        "country": "Poland",
+        "best_cities_or_regions": [
+          "Kraków",
+          "Gdańsk",
+          "Warsaw",
+          "Zakopane"
+        ],
+        "why_visit": "August brings Poland's best summer weather — Kraków's Wawel Castle and Jewish Kazimierz district are explored in warm sunshine, Gdańsk's amber-coloured Hanseatic old town on the Baltic is at beach-season peak, and Zakopane's Tatra Mountains offer excellent summer hiking in dramatic alpine scenery.",
+        "climate": {
+          "avg_temp_c": "14–26",
+          "rainfall_level": "medium",
+          "humidity": "medium"
+        },
+        "budget_category": "budget",
+        "estimated_daily_cost_usd": "70–140",
+        "season_type": "high",
+        "crowd_level": "medium",
+        "key_events": [
+          "Kraków International Film Music Festival (Jun, but Aug culture buildup)",
+          "Gdańsk Baltic Beach Festival",
+          "Warsaw Rising Anniversary (Aug 1) — solemn and moving national commemoration",
+          "Zakopane Highland Festival (Aug)"
+        ],
+        "travel_styles": [
+          "culture",
+          "adventure",
+          "food",
+          "beach"
+        ],
+        "pros": [
+          "Warsaw Rising anniversary Aug 1 — powerful and unforgettable national moment",
+          "Gdańsk Baltic coast warm for swimming (18–20°C)",
+          "Exceptional value — one of Europe's most affordable summer destinations",
+          "Kraków's medieval Old Town in summer light superb"
+        ],
+        "cons": [
+          "Kraków can feel tourist-saturated in peak summer",
+          "Warsaw Rising commemoration events affect some city areas",
+          "Zakopane Tatra trails crowded on weekends"
+        ]
       }
     ],
     "September": [
@@ -5644,9 +8014,10 @@ const TRAVEL_DATA = {
           "Tuscany",
           "Rome",
           "Amalfi Coast",
-          "Venice"
+          "Venice",
+          "Umbria"
         ],
-        "why_visit": "September is Italy's finest month — warm seas, grape harvest (vendemmia) festivals in Tuscany, Venice Film Festival, and significantly fewer tourists than August. The light is golden and food is exceptional with seasonal truffles.",
+        "why_visit": "September is Italy's finest month — the Venice Film Festival delivers celebrity sightings and world premieres on the Lido, Tuscany's grape harvest fills the Chianti countryside with the scent of fermenting wine, and the Amalfi Coast is warm (26°C sea) with crowds 40% below August's peak.",
         "climate": {
           "avg_temp_c": "17–28",
           "rainfall_level": "low",
@@ -5660,7 +8031,11 @@ const TRAVEL_DATA = {
           "Venice International Film Festival (late Aug/early Sep)",
           "Regata Storica Venice (1st Sun of Sep)",
           "Tuscany grape harvest (vendemmia)",
-          "Tartufo Bianco (white truffle season begins)"
+          "Tartufo Bianco (white truffle season begins)",
+          "Venice International Film Festival (late Aug/early Sep) — Lido red carpet",
+          "Regata Storica, Venice (1st Sun of Sep) — historic gondola race",
+          "Tuscany grape harvest (vendemmia, Sep–Oct)",
+          "Giostra del Saracino, Arezzo (1st Sun of Sep) — medieval jousting tournament"
         ],
         "travel_styles": [
           "culture",
@@ -5672,12 +8047,19 @@ const TRAVEL_DATA = {
           "Warm beaches without August crowds and heat",
           "Harvest season — fresh wine and early truffles",
           "Venice Film Festival glamour",
-          "Perfect warm September temperatures"
+          "Perfect warm September temperatures",
+          "Venice Film Festival red carpet — free to watch arrivals on Lido vaporetto",
+          "Tuscany vendemmia: vineyards open for harvest tours and tasting",
+          "Amalfi Coast still warm (26°C sea) with noticeably fewer visitors",
+          "Early white truffle season beginning in Umbria and Piedmont"
         ],
         "cons": [
           "Still busy and pricey at top sites",
           "Occasional early-autumn thunderstorms",
-          "Film Festival inflates Venice accommodation"
+          "Film Festival inflates Venice accommodation",
+          "Venice Film Festival week inflates hotel prices on the Lido dramatically",
+          "Still busy at key sights though improving",
+          "Occasional early-autumn thunderstorm"
         ]
       },
       {
@@ -5687,9 +8069,10 @@ const TRAVEL_DATA = {
           "Munich",
           "Berlin",
           "Rhine Valley",
-          "Black Forest"
+          "Black Forest",
+          "Rothenburg"
         ],
-        "why_visit": "Oktoberfest runs Sep 19–Oct 4, 2026, in Munich — the world's largest folk festival with 6 million visitors, beer tents, oompah bands, and roast chickens. Combine with Rhine Valley wine harvest for the full German autumn experience.",
+        "why_visit": "Oktoberfest (Sep 19–Oct 4, 2026) is the world's largest folk festival — 6 million visitors, 14 beer tents, roast ox, oompah bands, and Bavarian costume culture in full force. The Rhine Valley's wine harvest transforms riverside villages into outdoor wine festivals, and Berlin's cultural autumn season opens.",
         "climate": {
           "avg_temp_c": "10–20",
           "rainfall_level": "medium",
@@ -5703,23 +8086,34 @@ const TRAVEL_DATA = {
           "Oktoberfest (Sep 19–Oct 4, 2026)",
           "Cannstatter Volksfest Stuttgart",
           "Rhine in Flames river fireworks",
-          "Berlin Marathon (late Sep)"
+          "Berlin Marathon (late Sep)",
+          "Oktoberfest Munich (Sep 19–Oct 4, 2026)",
+          "Cannstatter Volksfest, Stuttgart (late Sep)",
+          "Rhine wine harvest festivals (Sep–Oct)",
+          "Berlin Marathon (last Sun Sep) — Abbott World Marathon Major"
         ],
         "travel_styles": [
           "culture",
           "food",
-          "nightlife"
+          "nightlife",
+          "nature"
         ],
         "pros": [
           "Iconic Oktoberfest experience",
           "Rhine Valley wine harvest",
           "Comfortable sightseeing temperatures",
-          "Berlin Marathon is a World Major"
+          "Berlin Marathon is a World Major",
+          "Oktoberfest: the world's most famous folk festival — unmissable bucket-list event",
+          "Rhine Valley wine harvest — free festival culture along the riverside",
+          "Berlin Marathon one of world's fastest — spectacular finish at Brandenburg Gate",
+          "Comfortable September temperatures for sightseeing"
         ],
         "cons": [
           "Munich hotels 3–5x normal prices during Oktoberfest",
           "Tent reservations needed months ahead",
-          "Rainy evenings possible"
+          "Rainy evenings possible",
+          "Munich accommodation 3–5x normal during Oktoberfest — book a year ahead",
+          "Tent reservations for Oktoberfest require months-ahead booking via restaurants"
         ]
       },
       {
@@ -6101,6 +8495,178 @@ const TRAVEL_DATA = {
           "Golden Week (Oct 1–7) booking pressure means Sep fills up fast",
           "Beijing traffic and pollution can flare",
           "Mid-Autumn Festival accommodation books out in major cities"
+        ]
+      },
+      {
+        "month": "September",
+        "country": "South Korea",
+        "best_cities_or_regions": [
+          "Seoul",
+          "Andong",
+          "Seoraksan NP",
+          "Busan"
+        ],
+        "why_visit": "September is one of Korea's finest travel months — Chuseok (Korean Thanksgiving, Sep 2026) fills folk villages with traditional games and ancestral rites, monsoon has ended revealing crystal-clear blue skies, and Seoraksan's northern peaks start showing the first autumn hints while Busan's sea remains warm.",
+        "climate": {
+          "avg_temp_c": "19–27",
+          "rainfall_level": "low",
+          "humidity": "medium"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "90–170",
+        "season_type": "high",
+        "crowd_level": "high",
+        "key_events": [
+          "Chuseok (Korean Thanksgiving, Sep 2026) — ancestral rites and folk games",
+          "Andong Mask Dance World Festival (Oct, but Sep cultural buildup)",
+          "Seoul Namsan Tower autumn viewing begins",
+          "Busan International Film Festival preparations (Oct)"
+        ],
+        "travel_styles": [
+          "culture",
+          "nature",
+          "food",
+          "adventure"
+        ],
+        "pros": [
+          "Chuseok folk villages and traditional ceremonies deeply authentic",
+          "Clear post-monsoon skies — best visibility for mountain views",
+          "Warm sea at Busan still perfect for swimming",
+          "Seoraksan first autumn colors begin mid-late September"
+        ],
+        "cons": [
+          "Chuseok week: transport chaos, shop closures, prices double",
+          "Must book trains and flights 2 months ahead for Chuseok travel",
+          "Seoul accommodation at Chuseok premium prices"
+        ]
+      },
+      {
+        "month": "September",
+        "country": "Russia",
+        "best_cities_or_regions": [
+          "Saint Petersburg",
+          "Altai Mountains",
+          "Lake Baikal",
+          "Moscow"
+        ],
+        "why_visit": "September is Russia's golden autumn — St. Petersburg's parks and canals glow with amber and gold, Baikal's shoreline turns fiery red with autumn foliage, and Altai Mountains offer stunning late-season trekking before snow arrives. Crowds drop dramatically from summer, yet weather remains comfortable.",
+        "climate": {
+          "avg_temp_c": "7–18",
+          "rainfall_level": "medium",
+          "humidity": "medium"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "80–160",
+        "season_type": "shoulder",
+        "crowd_level": "low",
+        "key_events": [
+          "Moscow City Day (first Sat of Sep) — huge street celebrations",
+          "Baikal shoreline autumn foliage (Sep–Oct)",
+          "Altai last trekking season before snow (Sep)",
+          "Petersburg Autumn (theatre and opera season opening)"
+        ],
+        "travel_styles": [
+          "culture",
+          "nature",
+          "adventure",
+          "wellness"
+        ],
+        "pros": [
+          "Moscow City Day brings free concerts and street parties citywide",
+          "Post-summer prices — 30% cheaper than June/July",
+          "Altai Mountains autumn trekking: golden taiga and empty trails",
+          "St. Petersburg cultural season opens — Mariinsky Theatre season begins"
+        ],
+        "cons": [
+          "Temperatures dropping fast — cold by end of September in Moscow",
+          "Altai snow can arrive without warning from mid-September",
+          "Some lake excursions reduce schedule as summer season ends"
+        ]
+      },
+      {
+        "month": "September",
+        "country": "Thailand",
+        "best_cities_or_regions": [
+          "Koh Samui",
+          "Koh Tao",
+          "Chiang Rai",
+          "Pai"
+        ],
+        "why_visit": "September is Thailand's quietest and cheapest month — Koh Tao on the Gulf coast remains dry and excellent for diving, while northern Thailand's forests are lush and green. The Vegetarian Festival begins in Phuket (late Sep/Oct) with extraordinary firewalking rituals. Great for budget travelers.",
+        "climate": {
+          "avg_temp_c": "25–32",
+          "rainfall_level": "high",
+          "humidity": "high"
+        },
+        "budget_category": "budget",
+        "estimated_daily_cost_usd": "30–65",
+        "season_type": "low",
+        "crowd_level": "low",
+        "key_events": [
+          "Phuket Vegetarian Festival (late Sep/Oct) — firewalking, piercing rituals",
+          "Ok Phansa (end of Buddhist Lent) preparations",
+          "Koh Tao dive season — Gulf side best visibility",
+          "Chiang Rai long-neck village and hill tribe visits"
+        ],
+        "travel_styles": [
+          "beach",
+          "culture",
+          "wellness",
+          "adventure"
+        ],
+        "pros": [
+          "Absolute lowest prices — hotels, food, tours at minimum rates",
+          "Koh Tao virtually to yourself with excellent diving",
+          "Phuket Vegetarian Festival one of Thailand's most intense cultural events",
+          "Northern forests vivid green — Chiang Rai serene and uncrowded"
+        ],
+        "cons": [
+          "September is the wettest month across most of Thailand",
+          "Flooding possible — especially Bangkok and central plains",
+          "Andaman seas rough and dive operations suspended"
+        ]
+      },
+      {
+        "month": "September",
+        "country": "Portugal",
+        "best_cities_or_regions": [
+          "Douro Valley",
+          "Lisbon",
+          "Azores",
+          "Alentejo"
+        ],
+        "why_visit": "September is Portugal's harvest month — the Douro Valley's terraced quintas open for grape harvest experiences, Lisbon's tram 28 routes are walked without summer crowds, and the Azores offer the year's best whale-watching conditions with humpbacks and sperm whales just offshore.",
+        "climate": {
+          "avg_temp_c": "15–26",
+          "rainfall_level": "low",
+          "humidity": "medium"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "110–210",
+        "season_type": "shoulder",
+        "crowd_level": "medium",
+        "key_events": [
+          "Douro Valley grape harvest (vendimha, Sep–Oct)",
+          "Azores Whale Watching peak (year-round but excellent in Sep)",
+          "Lisbon International Music Festival",
+          "Alentejo cork harvest season"
+        ],
+        "travel_styles": [
+          "food",
+          "nature",
+          "culture",
+          "wildlife"
+        ],
+        "pros": [
+          "Douro Valley harvest: stay at a quinta, stomp grapes, taste new wine",
+          "Azores humpback and sperm whale encounters — world-class",
+          "Lisbon warm (25°C) but much less crowded than July/August",
+          "Best month for wild Atlantic surfing in Ericeira and Peniche"
+        ],
+        "cons": [
+          "Azores weather unpredictable — pack layers",
+          "Douro harvest accommodation books out quickly",
+          "First autumn rains possible in the north late September"
         ]
       }
     ],
@@ -6567,6 +9133,264 @@ const TRAVEL_DATA = {
           "Golden Week Oct 1–7 is China's most crowded travel period — avoid if possible",
           "Accommodation prices peak during National Holiday week",
           "Post-Golden Week excellent — but plan accordingly"
+        ]
+      },
+      {
+        "month": "October",
+        "country": "South Korea",
+        "best_cities_or_regions": [
+          "Seoraksan NP",
+          "Seoul",
+          "Gyeongju",
+          "Jirisan NP"
+        ],
+        "why_visit": "October is South Korea's most spectacular month — Seoraksan's granite peaks turn fiery red and orange in what many consider East Asia's finest autumn foliage display. Seoul's Han River parks blaze with ginkgo and maple, Gyeongju's royal tombs are framed by crimson leaves, and hiking is perfect.",
+        "climate": {
+          "avg_temp_c": "10–20",
+          "rainfall_level": "low",
+          "humidity": "low"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "100–190",
+        "season_type": "high",
+        "crowd_level": "high",
+        "key_events": [
+          "Seoraksan Autumn Foliage peak (early Oct)",
+          "Andong Mask Dance World Festival (Oct)",
+          "Seoul Lantern Festival, Cheonggyecheon Stream (Nov, but Oct prep events)",
+          "Busan International Film Festival (Oct) — Asia's top film festival"
+        ],
+        "travel_styles": [
+          "nature",
+          "culture",
+          "adventure",
+          "food"
+        ],
+        "pros": [
+          "Seoraksan autumn foliage arguably Korea's single most beautiful sight",
+          "Andong Mask Dance Festival — UNESCO-listed traditional performance art",
+          "Busan Film Festival — star-studded Asian cinema on the waterfront",
+          "Perfect cool, dry hiking weather nationwide"
+        ],
+        "cons": [
+          "Peak autumn tourist season — Seoraksan extremely crowded on weekends",
+          "Accommodation in Sokcho (Seoraksan gateway) books 2–3 months ahead",
+          "Temperatures dropping fast by late October in Seoul"
+        ]
+      },
+      {
+        "month": "October",
+        "country": "Russia",
+        "best_cities_or_regions": [
+          "Moscow",
+          "Saint Petersburg",
+          "Kazan",
+          "Suzdal"
+        ],
+        "why_visit": "October brings Russia's golden autumn to its most accessible destinations — Moscow's parks (Gorky, Kolomenskoye, Sokolniki) are ablaze with colour, St. Petersburg's canals reflect amber trees, and Kazan's blend of Orthodox and Tatar Islamic architecture is explored without crowds.",
+        "climate": {
+          "avg_temp_c": "2–10",
+          "rainfall_level": "medium",
+          "humidity": "medium"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "80–150",
+        "season_type": "shoulder",
+        "crowd_level": "low",
+        "key_events": [
+          "Moscow autumn park foliage peak",
+          "Kazan City Days events",
+          "Russian museum season in full swing (uncrowded)",
+          "First snowfalls possible in northern Russia late October"
+        ],
+        "travel_styles": [
+          "culture",
+          "nature",
+          "food",
+          "wellness"
+        ],
+        "pros": [
+          "Moscow Gorky Park autumn atmosphere — golden, quiet, and beautiful",
+          "Lowest accommodation prices of the year in major cities",
+          "Museums and galleries uncrowded — Hermitage and Tretyakov at their best",
+          "Kazan: Russia's most multicultural city with Tatar food scene"
+        ],
+        "cons": [
+          "Cold and grey — overcast skies possible for days at a time",
+          "Short daylight hours by late October",
+          "First snow may disrupt travel in northern and Siberian regions"
+        ]
+      },
+      {
+        "month": "October",
+        "country": "Thailand",
+        "best_cities_or_regions": [
+          "Chiang Mai",
+          "Bangkok",
+          "Koh Samui",
+          "Koh Phangan"
+        ],
+        "why_visit": "October is Thailand's transition month — rain eases across most regions, the Ok Phansa candle boat festival (end of Buddhist Lent) sends illuminated krathong along rivers, and Phuket's Vegetarian Festival reaches its dramatic climax with firewalking. Koh Samui starts its own rainy season but the country is largely opening up.",
+        "climate": {
+          "avg_temp_c": "24–32",
+          "rainfall_level": "medium",
+          "humidity": "high"
+        },
+        "budget_category": "budget",
+        "estimated_daily_cost_usd": "35–75",
+        "season_type": "shoulder",
+        "crowd_level": "medium",
+        "key_events": [
+          "Phuket Vegetarian Festival (early Oct) — firewalking and spirit mediums",
+          "Ok Phansa — end of Buddhist Lent, candle boat processions",
+          "Loy Krathong preparations (Nov, but Oct buildup)",
+          "Andaman coast slowly reopening late October"
+        ],
+        "travel_styles": [
+          "culture",
+          "food",
+          "beach",
+          "wellness"
+        ],
+        "pros": [
+          "Phuket Vegetarian Festival — one of Asia's most intense spiritual events",
+          "Ok Phansa candle boat ceremonies at every temple nationwide",
+          "Prices still low — pre-peak season value",
+          "Andaman seas beginning to calm late October — diving resuming"
+        ],
+        "cons": [
+          "Rain still falling in many regions, especially Gulf coast (Koh Samui peak rain)",
+          "Koh Samui October–November is its wettest period",
+          "Flooding possible in Bangkok and Chiang Mai"
+        ]
+      },
+      {
+        "month": "October",
+        "country": "Czech Republic",
+        "best_cities_or_regions": [
+          "Prague",
+          "Český Krumlov",
+          "Brno",
+          "Karlovy Vary"
+        ],
+        "why_visit": "October is Prague at its most beautiful and affordable — golden autumn foliage frames Gothic spires, Stromovka and Riegrovy Sady parks blaze with colour, beer gardens serve their final seasonal Märzen, and Český Krumlov's chateau gardens are spectacular in autumn. Crowds drop dramatically from summer.",
+        "climate": {
+          "avg_temp_c": "6–15",
+          "rainfall_level": "medium",
+          "humidity": "medium"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "80–160",
+        "season_type": "shoulder",
+        "crowd_level": "medium",
+        "key_events": [
+          "Prague Signal Festival (light installations, Oct)",
+          "Czech Beer Festival autumn edition",
+          "Autumn foliage in Bohemian Switzerland NP",
+          "Český Krumlov autumn chateau illuminations"
+        ],
+        "travel_styles": [
+          "culture",
+          "food",
+          "nature",
+          "nightlife"
+        ],
+        "pros": [
+          "Prague Old Town in autumn colours without summer crowds",
+          "Excellent value — hotel prices 40% below peak summer",
+          "Prague's world-class beer culture in cosy autumn atmosphere",
+          "Český Krumlov chateau garden autumn colours stunning"
+        ],
+        "cons": [
+          "Cold evenings (5°C) — bring warm layers",
+          "Rain possible — carry an umbrella",
+          "Some outdoor attractions reducing hours"
+        ]
+      },
+      {
+        "month": "October",
+        "country": "Hungary",
+        "best_cities_or_regions": [
+          "Budapest",
+          "Eger",
+          "Pécs",
+          "Lake Balaton"
+        ],
+        "why_visit": "October is Budapest at its golden autumn best — Városliget (City Park) and Margaret Island blaze with red and gold, the wine harvest in Eger's Valley of Beautiful Women is in full swing, and the thermal bath culture feels most authentic as temperatures drop. Budapest is 40% cheaper than June peak.",
+        "climate": {
+          "avg_temp_c": "8–17",
+          "rainfall_level": "medium",
+          "humidity": "medium"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "80–150",
+        "season_type": "shoulder",
+        "crowd_level": "low",
+        "key_events": [
+          "Eger grape harvest and wine festivals (Egri Bikavér season)",
+          "Budapest Autumn Festival (Oct) — arts and culture",
+          "Hungarian national holiday (Oct 23) — Republic Day commemorations",
+          "Széchenyi Baths outdoor pools in autumn steam atmosphere"
+        ],
+        "travel_styles": [
+          "culture",
+          "food",
+          "wellness",
+          "nature"
+        ],
+        "pros": [
+          "Széchenyi Baths in autumn steam against golden trees — iconic",
+          "Eger wine harvest: Bull's Blood (Egri Bikavér) at its freshest",
+          "Budapest autumn foliage rivals Prague at far lower cost",
+          "Hungarian cuisine (gulyás, lángos, pörkölt) at its warming best"
+        ],
+        "cons": [
+          "Getting cool — thermal bath weather is perfect but sightseeing chilly",
+          "Overcast skies possible for stretches",
+          "Lake Balaton entirely off-season"
+        ]
+      },
+      {
+        "month": "October",
+        "country": "Spain",
+        "best_cities_or_regions": [
+          "Madrid",
+          "Seville",
+          "San Sebastián",
+          "Granada"
+        ],
+        "why_visit": "October is Spain's finest travel month — Madrid's El Retiro park is blazing with autumn gold, San Sebastián's Michelin-starred pintxos bars and surfing beaches are at their post-summer sweet spot, and Granada's Alhambra is finally explorable without booking tickets 3 months ahead. Seville's October weather is the best of the year.",
+        "climate": {
+          "avg_temp_c": "14–24",
+          "rainfall_level": "low",
+          "humidity": "medium"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "100–200",
+        "season_type": "shoulder",
+        "crowd_level": "medium",
+        "key_events": [
+          "San Sebastián International Film Festival (late Sep/Oct) — Europe's top film fest",
+          "Fiesta del Pilar, Zaragoza (Oct 12) — Spain's biggest regional festival",
+          "Madrid Apertura Gallery Weekend (Oct)",
+          "Wine harvest celebrations across La Rioja and Ribera del Duero"
+        ],
+        "travel_styles": [
+          "culture",
+          "food",
+          "beach",
+          "wellness"
+        ],
+        "pros": [
+          "San Sebastián Film Festival: red carpet with top international directors and stars",
+          "La Rioja wine harvest — vineyard visits and new vintage tastings",
+          "Alhambra tickets suddenly bookable in advance without 3-month wait",
+          "Seville in October: 24°C, minimal tourists, maximum charm"
+        ],
+        "cons": [
+          "Fiesta del Pilar creates surges in northern Spain",
+          "Atlantic coast (San Sebastián, Bilbao) can be rainy",
+          "Some beach resorts on Mediterranean coast quietening down"
         ]
       }
     ],
@@ -7037,6 +9861,265 @@ const TRAVEL_DATA = {
           "Northern China air quality worsens as coal heating begins",
           "Limited outdoor activities in the far north"
         ]
+      },
+      {
+        "month": "November",
+        "country": "South Korea",
+        "best_cities_or_regions": [
+          "Naejangsan NP",
+          "Seoul",
+          "Gyeongju",
+          "Jirisan NP"
+        ],
+        "why_visit": "November sees South Korea's most dramatic late-autumn foliage — Naejangsan's maple trees create a fiery crimson canopy over its valley temple, while Seoul's Bukhansan and Gyeongju's hills remain beautifully coloured. The Seoul Lantern Festival on the Cheonggyecheon Stream lights up with thousands of handmade lanterns.",
+        "climate": {
+          "avg_temp_c": "3–13",
+          "rainfall_level": "low",
+          "humidity": "low"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "90–170",
+        "season_type": "high",
+        "crowd_level": "high",
+        "key_events": [
+          "Naejangsan Autumn Foliage Festival (early Nov)",
+          "Seoul Lantern Festival — Cheonggyecheon Stream (Nov)",
+          "Gyeongju Late Autumn Foliage (mid-Nov)",
+          "Pepero Day (Nov 11) — Korean Valentine's Day equivalent"
+        ],
+        "travel_styles": [
+          "nature",
+          "culture",
+          "food",
+          "wellness"
+        ],
+        "pros": [
+          "Naejangsan maple valley — Korea's most vivid autumn foliage",
+          "Seoul Lantern Festival one of the most beautiful events in East Asia",
+          "Cool, perfect sightseeing weather before winter cold arrives",
+          "Prices slightly lower than October peak"
+        ],
+        "cons": [
+          "Naejangsan extremely crowded on November weekends",
+          "Temperatures drop sharply late November — winter approaching",
+          "Autumn foliage timing varies by 1–2 weeks each year"
+        ]
+      },
+      {
+        "month": "November",
+        "country": "Russia",
+        "best_cities_or_regions": [
+          "Moscow",
+          "Saint Petersburg",
+          "Murmansk",
+          "Kola Peninsula"
+        ],
+        "why_visit": "November marks the return of Northern Lights season in Murmansk and the Kola Peninsula as polar night approaches. Moscow's first winter snows arrive, Christmas markets begin setting up on Red Square, and Hermitage's winter programme opens with special exhibitions.",
+        "climate": {
+          "avg_temp_c": "-3–5",
+          "rainfall_level": "medium",
+          "humidity": "medium"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "80–150",
+        "season_type": "shoulder",
+        "crowd_level": "low",
+        "key_events": [
+          "Northern Lights return to Murmansk (Nov–Mar season begins)",
+          "National Unity Day (Nov 4) — patriotic celebrations",
+          "Red Square Christmas Market preparations",
+          "Hermitage winter exhibitions open"
+        ],
+        "travel_styles": [
+          "culture",
+          "nature",
+          "adventure",
+          "wellness"
+        ],
+        "pros": [
+          "Aurora borealis season begins — Murmansk accessible and spectacular",
+          "Red Square winter market charm beginning",
+          "City museums uncrowded and fully operational",
+          "Banya culture at its most appealing in cold weather"
+        ],
+        "cons": [
+          "Grey, cold, and overcast in Moscow and St. Petersburg",
+          "Early winter freeze — ice on pavements",
+          "Short daylight (6 hrs in Moscow, polar night in Murmansk)"
+        ]
+      },
+      {
+        "month": "November",
+        "country": "Thailand",
+        "best_cities_or_regions": [
+          "Chiang Mai",
+          "Bangkok",
+          "Sukhothai",
+          "Krabi"
+        ],
+        "why_visit": "Yi Peng (Nov 5, 2026) transforms Chiang Mai into one of Earth's most breathtaking sights — thousands of paper lanterns rise simultaneously into the night sky above the Ping River. Loy Krathong festival on the same night sees rivers across the country lit with floating candle-lit lotus boats. The dry season returns.",
+        "climate": {
+          "avg_temp_c": "20–31",
+          "rainfall_level": "low",
+          "humidity": "medium"
+        },
+        "budget_category": "budget",
+        "estimated_daily_cost_usd": "40–80",
+        "season_type": "high",
+        "crowd_level": "high",
+        "key_events": [
+          "Yi Peng Lantern Festival, Chiang Mai (full moon, Nov 5, 2026)",
+          "Loy Krathong (Nov 5, 2026) — nationwide floating lantern ceremony",
+          "Sukhothai Loy Krathong (most traditional, UNESCO-level event)",
+          "Andaman coast dry season returns (Phuket, Krabi reopen)"
+        ],
+        "travel_styles": [
+          "culture",
+          "beach",
+          "food",
+          "nightlife",
+          "nature"
+        ],
+        "pros": [
+          "Yi Peng Chiang Mai: thousands of lanterns in the sky — world's most beautiful festival moment",
+          "Loy Krathong at Sukhothai historically unparalleled",
+          "Andaman islands (Krabi, Koh Lanta) reopen — first divers of new season",
+          "Dry season returns — excellent weather begins"
+        ],
+        "cons": [
+          "Chiang Mai Yi Peng accommodation books out 6 months ahead",
+          "Festival dates mean flights and hotels 2–3x normal prices",
+          "Yi Peng large lantern release now restricted — only licensed events"
+        ]
+      },
+      {
+        "month": "November",
+        "country": "Belgium",
+        "best_cities_or_regions": [
+          "Brussels",
+          "Bruges",
+          "Ghent",
+          "Dinant"
+        ],
+        "why_visit": "November is Belgium's most underrated month — Christmas markets begin in Bruges and Brussels (mid-Nov), the chocolate and beer culture is at its most indulgent indoors, Ghent's medieval city walls are reflected in rainy canal water in atmospheric solitude, and prices are at their annual low before December's surge.",
+        "climate": {
+          "avg_temp_c": "4–10",
+          "rainfall_level": "medium",
+          "humidity": "high"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "110–200",
+        "season_type": "shoulder",
+        "crowd_level": "low",
+        "key_events": [
+          "Bruges Christmas Market opens (mid-Nov)",
+          "Brussels Winter Wonders market opens (late Nov)",
+          "Armistice Day (Nov 11) — In Flanders Fields commemorations in Ypres",
+          "Belgian National Chocolate Week events"
+        ],
+        "travel_styles": [
+          "culture",
+          "food",
+          "nightlife",
+          "wellness"
+        ],
+        "pros": [
+          "Ypres Armistice Day Last Post ceremony — one of Europe's most moving commemorations",
+          "Bruges completely transformed by early Christmas market with almost no crowds",
+          "Belgian beer (Trappist, Lambic, Gueuze) at their most warming and seasonal",
+          "Prices significantly lower than December Christmas market peak"
+        ],
+        "cons": [
+          "Cold, grey, and frequently rainy",
+          "Short daylight hours",
+          "Some outdoor tourist areas feel quiet and shuttered"
+        ]
+      },
+      {
+        "month": "November",
+        "country": "Austria",
+        "best_cities_or_regions": [
+          "Vienna",
+          "Salzburg",
+          "Hallstatt",
+          "Innsbruck"
+        ],
+        "why_visit": "Vienna in November is a cultural powerhouse at peak season — the Wiener Staatsoper's opera and ballet programme is in full swing, the Kunsthistorisches Museum and Belvedere galleries are uncrowded, Christmas markets open in mid-November with Vienna Rathausmarkt and Schönbrunn among Europe's finest, and Viennese coffee house culture is at its most warming.",
+        "climate": {
+          "avg_temp_c": "2–9",
+          "rainfall_level": "medium",
+          "humidity": "medium"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "130–250",
+        "season_type": "shoulder",
+        "crowd_level": "medium",
+        "key_events": [
+          "Vienna Christkindlmarkt (mid-Nov to Dec 24) — Europe's most elegant market",
+          "Vienna Philharmonic subscription season peak",
+          "Wiener Staatsoper full winter programme",
+          "Hallstatt winter opening (magical and uncrowded in Nov)"
+        ],
+        "travel_styles": [
+          "culture",
+          "food",
+          "wellness",
+          "nightlife"
+        ],
+        "pros": [
+          "Vienna Christmas markets open — the most sophisticated in Europe",
+          "Opera and concert tickets easier to obtain than peak December",
+          "Viennese coffeehouse culture (Sachertorte, Melange) at its coziest",
+          "Hallstatt with first snow but before Christmas crowds arrive"
+        ],
+        "cons": [
+          "Cold (2–5°C) and often grey",
+          "Early Christmas market crowds building by late November",
+          "Short days reduce sightseeing window"
+        ]
+      },
+      {
+        "month": "November",
+        "country": "Denmark",
+        "best_cities_or_regions": [
+          "Copenhagen",
+          "Aarhus",
+          "Roskilde",
+          "Bornholm"
+        ],
+        "why_visit": "November is the heart of Danish hygge culture — Copenhagen's candle-lit restaurants, craft beer bars, and design museums are at their most cosy, the acclaimed Nordic food scene (Noma's alumni restaurants and smørrebrød temples) is at full operation, and Christmas 'Julemarked' decorations begin transforming the city from mid-November.",
+        "climate": {
+          "avg_temp_c": "3–8",
+          "rainfall_level": "medium",
+          "humidity": "high"
+        },
+        "budget_category": "luxury",
+        "estimated_daily_cost_usd": "180–330",
+        "season_type": "low",
+        "crowd_level": "low",
+        "key_events": [
+          "Copenhagen Julemarked (Christmas market, mid-Nov)",
+          "CPH:DOX — Copenhagen Documentary Film Festival (Nov)",
+          "Danish Design Museum winter programme",
+          "Tivoli Gardens winter opening (mid-Nov)"
+        ],
+        "travel_styles": [
+          "culture",
+          "food",
+          "wellness",
+          "nightlife"
+        ],
+        "pros": [
+          "Hygge culture at its purest — candles, blankets, and craft beer in design-forward cafés",
+          "Nordic cuisine (smørrebrød, new Nordic) world-class and at full season",
+          "Tivoli Christmas opening — the world's most charming amusement park in fairy lights",
+          "Copenhagen design and architecture scene excellent in any weather"
+        ],
+        "cons": [
+          "Very expensive — food and accommodation among Europe's highest",
+          "Dark and cold — only 8 hours of daylight",
+          "Rain and wind common from the North Sea"
+        ]
       }
     ],
     "December": [
@@ -7090,9 +10173,11 @@ const TRAVEL_DATA = {
           "Bangkok",
           "Chiang Mai",
           "Krabi",
-          "Koh Samui"
+          "Koh Samui",
+          "Koh Lipe",
+          "Koh Lanta"
         ],
-        "why_visit": "December is Thailand's finest month — dry, sunny, and warm nationwide. Bangkok's rooftop bars and river celebrations for New Year are spectacular, southern islands have perfect weather, and Chiang Mai nights are refreshingly cool.",
+        "why_visit": "December is Thailand's peak season at its finest — Koh Lipe's emerald waters are at their clearest and calmest, Chiang Mai's cool nights make Christmas feel festive in the mountains, and Bangkok's rooftop bars and riverside NYE celebrations rival the world's best. The king's birthday on Dec 5 lights up the country.",
         "climate": {
           "avg_temp_c": "22–32",
           "rainfall_level": "low",
@@ -7106,24 +10191,36 @@ const TRAVEL_DATA = {
           "King's Birthday / Father's Day (Dec 5)",
           "Chiang Mai Red Cross Winter Fair",
           "Bangkok NYE fireworks at CentralWorld and riverside",
-          "Full Moon Party Koh Phangan"
+          "Full Moon Party Koh Phangan",
+          "King's Birthday / Father's Day (Dec 5) — national celebrations",
+          "Bangkok NYE fireworks at Chao Phraya River and CentralWorld",
+          "Chiang Mai Christmas and New Year mountain markets",
+          "Koh Phangan Full Moon Party (Dec) — year's final edition"
         ],
         "travel_styles": [
           "beach",
           "food",
           "nightlife",
-          "culture"
+          "culture",
+          "wellness"
         ],
         "pros": [
           "Best weather of the year across the country",
           "Excellent diving visibility on Andaman coast",
           "Christmas/NYE celebrations in Bangkok world-class",
-          "Still great value despite December prices"
+          "Still great value despite December prices",
+          "Koh Lipe and southern Andaman at absolute peak condition",
+          "Bangkok NYE among Asia's best — rooftop bars and river barges",
+          "Chiang Mai cool and festive — Christmas in the mountains unique",
+          "Best weather of the year across the entire country"
         ],
         "cons": [
           "Hotel rates spike 30–50% over Christmas/NYE",
           "Popular islands and Bangkok heavily crowded",
-          "New Year's Eve accommodation needs advance booking"
+          "New Year's Eve accommodation needs advance booking",
+          "Most expensive month — Christmas and NYE accommodation triples",
+          "Popular beaches and islands heavily crowded",
+          "Bangkok NYE events require advance booking 3–4 months ahead"
         ]
       },
       {
@@ -7135,7 +10232,7 @@ const TRAVEL_DATA = {
           "Munich",
           "Cologne"
         ],
-        "why_visit": "Germany's Christkindlmärkte (Christmas markets) transform every town square from late November through December 23 — Nuremberg's Christkindlesmarkt is the most famous, Dresden's Striezelmarkt the oldest (since 1434), and Cologne's Cathedral Market the most dramatic.",
+        "why_visit": "Germany's Christkindlmärkte are the world's original and finest Christmas markets — Nuremberg's Christkindlesmarkt (since 1628) fills the medieval market square, Dresden's Striezelmarkt (since 1434, the oldest in Germany) is a fairytale of gingerbread and Stollen, and Cologne's cathedral market glows beneath the twin Gothic spires.",
         "climate": {
           "avg_temp_c": "−2–5",
           "rainfall_level": "medium",
@@ -7149,7 +10246,9 @@ const TRAVEL_DATA = {
           "Nuremberg Christkindlesmarkt",
           "Dresden Striezelmarkt (oldest in Germany, since 1434)",
           "Munich Marienplatz Christmas Market",
-          "Cologne Cathedral Christmas Market"
+          "Cologne Cathedral Christmas Market",
+          "Nuremberg Christkindlesmarkt (late Nov–Dec 24) — world's most famous",
+          "Munich Marienplatz Christkindlmarkt"
         ],
         "travel_styles": [
           "culture",
@@ -7160,12 +10259,19 @@ const TRAVEL_DATA = {
           "World's most iconic Christmas markets",
           "Excellent rail connections between cities",
           "Superb beer, wine and hearty winter food",
-          "Many museums uncrowded midweek"
+          "Many museums uncrowded midweek",
+          "Christmas market atmosphere unmatched anywhere in the world",
+          "Glühwein (mulled wine), Lebkuchen, Bratwurst — seasonal food excellence",
+          "Excellent rail connections — visit 3 cities in one trip",
+          "Many museums and cultural venues free on Christmas Day"
         ],
         "cons": [
           "Cold, often grey and wet weather",
           "Most markets close Dec 23–24",
-          "Munich and Cologne peak weekend prices soar"
+          "Munich and Cologne peak weekend prices soar",
+          "Market weekends very crowded",
+          "All markets close Dec 23–24 — plan arrival carefully",
+          "Cold (0°C), wet and grey weather"
         ]
       },
       {
@@ -7510,6 +10616,178 @@ const TRAVEL_DATA = {
           "Harbin's extreme cold (-20°C) — proper Arctic gear essential",
           "December flights expensive as Christmas and CNY approach",
           "Sanya accommodation peaks in price for beach high season"
+        ]
+      },
+      {
+        "month": "December",
+        "country": "South Korea",
+        "best_cities_or_regions": [
+          "Seoul",
+          "Gangwon-do",
+          "Pyeongchang",
+          "Everland"
+        ],
+        "why_visit": "December brings Korea's Christmas and winter festival season — Seoul's Myeongdong and Insadong glow with festive lights and markets, and Gangwon-do's ski resorts open for the season. The country's year-end countdowns at Seoul's Bosingak Bell are spectacular, and Everland theme park transforms into Korea's top winter wonderland.",
+        "climate": {
+          "avg_temp_c": "-5–3",
+          "rainfall_level": "low",
+          "humidity": "low"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "90–170",
+        "season_type": "high",
+        "crowd_level": "high",
+        "key_events": [
+          "Seoul Christmas & Year-End Festivals (Dec 25 & 31)",
+          "Bosingak Bell Ceremony — Seoul New Year countdown",
+          "Gangwon-do ski resorts open (Alpensia, Yongpyong, High1)",
+          "Naksan Temple winter sunrise New Year (Jan 1 tradition begins Dec)"
+        ],
+        "travel_styles": [
+          "skiing",
+          "culture",
+          "nightlife",
+          "food"
+        ],
+        "pros": [
+          "Seoul Christmas light installations world-class",
+          "Ski resorts opening with first fresh snow",
+          "New Year's Eve Bosingak Bell ceremony — historic and atmospheric",
+          "Year-end Korean BBQ and jjimjilbang (sauna) culture at best"
+        ],
+        "cons": [
+          "Very cold — Seoul averages -2°C with wind chill much worse",
+          "Christmas and NYE accommodation at yearly price peak",
+          "Snow and ice make outdoor city walking challenging"
+        ]
+      },
+      {
+        "month": "December",
+        "country": "Russia",
+        "best_cities_or_regions": [
+          "Moscow",
+          "Saint Petersburg",
+          "Murmansk",
+          "Suzdal"
+        ],
+        "why_visit": "December is Russia at its most magical — Red Square's GUM Christmas market glows behind the fairy-lit St. Basil's Cathedral, Suzdal's snow-covered wooden churches look like fairy-tale illustrations, and Murmansk's Northern Lights are at full season during polar night. Russian New Year (Dec 31) is a spectacular national celebration.",
+        "climate": {
+          "avg_temp_c": "-10–0",
+          "rainfall_level": "low",
+          "humidity": "low"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "80–160",
+        "season_type": "high",
+        "crowd_level": "high",
+        "key_events": [
+          "Red Square Christmas Market and ice rink (Dec–Jan)",
+          "Russian New Year (Dec 31) — the main holiday of the Russian calendar",
+          "Murmansk Northern Lights peak season (Nov–Feb)",
+          "Suzdal winter fairy-tale atmosphere at its peak"
+        ],
+        "travel_styles": [
+          "culture",
+          "nightlife",
+          "nature",
+          "adventure"
+        ],
+        "pros": [
+          "Red Square at Christmas — one of the world's most photogenic winter scenes",
+          "Russian New Year more celebrated than Christmas — spectacular street events",
+          "Murmansk Northern Lights reliable during polar night",
+          "Suzdal wooden churches and monasteries under fresh snow — pure magic"
+        ],
+        "cons": [
+          "Very cold (-10 to -15°C in Moscow, colder in Siberia)",
+          "NYE accommodation in Moscow and St. Petersburg books out 4 months ahead",
+          "Visa and logistics require significant advance planning"
+        ]
+      },
+      {
+        "month": "December",
+        "country": "France",
+        "best_cities_or_regions": [
+          "Strasbourg",
+          "Paris",
+          "Alsace",
+          "Lyon"
+        ],
+        "why_visit": "Strasbourg ('Capital of Christmas') hosts the oldest Christmas market in France (since 1570) in a perfectly preserved medieval Alsatian setting — half-timbered houses strung with lights reflected in the Ill River. Paris's winter illuminations on the Champs-Élysées and the Eiffel Tower create one of Europe's most romantic December scenes.",
+        "climate": {
+          "avg_temp_c": "-1–6",
+          "rainfall_level": "medium",
+          "humidity": "medium"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "150–290",
+        "season_type": "high",
+        "crowd_level": "high",
+        "key_events": [
+          "Strasbourg Christkindelsmarik — oldest Christmas market in France (since 1570)",
+          "Paris Christmas illuminations — Champs-Élysées and Galeries Lafayette windows",
+          "Lyon Fête des Lumières (early Dec) — world's greatest light festival",
+          "New Year's Eve, Paris — Eiffel Tower countdown"
+        ],
+        "travel_styles": [
+          "culture",
+          "food",
+          "nightlife",
+          "wellness"
+        ],
+        "pros": [
+          "Lyon Fête des Lumières (Dec 5–8) — 2 million visitors, 40+ light installations — FREE",
+          "Strasbourg Christmas market in perfectly preserved Alsatian medieval village",
+          "Paris NYE from Champs-Élysées or Seine riverbanks — free",
+          "Alsace vin chaud (mulled wine) and Bredele cookies unique to the region"
+        ],
+        "cons": [
+          "Paris and Strasbourg very crowded and expensive in December",
+          "Lyon Fête des Lumières creates enormous crowds over 4 nights",
+          "Cold and often grey — pack warmly"
+        ]
+      },
+      {
+        "month": "December",
+        "country": "England",
+        "best_cities_or_regions": [
+          "London",
+          "Bath",
+          "York",
+          "Cotswolds"
+        ],
+        "why_visit": "London in December is magical — Winter Wonderland in Hyde Park, the Southbank Christmas Market, ice rinks at Somerset House and the Natural History Museum, and Oxford Street's illuminations draw millions. Bath's Roman Baths lit by torchlight and York's Shambles Christmas market offer some of England's most atmospheric festive experiences.",
+        "climate": {
+          "avg_temp_c": "4–9",
+          "rainfall_level": "medium",
+          "humidity": "high"
+        },
+        "budget_category": "luxury",
+        "estimated_daily_cost_usd": "200–400",
+        "season_type": "high",
+        "crowd_level": "high",
+        "key_events": [
+          "Hyde Park Winter Wonderland, London (Nov–Jan) — Europe's largest Christmas fair",
+          "Bath Roman Baths torchlit Christmas event",
+          "York Shambles Christmas Market",
+          "London NYE Thames fireworks (ticket ballot)"
+        ],
+        "travel_styles": [
+          "culture",
+          "food",
+          "nightlife",
+          "wellness"
+        ],
+        "pros": [
+          "Hyde Park Winter Wonderland free entry (rides extra) — spectacular",
+          "Bath Roman Baths by torchlight — one of England's most atmospheric seasonal events",
+          "York's medieval Shambles decorated for Christmas — perfectly preserved",
+          "London NYE Thames fireworks among the world's best (ticket ballot system)"
+        ],
+        "cons": [
+          "London extremely expensive in December — among the priciest Christmas destinations",
+          "Hyde Park Winter Wonderland massively crowded on weekends",
+          "NYE London fireworks tickets ballot — no guarantee of getting in"
         ]
       }
     ]

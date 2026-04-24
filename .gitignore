@@ -1,14 +1,35 @@
 # Local Claude / editor state
 .claude/
+.claude.local/
 .vscode/
 .idea/
+*.swp
+*.swo
 
 # OS junk
 .DS_Store
 Thumbs.db
+desktop.ini
 
 # Node (only if anyone adds tooling later)
 node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Logs & runtime
+*.log
+*.pid
 
 # One-shot build/merge scripts (kept out of repo by convention)
 _*.js
+
+# Local backups
+*.bak
+*.orig
+*~

@@ -207,22 +207,20 @@ html, body {
   margin: 0 auto;
   padding: 12px 16px;
   display: flex;
-  gap: 8px;
-  overflow-x: auto;
-  scrollbar-width: thin;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
 }
-.month-tabs-inner::-webkit-scrollbar { height: 6px; }
-.month-tabs-inner::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
 
 .month-tab {
-  flex: 0 0 auto;
-  padding: 8px 18px;
+  flex: 0 1 auto;
+  padding: 6px 14px;
   border-radius: 999px;
   border: 1px solid var(--border);
   background: #fff;
   color: var(--text);
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   cursor: pointer;
   transition: all 0.15s ease;
   white-space: nowrap;
@@ -233,6 +231,142 @@ html, body {
   color: #fff;
   border-color: var(--accent);
   box-shadow: 0 4px 12px rgba(249, 115, 22, 0.35);
+}
+
+/* ---------- Search panel (3rd mode) ---------- */
+.search-panel {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+.search-panel-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+  position: relative;
+}
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+  box-shadow: var(--shadow);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.search-box:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(249,115,22,0.15), var(--shadow);
+}
+.search-icon { font-size: 1.05rem; color: var(--text-muted); }
+.search-input {
+  flex: 1;
+  border: 0;
+  outline: 0;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--text);
+  background: transparent;
+}
+.search-input::placeholder { color: #94a3b8; }
+.search-clear {
+  border: 0;
+  background: #f1f5f9;
+  color: var(--text-muted);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease;
+}
+.search-clear:hover { background: var(--red-soft); color: var(--red); }
+
+.search-dropdown {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  top: calc(100% - 4px);
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  max-height: 320px;
+  overflow-y: auto;
+  z-index: 40;
+}
+.search-suggestion {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.search-suggestion:hover,
+.search-suggestion.active {
+  background: #f8fafc;
+}
+.search-suggestion .s-icon { font-size: 1rem; }
+.search-suggestion .s-name { font-weight: 600; color: var(--text); }
+.search-suggestion .s-meta { font-size: 0.78rem; color: var(--text-muted); margin-left: auto; }
+.search-suggestion .s-country {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+.search-empty {
+  padding: 14px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.search-selected {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+.search-selected strong { color: var(--text); font-weight: 600; }
+.search-selected .chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--accent-soft);
+  color: #9a3412;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+/* Month badge shown on cards in search mode */
+.card-month-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: var(--accent);
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 /* ---------- Filters ---------- */
@@ -370,6 +504,16 @@ html, body {
   font-weight: 700;
   margin: 0;
   letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.card-country .flag {
+  font-size: 1.35rem;
+  line-height: 1;
+  /* Color-emoji fonts render reliably across platforms */
+  font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
 }
 .card-regions {
   display: flex;
@@ -516,5 +660,197 @@ html, body {
   color: var(--text-muted);
   font-size: 0.85rem;
   border-top: 1px solid var(--border);
-  background: #fff;
+  background: var(--footer-bg, #fff);
+}
+
+/* ---------- Theme toggle button ---------- */
+.hero-actions {
+  margin-top: 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.hero-actions .view-toggle { margin-top: 0; }
+
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  font-size: 1.05rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+  padding: 0;
+}
+.theme-toggle:hover {
+  background: rgba(255,255,255,0.16);
+  border-color: rgba(255,255,255,0.28);
+}
+.theme-toggle:active { transform: scale(0.94); }
+.theme-icon { display: none; line-height: 1; }
+[data-theme="light"] .theme-icon-moon,
+:root:not([data-theme="dark"]) .theme-icon-moon { display: inline; }
+[data-theme="dark"] .theme-icon-sun { display: inline; }
+
+/* =========================================================
+   Dark mode
+   Activated by [data-theme="dark"] on <html> (set by inline
+   script in index.html + theme toggle in main.js).
+   ========================================================= */
+[data-theme="dark"] {
+  /* Core surfaces */
+  --bg: #0b1220;
+  --card: #131c2e;
+  --border: #243049;
+  --text: #e2e8f0;
+  --text-muted: #94a3b8;
+
+  /* Navy is used for filter pill.active — flip so it reads against dark bg */
+  --navy: #e2e8f0;
+  --navy-2: #cbd5e1;
+
+  /* Accent soft (chip bg for selected search) */
+  --accent-soft: #7c2d12;
+
+  /* Semantic soft backgrounds — darken so badges stay legible with
+     their existing dark text colors overridden below */
+  --green-soft: #064e3b;
+  --blue-soft: #1e3a8a;
+  --amber-soft: #78350f;
+  --red-soft: #7f1d1d;
+  --purple-soft: #581c87;
+
+  /* Style pastels — darker backgrounds + lighter foregrounds */
+  --s-beach: #164e63;       --s-beach-fg: #a5f3fc;
+  --s-culture: #701a75;     --s-culture-fg: #f5d0fe;
+  --s-adventure: #7f1d1d;   --s-adventure-fg: #fecaca;
+  --s-nature: #14532d;      --s-nature-fg: #bbf7d0;
+  --s-food: #7c2d12;        --s-food-fg: #fed7aa;
+  --s-nightlife: #4c1d95;   --s-nightlife-fg: #ddd6fe;
+  --s-wildlife: #78350f;    --s-wildlife-fg: #fde68a;
+  --s-skiing: #0c4a6e;      --s-skiing-fg: #bae6fd;
+  --s-wellness: #1e293b;    --s-wellness-fg: #cbd5e1;
+  --s-history: #713f12;     --s-history-fg: #fef08a;
+  --s-music: #831843;       --s-music-fg: #fbcfe8;
+
+  /* Shadows (stronger for dark) */
+  --shadow: 0 1px 2px rgba(0,0,0,0.5), 0 8px 24px rgba(0,0,0,0.35);
+  --shadow-lg: 0 4px 12px rgba(0,0,0,0.55), 0 24px 48px rgba(0,0,0,0.45);
+
+  --footer-bg: var(--card);
+}
+
+/* Selector-specific overrides for hard-coded colors */
+[data-theme="dark"] .map-wrap,
+[data-theme="dark"] .month-tab,
+[data-theme="dark"] .search-box,
+[data-theme="dark"] .search-dropdown,
+[data-theme="dark"] .stat-chip,
+[data-theme="dark"] .empty-state {
+  background: var(--card);
+}
+/* Pills sit over the filter bar's dark tint — give them a slightly
+   lighter surface so they stand out, not the same as the bar itself. */
+[data-theme="dark"] .pill {
+  background: #1e293b;
+  color: var(--text);
+  border-color: #334155;
+}
+[data-theme="dark"] .pill:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+[data-theme="dark"] .map-el { background: #0f172a; }
+[data-theme="dark"] .map-hint { background: #0f172a; }
+
+[data-theme="dark"] .month-tabs,
+[data-theme="dark"] .search-panel {
+  background: rgba(19, 28, 46, 0.92);
+}
+[data-theme="dark"] .filters {
+  background: rgba(11, 18, 32, 0.95);
+}
+
+[data-theme="dark"] .card-why,
+[data-theme="dark"] .popup-month-why {
+  color: var(--text);
+}
+[data-theme="dark"] .region-tag,
+[data-theme="dark"] .badge-temp,
+[data-theme="dark"] .badge-humidity,
+[data-theme="dark"] .badge-season-low {
+  background: #1e293b;
+  color: #cbd5e1;
+}
+[data-theme="dark"] .search-clear {
+  background: #1e293b;
+}
+[data-theme="dark"] .search-suggestion:hover,
+[data-theme="dark"] .search-suggestion.active {
+  background: #1e293b;
+}
+[data-theme="dark"] .search-input::placeholder { color: #64748b; }
+
+/* Badges: lighten foreground colors so they pop against the dark
+   variants of *-soft backgrounds */
+[data-theme="dark"] .badge-rain-low,
+[data-theme="dark"] .badge-budget,
+[data-theme="dark"] .badge-crowd-low { color: #86efac; }
+[data-theme="dark"] .badge-rain-medium,
+[data-theme="dark"] .badge-crowd-medium { color: #fcd34d; }
+[data-theme="dark"] .badge-rain-high,
+[data-theme="dark"] .badge-mid-range { color: #93c5fd; }
+[data-theme="dark"] .badge-luxury { color: #d8b4fe; }
+[data-theme="dark"] .badge-crowd-high { color: #fca5a5; }
+[data-theme="dark"] .badge-season-high {
+  background: #78350f; color: #fde68a;
+}
+[data-theme="dark"] .badge-season-shoulder {
+  background: #312e81; color: #c7d2fe;
+}
+
+/* Event pill (hard-coded orange) */
+[data-theme="dark"] .event-pill {
+  background: #431407;
+  color: #fdba74;
+  border-color: #7c2d12;
+}
+
+/* Search selected chip text color (was baked dark orange) */
+[data-theme="dark"] .search-selected .chip { color: #fed7aa; }
+
+/* Popup month-cities uses text-muted already; popup-month-why colored */
+[data-theme="dark"] .popup-country { color: var(--text); }
+
+/* Pill active uses --navy which we flipped; ensure contrast */
+[data-theme="dark"] .pill.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+[data-theme="dark"] .month-tab.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+/* Leaflet popup dark styling */
+[data-theme="dark"] .leaflet-popup-content-wrapper,
+[data-theme="dark"] .leaflet-popup-tip {
+  background: var(--card);
+  color: var(--text);
+}
+[data-theme="dark"] .leaflet-container a.leaflet-popup-close-button {
+  color: var(--text-muted);
+}
+
+/* Theme toggle button in dark mode — slightly different hover */
+[data-theme="dark"] .theme-toggle {
+  background: rgba(255,255,255,0.06);
 }

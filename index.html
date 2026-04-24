@@ -10,22 +10,61 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script>
+    // Apply theme before paint to avoid flash. Reads localStorage, falls back
+    // to prefers-color-scheme. Matches logic in main.js (keep them in sync).
+    (function () {
+      try {
+        var saved = localStorage.getItem('faraway-theme');
+        var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) { /* ignore */ }
+    })();
+  </script>
 </head>
 <body>
   <header class="hero">
     <div class="hero-inner">
       <h1 class="hero-title">Faraway<span class="dot">.</span></h1>
       <p class="hero-subtitle">A monthly compass for your next trip — curated destinations, climate, costs, and crowds at a glance.</p>
-      <div class="view-toggle" role="tablist" aria-label="View mode">
-        <button id="viewListBtn" class="view-btn active" role="tab" aria-selected="true">📋 List</button>
-        <button id="viewMapBtn" class="view-btn" role="tab" aria-selected="false">🗺️ Map</button>
+      <div class="hero-actions">
+        <div class="view-toggle" role="tablist" aria-label="View mode">
+          <button id="viewListBtn" class="view-btn active" role="tab" aria-selected="true">📋 List</button>
+          <button id="viewMapBtn" class="view-btn" role="tab" aria-selected="false">🗺️ Map</button>
+          <button id="viewSearchBtn" class="view-btn" role="tab" aria-selected="false">🔎 Search</button>
+        </div>
+        <button id="themeToggleBtn" class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <span class="theme-icon theme-icon-sun" aria-hidden="true">☀️</span>
+          <span class="theme-icon theme-icon-moon" aria-hidden="true">🌙</span>
+        </button>
       </div>
     </div>
   </header>
 
-  <nav class="month-tabs" aria-label="Month selector">
+  <nav id="monthTabsNav" class="month-tabs" aria-label="Month selector">
     <div id="monthTabs" class="month-tabs-inner"></div>
   </nav>
+
+  <section id="searchPanel" class="search-panel" aria-label="Place search" hidden>
+    <div class="search-panel-inner">
+      <div class="search-box">
+        <span class="search-icon" aria-hidden="true">🔎</span>
+        <input
+          id="searchInput"
+          type="text"
+          class="search-input"
+          placeholder="Type a country or city — e.g. Japan, Tokyo, Iceland"
+          autocomplete="off"
+          spellcheck="false"
+          aria-label="Search for a country or city"
+          aria-autocomplete="list"
+          aria-controls="searchDropdown" />
+        <button id="searchClearBtn" class="search-clear" type="button" aria-label="Clear search" hidden>✕</button>
+      </div>
+      <ul id="searchDropdown" class="search-dropdown" role="listbox" hidden></ul>
+      <div id="searchSelected" class="search-selected" hidden></div>
+    </div>
+  </section>
 
   <section class="filters" aria-label="Filters">
     <div class="filters-inner">
@@ -75,9 +114,9 @@
     </div>
 
     <div id="emptyState" class="empty-state" hidden>
-      <div class="empty-emoji">🧭</div>
-      <h3>No matches for these filters</h3>
-      <p>Try a different month, widen the budget, or clear filters to start over.</p>
+      <div class="empty-emoji" id="emptyEmoji">🧭</div>
+      <h3 id="emptyTitle">No matches for these filters</h3>
+      <p id="emptyMessage">Try a different month, widen the budget, or clear filters to start over.</p>
     </div>
   </main>
 
