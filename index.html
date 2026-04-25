@@ -23,7 +23,67 @@
   </script>
 </head>
 <body>
-  <header class="hero">
+  <!-- Compact mobile top bar (visible on ≤639px). Reuses theme-toggle id by
+       binding mtThemeToggleBtn to the same handler in main.js. -->
+  <div id="mobileTopbar" class="mobile-topbar" aria-label="App header">
+    <div class="mt-row mt-row-1">
+      <div class="mt-logo">Faraway<span class="dot">.</span></div>
+      <button id="mtThemeToggleBtn" class="mt-icon-btn" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon-sun" aria-hidden="true">☀️</span>
+        <span class="theme-icon theme-icon-moon" aria-hidden="true">🌙</span>
+      </button>
+    </div>
+    <div class="mt-row mt-row-2">
+      <button id="mtMonthBtn" class="mt-month-btn" type="button" aria-haspopup="dialog" aria-expanded="false">
+        <span class="mt-month-icon" aria-hidden="true">📅</span>
+        <span id="mtMonthLabel" class="mt-month-label">May</span>
+        <span class="mt-month-chevron" aria-hidden="true">▾</span>
+      </button>
+      <button id="mtFiltersBtn" class="mt-filters-btn" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="filterSheet">
+        <span aria-hidden="true">⚙️</span>
+        <span>Filters</span>
+        <span id="mtFilterCountBadge" class="mt-filter-count" hidden>0</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Desktop toolbar (visible on ≥640px). Replaces the big hero + ensures
+       view-toggle / month / filters are reachable while scrolling. -->
+  <header id="desktopToolbar" class="desktop-toolbar" aria-label="App toolbar">
+    <div class="dt-inner">
+      <div class="dt-logo">Faraway<span class="dot">.</span></div>
+      <div class="dt-views" role="tablist" aria-label="View mode">
+        <button id="dtViewListBtn" class="dt-view-btn active" data-view="list" role="tab" aria-selected="true">📋 Browse</button>
+        <button id="dtViewMapBtn" class="dt-view-btn" data-view="map" role="tab" aria-selected="false">🗺️ Map</button>
+        <button id="dtViewSearchBtn" class="dt-view-btn" data-view="search" role="tab" aria-selected="false">🔎 Search</button>
+        <button id="dtViewSavedBtn" class="dt-view-btn" data-view="saved" role="tab" aria-selected="false">♥ Saved <span id="dtSavedCount" class="dt-count" hidden>0</span></button>
+      </div>
+      <div class="dt-spacer"></div>
+      <button class="dt-pop-btn" data-pop="month" type="button" aria-haspopup="true" aria-expanded="false">
+        📅 <span id="dtMonthLabel">May</span> <span class="dt-chev">▾</span>
+      </button>
+      <button class="dt-pop-btn" data-pop="continent" type="button" aria-haspopup="true" aria-expanded="false">
+        🌏 <span id="dtContinentLabel">Continent</span> <span class="dt-chev">▾</span>
+      </button>
+      <button class="dt-pop-btn" data-pop="budget" type="button" aria-haspopup="true" aria-expanded="false">
+        💰 <span id="dtBudgetLabel">Budget</span> <span class="dt-chev">▾</span>
+      </button>
+      <button class="dt-pop-btn dt-pop-styles" data-pop="styles" type="button" aria-haspopup="true" aria-expanded="false">
+        🎨 Styles <span id="dtStylesCount" class="dt-pop-count" hidden>0</span> <span class="dt-chev">▾</span>
+      </button>
+      <button id="dtThemeToggleBtn" class="dt-theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <span class="theme-icon theme-icon-sun" aria-hidden="true">☀️</span>
+        <span class="theme-icon theme-icon-moon" aria-hidden="true">🌙</span>
+      </button>
+    </div>
+    <div id="activeChips" class="dt-chips-row" hidden>
+      <div class="dt-chips-summary"><span id="dtSummary"></span></div>
+      <div id="dtActiveChips" class="dt-active-chips"></div>
+      <button id="dtClearAll" class="dt-clear-all" type="button" hidden>Clear all</button>
+    </div>
+  </header>
+
+  <header class="hero hero-desktop-only">
     <div class="hero-inner">
       <h1 class="hero-title">Faraway<span class="dot">.</span></h1>
       <p class="hero-subtitle">A monthly compass for your next trip — curated destinations, climate, costs, and crowds at a glance.</p>
@@ -40,6 +100,18 @@
       </div>
     </div>
   </header>
+
+  <!-- Mobile month picker popover (rendered via JS into #monthPickerGrid) -->
+  <div id="monthPicker" class="month-picker" role="dialog" aria-modal="true" aria-label="Pick a month" hidden>
+    <div class="month-picker-backdrop" data-close></div>
+    <div class="month-picker-panel">
+      <div class="month-picker-head">
+        <span>Pick a month</span>
+        <button class="month-picker-close" type="button" data-close aria-label="Close">✕</button>
+      </div>
+      <div id="monthPickerGrid" class="month-picker-grid"></div>
+    </div>
+  </div>
 
   <nav id="monthTabsNav" class="month-tabs" aria-label="Month selector">
     <div id="monthTabs" class="month-tabs-inner"></div>
@@ -66,7 +138,10 @@
     </div>
   </section>
 
-  <section class="filters" id="filtersSection" aria-label="Filters">
+  <!-- Backdrop used on mobile when filter sheet is open -->
+  <div id="filterBackdrop" class="filter-backdrop" hidden></div>
+
+  <section class="filters" id="filtersSection" aria-label="Filters" role="dialog" aria-modal="true">
     <button
       id="filterToggleBtn"
       class="filter-toggle"
@@ -80,6 +155,11 @@
       </span>
       <span class="filter-toggle-chevron" aria-hidden="true">▾</span>
     </button>
+    <div class="filter-sheet-handle" aria-hidden="true"><span></span></div>
+    <div class="filter-sheet-head">
+      <span class="filter-sheet-title">Filters</span>
+      <button id="filterSheetCloseBtn" class="filter-sheet-close" type="button" aria-label="Close filters">✕</button>
+    </div>
     <div class="filters-inner" id="filtersInner">
       <div class="filter-group">
         <label class="filter-label">Continent</label>
@@ -123,6 +203,11 @@
         <button id="clearFilters" class="btn-clear" type="button">Clear filters</button>
       </div>
     </div>
+    <div class="filter-sheet-cta">
+      <button id="filterSheetApplyBtn" class="filter-sheet-apply" type="button">
+        Show <span id="filterSheetCount">17</span> destinations
+      </button>
+    </div>
   </section>
 
   <main class="results">
@@ -149,6 +234,22 @@
   <footer class="site-footer">
     <p>Faraway · static demo · data snapshot 2026.04</p>
   </footer>
+
+  <nav id="bottomNav" class="bottom-nav" aria-label="Primary">
+    <button class="bn-btn" data-view="list" type="button" aria-current="page">
+      <span class="bn-icon" aria-hidden="true">📋</span><span class="bn-label">Browse</span>
+    </button>
+    <button class="bn-btn" data-view="map" type="button">
+      <span class="bn-icon" aria-hidden="true">🗺️</span><span class="bn-label">Map</span>
+    </button>
+    <button class="bn-btn" data-view="search" type="button">
+      <span class="bn-icon" aria-hidden="true">🔎</span><span class="bn-label">Search</span>
+    </button>
+    <button class="bn-btn" data-view="saved" type="button">
+      <span class="bn-icon" aria-hidden="true">♥</span><span class="bn-label">Saved</span>
+      <span id="bnSavedCount" class="bn-count" hidden>0</span>
+    </button>
+  </nav>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
           integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
