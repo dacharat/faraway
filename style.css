@@ -210,6 +210,9 @@ input:focus-visible,
   box-shadow: var(--shadow-lg);
   padding: 14px;
   min-width: 220px;
+  max-width: 280px;
+  max-height: 360px;
+  overflow-y: auto;
   z-index: 50;
 }
 .dt-popover-title {
@@ -220,7 +223,24 @@ input:focus-visible,
   color: var(--text-muted);
   margin: 0 0 10px;
 }
-.dt-popover .pill-row { display: flex; flex-wrap: wrap; gap: 6px; }
+/* Stack pills vertically for clean scannability — Continent/Budget render as
+   full-width rows. Styles is multi-select so allows wrap (denser layout). */
+.dt-popover .pill-row { display: flex; flex-direction: column; gap: 4px; }
+.dt-popover .pill-row .pill {
+  width: 100%;
+  text-align: left;
+  border-radius: 8px;
+  padding: 8px 12px;
+  min-height: 36px;
+}
+.dt-popover.popover-styles .pill-row {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.dt-popover.popover-styles .pill-row .pill {
+  width: auto;
+  border-radius: 999px;
+}
 .dt-popover .month-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1201,11 +1221,26 @@ input:focus-visible,
   gap: 6px;
 }
 .region-tag {
+  font-family: inherit;
   font-size: 0.75rem;
   color: var(--text-muted);
   background: #f1f5f9;
-  padding: 3px 8px;
+  padding: 4px 9px;
+  border: 1px solid transparent;
   border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.region-tag:hover {
+  background: #fff7ed;
+  color: #9a3412;
+  border-color: #fed7aa;
+}
+[data-theme="dark"] .region-tag { background: #1e293b; color: #cbd5e1; }
+[data-theme="dark"] .region-tag:hover {
+  background: #431407;
+  color: #fdba74;
+  border-color: #7c2d12;
 }
 
 .card-why {

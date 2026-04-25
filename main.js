@@ -102,7 +102,8 @@
     searchQuery: '',
     selectedPlace: null,                   // { type: 'country'|'city', name, country }
     expanded: new Set(),                   // card ids that are expanded (per session)
-    saved: new Set()                       // saved entry ids, persisted to localStorage
+    saved: new Set(),                      // saved entry ids, persisted to localStorage
+    mapFocus: null                         // { country, city? } — one-shot pan/zoom target on next map render
   };
 
   // Stable id for an entry — month + country uniquely identifies it given the
@@ -414,7 +415,7 @@
   function openPopover(kind, anchorBtn) {
     closePopover();
     const pop = document.createElement('div');
-    pop.className = 'dt-popover';
+    pop.className = 'dt-popover' + (kind === 'styles' ? ' popover-styles' : '');
     pop.dataset.kind = kind;
     let inner = '';
     if (kind === 'month') {
@@ -984,6 +985,9 @@
 
     mapMarkersLayer.clearLayers();
     const isMobile = window.innerWidth <= 639;
+    const focusKey = state.mapFocus ? (state.mapFocus.city + '|' + state.mapFocus.country) : null;
+    let focusMarker = null;
+    let focusFallback = null;
     Object.values(byCity).forEach(group => {
       const marker = L.circleMarker(group.coord, {
         radius: (isMobile ? 9 : 5) + Math.min(group.entries.length * 2, 10),
@@ -995,10 +999,33 @@
       marker.bindTooltip(buildCityTooltip(group), { sticky: true, direction: 'top' });
       marker.bindPopup(buildCityPopup(group), { maxWidth: 340, minWidth: 260 });
       marker.addTo(mapMarkersLayer);
+
+      // If user clicked "View on map" on a card, remember which marker to open.
+      if (state.mapFocus) {
+        const id = group.city + '|' + group.country;
+        if (id === focusKey) focusMarker = { marker, coord: group.coord };
+        else if (!focusFallback && group.country === state.mapFocus.country) {
+          focusFallback = { marker, coord: group.coord };
+        }
+      }
     });
 
     // Leaflet needs a kick if the container was hidden when created.
-    setTimeout(() => mapInstance.invalidateSize(), 50);
+    setTimeout(() => {
+      mapInstance.invalidateSize();
+      if (state.mapFocus) {
+        const target = focusMarker || focusFallback;
+        if (target) {
+          mapInstance.setView(target.coord, Math.max(mapInstance.getZoom(), 5), { animate: true });
+          target.marker.openPopup();
+        } else {
+          // Country had no marker after filters — fall back to country centroid
+          const centroid = COUNTRY_COORDS[state.mapFocus.country];
+          if (centroid) mapInstance.setView(centroid, 4, { animate: true });
+        }
+        state.mapFocus = null; // one-shot
+      }
+    }, 80);
   }
 
   // Normalize a raw city label into a lookup key + display name.
@@ -1160,7 +1187,7 @@
           </span>
         </div>
         <div class="card-regions">
-          ${(d.best_cities_or_regions || []).slice(0, 3).map(r => `<span class="region-tag">📍 ${escapeHtml(r)}</span>`).join('')}
+          ${(d.best_cities_or_regions || []).slice(0, 3).map(r => `<button class="region-tag" type="button" data-city="${escapeHtml(r)}" aria-label="View ${escapeHtml(r)} on the map">📍 ${escapeHtml(r)}</button>`).join('')}
         </div>
       </div>
 
@@ -1223,6 +1250,16 @@
       if (ex) state.expanded.add(eid); else state.expanded.delete(eid);
       toggle.setAttribute('aria-expanded', String(ex));
       toggle.querySelector('.card-toggle-label').textContent = ex ? 'Hide details' : 'See details';
+    });
+
+    // Region pins → switch to map, focus that specific city
+    card.querySelectorAll('.region-tag[data-city]').forEach(btn => {
+      btn.addEventListener('click', (ev) => {
+        ev.stopPropagation();
+        const raw = btn.dataset.city;
+        state.mapFocus = { country: d.country, city: raw ? normalizeCityName(raw) : null };
+        setView('map');
+      });
     });
 
     // Save toggle

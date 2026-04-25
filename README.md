@@ -16,21 +16,39 @@ map of every recommended city.
 
 ## Features
 
-- **Month tabs** — Jan→Dec pill selector, defaults to the current month
-  (horizontal-scroll single row on mobile, wrap on desktop)
-- **Filter bar** — continent · budget · crowd level · travel-style multi-select,
-  with a live count badge; collapsible behind a toggle on mobile
-- **🔎 Search mode** — type a country or city for instant autocomplete,
-  returns every month that place is recommended
-- **🏳️ Flag emojis** — every country in the grid, tooltip, popup, and search
-  dropdown is labelled with its flag
-- **Live stats** — destinations found, average daily cost range, season mix
-- **Card grid** — climate badges, key events, pros/cons, responsive 1→2→3 cols
-- **🗺️ Map view** — every recommended city plotted on a world map; hover for
-  a quick tooltip, click for full month-by-month context, click a month badge
-  in the popup to jump back into the list view filtered to that month
-- **🌗 Dark mode** — auto-follows system preference, toggle in the hero to
-  override, choice persists in `localStorage`
+- **Two shells, one codebase** — mobile gets a compact sticky topbar +
+  bottom navigation (Browse / Map / Search / Saved); desktop gets a single
+  56px sticky toolbar with popover dropdowns. Switches at the `640px`
+  breakpoint
+- **Month picker** — defaults to the current month. Mobile: dialog with a
+  3-col grid of All + 12 months. Desktop: popover dropdown in the toolbar
+- **Filters** — continent · budget · crowd · travel-style (multi-select),
+  with a live count badge. Mobile: bottom sheet with drag handle + sticky
+  "Show N destinations" CTA. Desktop: vertical popover dropdowns + active
+  filter chips that you can ✕-remove individually
+- **♥ Saved trips** — heart any destination card to keep it; a "Saved" tab
+  surfaces the collection. Persists across reloads
+- **🔎 Search** — country/city autocomplete with **fuzzy match** ("tokio" →
+  Tokyo). Empty state shows "Trending this month" + recent searches
+- **📍 Clickable city pins** — every region tag on a card (e.g. Kyoto,
+  Hirosaki, Takayama) is a button. Tap to jump to map view, pan to that
+  exact city, and open its popup
+- **🔗 Shareable URLs** — filter / view / month / search state syncs to the
+  URL (`?view=map&continent=Asia&styles=culture,food`). Refresh-safe,
+  copy-pasteable
+- **🏳️ Flag emojis** — every country in cards, tooltips, popups, and the
+  search dropdown is labelled with its flag
+- **Two-tier card** — country, 1-line summary, prominent price, 3 essential
+  signals (budget / crowds / season). "See details" expands climate, key
+  events, pros/cons, travel styles inline
+- **🗺️ Map view** — every recommended city plotted; hover for a tooltip,
+  click for full month-by-month context, click a month badge in the popup
+  to jump back into List filtered to that month
+- **🌗 Dark mode** — auto-follows system preference, toggle in either
+  toolbar to override, persists in `localStorage`
+- **♿ A11y baseline** — 44px tap targets, `:focus-visible` rings,
+  `prefers-reduced-motion`, `role="dialog"` + `aria-modal` on sheets,
+  `aria-current="page"` on the active bottom-nav tab
 - **No build step** — open `index.html` and it works
 
 ## Tech
@@ -56,6 +74,20 @@ faraway/
 └── README.md    # this file
 ```
 
+## Persistence
+
+Three things survive a refresh:
+
+| What             | Storage key              | Notes                          |
+| ---------------- | ------------------------ | ------------------------------ |
+| Theme            | `faraway-theme`          | `"light" \| "dark"`            |
+| Saved trips      | `faraway-saved`          | `month\|country` ids           |
+| Recent searches  | `faraway-recent`         | last 5 selections              |
+
+Filter / view / month / search state is **also** synced to the URL
+(`?view=map&continent=Asia&styles=culture,food`) via
+`history.replaceState`, so any state is shareable and refresh-safe.
+
 ## Dark mode
 
 Dark mode uses a single `data-theme` attribute on `<html>`:
@@ -63,9 +95,11 @@ Dark mode uses a single `data-theme` attribute on `<html>`:
 - An inline `<script>` in `<head>` applies the theme **before paint** (no
   flash), reading `localStorage['faraway-theme']` and falling back to the
   OS preference (`prefers-color-scheme`).
-- The hero's 🌗 toggle flips the attribute and persists the choice.
-- If the user hasn't made an explicit choice yet, the page follows OS theme
-  changes live.
+- Three 🌗 toggles flip the attribute (one in the hero — kept for
+  desktop's legacy DOM — one in the mobile topbar, one in the desktop
+  toolbar). Choice persists.
+- If the user hasn't made an explicit choice yet, the page follows OS
+  theme changes live.
 
 Color tokens are declared under `:root`, then overridden inside a
 `[data-theme="dark"]` block at the end of `style.css`, along with

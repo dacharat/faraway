@@ -119,8 +119,7 @@ Do **not** just `.push(...entries)` verbatim — that will create duplicate
 
 ## Filters
 
-Four filter groups live in the sticky filter bar, applied additively by
-`applyFilters()` in `main.js`:
+Four filter groups, applied additively by `applyFilters()` in `main.js`:
 
 | Filter    | Type         | State field       | Source of options                     |
 | --------- | ------------ | ----------------- | ------------------------------------- |
@@ -129,43 +128,96 @@ Four filter groups live in the sticky filter bar, applied additively by
 | Crowd     | single-pill  | `state.crowd`     | `crowd_level` on entries              |
 | Style     | multi-select | `state.styles`    | `TRAVEL_STYLES` (fixed array in JS)   |
 
-Any pill row that uses `data-filter="<key>"` is auto-wired by `bindFilterPills()`
-for single-select behavior — to add a new single-select filter, just drop a
-`<div class="pill-row" data-filter="newkey">` in the HTML and initialize
-`state.newkey` alongside the others. Multi-select (like Style) is built
-imperatively in `buildStyleFilter()`.
+The "source of truth" for these is the legacy filter section in
+`#filtersSection` — its `data-filter="<key>"` pill rows are auto-wired by
+`bindFilterPills()`. The mobile filter sheet (A4) and desktop popover
+dropdowns (B2) are **alternate UIs** that mutate the same state and sync the
+underlying pills. To add a new single-select filter: add the pill row, init
+`state.newkey`, and update both popover wiring in `bindDesktopToolbar()` and
+the mobile sheet rendering. Multi-select (Style) is built in `buildStyleFilter()`.
 
-**Clear button** resets every filter group — keep `bindClearButton()` in sync
-when adding a new filter.
+**Clear / chip-remove** must reset every filter group — keep
+`bindClearButton()`, the toolbar's `dt-clear-all` handler, and
+`renderActiveChips()` in sync.
 
-**Active-count badge** on the mobile filter toggle is computed in
-`updateFilterCountBadge()` — also add any new filter there.
+**Active-count badge**: `updateFilterCountBadge()` updates both the mobile
+topbar badge (`#mtFilterCountBadge`) and the legacy `#filterCountBadge`.
 
 ## Views
 
-Three views, switched via the hero tablist (`setView()` in `main.js`):
+Four views, routed by `setView()` in `main.js`:
 
-- **List** — default. Month tabs + filter bar visible.
-- **Map** — Leaflet world map. Month tabs + filter bar visible; filters also
-  apply to pin aggregation in `aggregateByCity()`.
-- **Search** — a country/city autocomplete answers "when should I visit X?".
-  Month tabs **and** the filter bar are hidden (by design — the query is
-  the sole filter). Filter state is preserved, so switching back to List
-  restores the user's last selection.
+- **List / Browse** — default. Cards rendered by month + filters.
+- **Map** — Leaflet world map. Filters apply to pin aggregation
+  (`aggregateByCity()`); month tab is ignored on map (each pin summarises
+  every month it appears in).
+- **Search** — country/city autocomplete answering "when should I visit X?".
+  Month tabs and the filter sheet are hidden. Filter state is preserved.
+- **Saved** — pulls every entry whose id (`month|country`) lives in
+  `state.saved` (persisted to `localStorage['faraway-saved']`). Filters still
+  apply on top.
 
-## Mobile UX specifics
+Card region pins (`.region-tag` — Kyoto, Hirosaki, Takayama on the Japan
+card) are **clickable buttons**. Clicking one sets
+`state.mapFocus = { country, city }` (one-shot, the city goes through
+`normalizeCityName()`), switches to map view, and `renderMap()` `panTo`s +
+`openPopup`s the matching marker after layout. If the city has no marker
+under current filters, it falls back to any marker in the same country, then
+finally to the country centroid in `COUNTRY_COORDS`.
 
-- **Month tabs** (`≤ 639px`): single horizontal scroll row (`flex-wrap: nowrap`,
-  `scroll-snap-type: x proximity`, hidden scrollbar) instead of wrapping to
-  4 rows. Desktop keeps the wrap + centered layout.
-- **Filter bar** (`≤ 639px`): collapsed by default behind a `⚙️ Filters` button
-  with an active-count badge. Toggling adds/removes `.open` on the section.
-  Desktop (`≥ 640px`): button hidden, panel always visible.
-- **Filter grid on desktop**: 2 rows — Continent spans full width on top,
-  Budget/Crowd/Style/Clear share the bottom row (grid-template-areas). This
-  keeps the wider continent pills from squeezing the other columns.
-- `align-items: start` on `.filters-inner` so filter labels line up at the top
-  instead of floating in empty space above short pill rows.
+## Layout shells
+
+The site has two distinct shells; switch happens at `640px`.
+
+### Mobile (`≤ 639px`)
+- **`#mobileTopbar`** sticky top: logo, theme toggle, month-picker button,
+  Filters button (with count badge). Hero is hidden.
+- **Month picker**: dialog `#monthPicker` with 3-col grid of All + 12 months.
+  Replaces the horizontal-scroll month-tab strip.
+- **Filter sheet**: the same `#filtersSection` becomes a bottom sheet
+  (`position: fixed; transform: translateY(100%)`, slides in on `.open`),
+  with a drag handle, header, and "Show {N} destinations" sticky CTA
+  (`#filterSheetCount`). Backdrop dim is `#filterBackdrop`.
+- **`#bottomNav`** fixed at bottom with Browse / Map / Search / Saved
+  (`aria-current="page"` on active). `Saved` shows a count badge.
+
+### Desktop (`≥ 640px`)
+- **`#desktopToolbar`** sticky 56px row: logo · view tabs (Browse / Map /
+  Search / Saved) · spacer · popover triggers for Month / Continent /
+  Budget / Styles · theme toggle. Filter pills are stacked **vertically**
+  inside the popover (with `max-height: 360px` overflow).
+- **`#activeChips`** below toolbar: `<n> destinations · avg $X/day · season
+  mix` summary + removable filter chips + Clear all. Replaces the standalone
+  `.stats-bar` (which is hidden on desktop).
+- The legacy `.hero`, `.month-tabs`, and `.filters` sections all become
+  `display: none` on desktop — kept in DOM as the source of truth that the
+  new UIs mutate.
+
+## Persistence
+
+| What             | Storage key             | Format                          |
+| ---------------- | ----------------------- | ------------------------------- |
+| Theme            | `faraway-theme`         | `"light" \| "dark"`             |
+| Saved trips      | `faraway-saved`         | `string[]` of `month\|country` |
+| Recent searches  | `faraway-recent`        | `string[]` (last 5 picks)       |
+
+URL state (`view / month / continent / budget / crowd / styles / q`) is
+synced via `history.replaceState` in `syncUrlState()`. Read on init in
+`readUrlState()`. `?continent=Asia&styles=culture,food` is shareable.
+
+## Accessibility
+
+- Tap targets ≥ 44px on mobile (buttons, pills, month-tabs).
+- `:focus-visible { outline: 2px solid var(--accent) }` is global.
+- `prefers-reduced-motion` disables transitions/animations site-wide.
+- Filter sheet and month picker are `role="dialog"` with `aria-modal="true"`;
+  open returns focus to the sheet's close button, close restores focus to
+  the trigger (`_sheetReturnFocus`).
+- Bottom nav uses `aria-current="page"` on the active button.
+- Card "See details" toggle uses `aria-expanded` + label flip.
+
+When adding new dialogs/popovers, follow the same pattern: capture
+`document.activeElement` on open, restore on close.
 
 ## Dark mode
 
@@ -186,9 +238,15 @@ Dark mode is live. Key pieces:
   (`#1e293b → #0f172a`) instead of `var(--navy)` because `--navy` is flipped
   in dark mode for the filter pill active state. Don't re-introduce
   `var(--navy)` in the hero background or you'll re-break dark mode there.
-- **Toggle**: `#themeToggleBtn` in the hero; `bindThemeToggle()` in `main.js`
-  flips the attribute, persists to localStorage, and listens for OS theme
-  changes (only auto-applies them if the user hasn't explicitly chosen).
+  *(Note: the hero is `display: none` on desktop now — replaced by
+  `#desktopToolbar` — but kept in DOM and used as the source of truth for
+  the legacy view-tabs / theme-toggle handlers.)*
+- **Toggle**: there are now THREE theme buttons (`#themeToggleBtn` in hero,
+  `#mtThemeToggleBtn` in mobile topbar, `#dtThemeToggleBtn` in desktop
+  toolbar) — they all flip `data-theme` and persist to `localStorage`.
+  `bindThemeToggle()` wires the legacy hero one; `bindMobileTopbar()` and
+  `bindDesktopToolbar()` wire their respective buttons. Keep all three in
+  sync if you change the toggle behaviour.
 
 ## Travel styles (adding a new one)
 
