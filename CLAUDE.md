@@ -88,7 +88,7 @@ No rebuild — refresh the browser.
 ## Merging datasets (the common recurring task)
 
 The repo has received several bulk data drops (e.g. `korea_russia_thailand_data.js`,
-`eu_uk_data.js`). These files define a sibling constant with the same shape as
+`eu_uk_data.js`, `asia_extended_data.js`). These files define a sibling constant with the same shape as
 `TRAVEL_DATA` and include merge instructions in their header comment.
 
 **Established merge policy** (confirmed by the user across multiple sessions):

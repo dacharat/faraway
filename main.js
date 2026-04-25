@@ -30,7 +30,8 @@
     'Ethiopia': '🇪🇹', 'Finland': '🇫🇮', 'France': '🇫🇷', 'Georgia': '🇬🇪',
     'Germany': '🇩🇪', 'Greece': '🇬🇷', 'Hungary': '🇭🇺', 'Iceland': '🇮🇸',
     'India': '🇮🇳', 'Indonesia': '🇮🇩', 'Ireland': '🇮🇪', 'Italy': '🇮🇹',
-    'Japan': '🇯🇵', 'Jordan': '🇯🇴', 'Kenya': '🇰🇪', 'Laos': '🇱🇦',
+    'Japan': '🇯🇵', 'Jordan': '🇯🇴', 'Kenya': '🇰🇪', 'Kyrgyzstan': '🇰🇬',
+    'Laos': '🇱🇦', 'Malaysia': '🇲🇾',
     'Maldives': '🇲🇻', 'Malta': '🇲🇹', 'Mexico': '🇲🇽', 'Mongolia': '🇲🇳',
     'Morocco': '🇲🇦', 'Myanmar': '🇲🇲', 'Namibia': '🇳🇦', 'Nepal': '🇳🇵',
     'Netherlands': '🇳🇱', 'New Zealand': '🇳🇿', 'Norway': '🇳🇴', 'Oman': '🇴🇲',
@@ -39,7 +40,7 @@
     'Scotland': '🏴\u{E0067}\u{E0062}\u{E0073}\u{E0063}\u{E0074}\u{E007F}',
     'Slovenia': '🇸🇮', 'South Africa': '🇿🇦', 'South Korea': '🇰🇷',
     'Spain': '🇪🇸', 'Sri Lanka': '🇱🇰', 'Sweden': '🇸🇪', 'Switzerland': '🇨🇭',
-    'Tanzania': '🇹🇿', 'Thailand': '🇹🇭', 'Turkey': '🇹🇷',
+    'Taiwan': '🇹🇼', 'Tanzania': '🇹🇿', 'Thailand': '🇹🇭', 'Turkey': '🇹🇷',
     'United Arab Emirates': '🇦🇪', 'United States': '🇺🇸', 'Vietnam': '🇻🇳'
   };
 
@@ -63,7 +64,8 @@
     'Georgia': 'Asia', 'Germany': 'Europe', 'Greece': 'Europe',
     'Hungary': 'Europe', 'Iceland': 'Europe', 'India': 'Asia',
     'Indonesia': 'Asia', 'Ireland': 'Europe', 'Italy': 'Europe',
-    'Japan': 'Asia', 'Jordan': 'Asia', 'Kenya': 'Africa', 'Laos': 'Asia',
+    'Japan': 'Asia', 'Jordan': 'Asia', 'Kenya': 'Africa',
+    'Kyrgyzstan': 'Asia', 'Laos': 'Asia', 'Malaysia': 'Asia',
     'Maldives': 'Asia', 'Malta': 'Europe', 'Mexico': 'North America',
     'Mongolia': 'Asia', 'Morocco': 'Africa', 'Myanmar': 'Asia',
     'Namibia': 'Africa', 'Nepal': 'Asia', 'Netherlands': 'Europe',
@@ -72,8 +74,8 @@
     'Portugal': 'Europe', 'Russia': 'Europe', 'Rwanda': 'Africa',
     'Scotland': 'Europe', 'Slovenia': 'Europe', 'South Africa': 'Africa',
     'South Korea': 'Asia', 'Spain': 'Europe', 'Sri Lanka': 'Asia',
-    'Sweden': 'Europe', 'Switzerland': 'Europe', 'Tanzania': 'Africa',
-    'Thailand': 'Asia', 'Turkey': 'Asia',
+    'Sweden': 'Europe', 'Switzerland': 'Europe', 'Taiwan': 'Asia',
+    'Tanzania': 'Africa', 'Thailand': 'Asia', 'Turkey': 'Asia',
     'United Arab Emirates': 'Asia', 'United States': 'North America',
     'Vietnam': 'Asia'
   };

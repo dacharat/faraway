@@ -11,7 +11,7 @@
    ========================================================= */
 const TRAVEL_DATA = {
   "dataset_version": "2026.04",
-  "total_entries": 189,
+  "total_entries": 211,
   "currency": "USD",
   "city_coords": {
     "Bangkok": [
@@ -1159,7 +1159,7 @@ const TRAVEL_DATA = {
       108.33
     ],
     "Inle Lake": [
-      20.57,
+      20.55,
       96.91
     ],
     "Isle of Skye": [
@@ -1283,8 +1283,8 @@ const TRAVEL_DATA = {
       -71.57
     ],
     "Ngapali Beach": [
-      18.45,
-      94.36
+      18.4,
+      94.28
     ],
     "Ngorongoro": [
       -3.16,
@@ -1315,8 +1315,8 @@ const TRAVEL_DATA = {
       98.44
     ],
     "Palawan": [
-      9.84,
-      118.74
+      9.74,
+      118.73
     ],
     "Paros": [
       37.07,
@@ -1403,7 +1403,7 @@ const TRAVEL_DATA = {
       34.33
     ],
     "Siargao": [
-      9.86,
+      9.85,
       126.05
     ],
     "Siem Reap": [
@@ -1427,8 +1427,8 @@ const TRAVEL_DATA = {
       78.66
     ],
     "Tbilisi": [
-      41.72,
-      44.78
+      41.69,
+      44.83
     ],
     "Terelj NP": [
       47.98,
@@ -2265,6 +2265,358 @@ const TRAVEL_DATA = {
     "Dalarna": [
       61,
       14.5
+    ],
+    "Taipei": [
+      25.04,
+      121.56
+    ],
+    "Tainan": [
+      22.99,
+      120.21
+    ],
+    "Kaohsiung": [
+      22.63,
+      120.28
+    ],
+    "Hualien": [
+      23.99,
+      121.6
+    ],
+    "Taroko Gorge": [
+      24.15,
+      121.62
+    ],
+    "Alishan": [
+      23.51,
+      120.8
+    ],
+    "Sun Moon Lake": [
+      23.86,
+      120.91
+    ],
+    "Jiufen": [
+      25.11,
+      121.84
+    ],
+    "Pingxi": [
+      25.01,
+      121.76
+    ],
+    "Yangmingshan NP": [
+      25.18,
+      121.56
+    ],
+    "Kenting": [
+      21.95,
+      120.8
+    ],
+    "Penghu Islands": [
+      23.57,
+      119.58
+    ],
+    "Taichung": [
+      24.15,
+      120.68
+    ],
+    "Luodong": [
+      24.68,
+      121.77
+    ],
+    "Wulai": [
+      24.87,
+      121.55
+    ],
+    "Orchid Island": [
+      22.04,
+      121.55
+    ],
+    "Lanyu": [
+      22.04,
+      121.55
+    ],
+    "Kazbegi (Stepantsminda)": [
+      42.66,
+      44.64
+    ],
+    "Mtskheta": [
+      41.85,
+      44.72
+    ],
+    "Kakheti": [
+      41.65,
+      45.72
+    ],
+    "Sighnaghi": [
+      41.62,
+      45.92
+    ],
+    "Telavi": [
+      41.92,
+      45.48
+    ],
+    "Gori": [
+      41.99,
+      44.11
+    ],
+    "Uplistsikhe": [
+      41.94,
+      44.21
+    ],
+    "Kutaisi": [
+      42.27,
+      42.7
+    ],
+    "Svaneti": [
+      43.05,
+      42.97
+    ],
+    "Mestia": [
+      43.05,
+      42.72
+    ],
+    "Ushguli": [
+      43.12,
+      43.04
+    ],
+    "Gudauri": [
+      42.48,
+      44.48
+    ],
+    "Bakuriani": [
+      41.74,
+      43.52
+    ],
+    "Borjomi": [
+      41.84,
+      43.39
+    ],
+    "Gergeti Trinity Church": [
+      42.65,
+      44.63
+    ],
+    "Vardzia": [
+      41.39,
+      43.28
+    ],
+    "Tusheti": [
+      42.27,
+      45.56
+    ],
+    "Juta Valley": [
+      42.71,
+      44.57
+    ],
+    "El Nido": [
+      11.19,
+      119.4
+    ],
+    "Coron": [
+      12,
+      120.2
+    ],
+    "Cebu City": [
+      10.32,
+      123.9
+    ],
+    "Manila": [
+      14.6,
+      120.98
+    ],
+    "Banaue": [
+      16.92,
+      121.06
+    ],
+    "Vigan": [
+      17.57,
+      120.39
+    ],
+    "Batad Rice Terraces": [
+      16.92,
+      121.13
+    ],
+    "Chocolate Hills Bohol": [
+      9.8,
+      124.19
+    ],
+    "Davao": [
+      7.07,
+      125.61
+    ],
+    "Intramuros Manila": [
+      14.59,
+      120.97
+    ],
+    "Ati-Atihan Kalibo": [
+      11.7,
+      122.37
+    ],
+    "Sinulog Cebu": [
+      10.32,
+      123.9
+    ],
+    "Puerto Princesa": [
+      9.74,
+      118.74
+    ],
+    "Camiguin": [
+      9.17,
+      124.72
+    ],
+    "Malapascua": [
+      11.33,
+      124.12
+    ],
+    "Tubbataha Reef": [
+      8.97,
+      119.9
+    ],
+    "Kuala Lumpur": [
+      3.14,
+      101.69
+    ],
+    "Penang": [
+      5.42,
+      100.33
+    ],
+    "Langkawi": [
+      6.35,
+      99.8
+    ],
+    "Kota Kinabalu": [
+      5.98,
+      116.07
+    ],
+    "Sabah": [
+      5.98,
+      116.07
+    ],
+    "Sarawak": [
+      1.55,
+      110.36
+    ],
+    "Kuching": [
+      1.55,
+      110.34
+    ],
+    "Perhentian Islands": [
+      5.91,
+      102.75
+    ],
+    "Tioman Island": [
+      2.83,
+      104.14
+    ],
+    "Cameron Highlands": [
+      4.47,
+      101.38
+    ],
+    "Malacca": [
+      2.19,
+      102.24
+    ],
+    "Taman Negara": [
+      4.39,
+      102.4
+    ],
+    "Sipadan Island": [
+      4.12,
+      118.63
+    ],
+    "Semporna": [
+      4.48,
+      118.61
+    ],
+    "Georgetown": [
+      5.41,
+      100.34
+    ],
+    "Mulu National Park": [
+      4.05,
+      114.81
+    ],
+    "Yangon": [
+      16.87,
+      96.19
+    ],
+    "Hsipaw": [
+      22.62,
+      97.3
+    ],
+    "Hpa-An": [
+      16.89,
+      97.64
+    ],
+    "Mrauk-U": [
+      20.6,
+      93.2
+    ],
+    "Kyaiktiyo (Golden Rock)": [
+      17.48,
+      97.1
+    ],
+    "Kalaw": [
+      20.63,
+      96.57
+    ],
+    "Pindaya": [
+      20.99,
+      96.63
+    ],
+    "Nay Pyi Taw": [
+      19.75,
+      96.11
+    ],
+    "Myeik Archipelago": [
+      12.44,
+      98.61
+    ],
+    "Bishkek": [
+      42.87,
+      74.59
+    ],
+    "Osh": [
+      40.52,
+      72.8
+    ],
+    "Karakol": [
+      42.49,
+      78.39
+    ],
+    "Issyk-Kul Lake": [
+      42.47,
+      77.35
+    ],
+    "Song-Kul Lake": [
+      41.83,
+      75.13
+    ],
+    "Tash Rabat": [
+      40.83,
+      75.23
+    ],
+    "Jyrgalan Valley": [
+      42.56,
+      79.17
+    ],
+    "Ala-Archa NP": [
+      42.61,
+      74.49
+    ],
+    "Kyrgyz Ata NP": [
+      39.83,
+      72.85
+    ],
+    "Sary-Chelek": [
+      41.88,
+      71.95
+    ],
+    "Batken": [
+      40.07,
+      70.82
+    ],
+    "Kochkor": [
+      42.22,
+      75.75
     ]
   },
   "country_coords": {
@@ -2457,7 +2809,7 @@ const TRAVEL_DATA = {
       15.2
     ],
     "Georgia": [
-      42.32,
+      42.31,
       43.36
     ],
     "Chile": [
@@ -2481,8 +2833,8 @@ const TRAVEL_DATA = {
       102.5
     ],
     "Myanmar": [
-      21.91,
-      95.96
+      19.16,
+      96.08
     ],
     "Philippines": [
       12.88,
@@ -2539,6 +2891,18 @@ const TRAVEL_DATA = {
     "Sweden": [
       60.13,
       18.64
+    ],
+    "Taiwan": [
+      23.7,
+      121
+    ],
+    "Malaysia": [
+      4.21,
+      101.97
+    ],
+    "Kyrgyzstan": [
+      41.2,
+      74.76
     ]
   },
   "months": {
@@ -3234,6 +3598,92 @@ const TRAVEL_DATA = {
           "Sea too cold for swimming (16°C)",
           "Occasional winter rain and strong wind",
           "Some dive operators and boat tours limited in January"
+        ]
+      },
+      {
+        "month": "January",
+        "country": "Philippines",
+        "best_cities_or_regions": [
+          "Palawan (El Nido, Coron)",
+          "Cebu",
+          "Boracay",
+          "Siargao"
+        ],
+        "why_visit": "January is peak dry season across the Philippines — El Nido's limestone karst lagoons are flat calm and crystal clear, Boracay's White Beach is at its most pristine, and Sinulog Festival in Cebu (third Sunday of January) draws 1 million people for one of Asia's most spectacular street parades. Tubbataha Reef dive season opens.",
+        "climate": {
+          "avg_temp_c": "24–30",
+          "rainfall_level": "low",
+          "humidity": "medium"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "70–150",
+        "season_type": "high",
+        "crowd_level": "high",
+        "key_events": [
+          "Sinulog Festival, Cebu (3rd Sunday Jan) — massive street parade and Sto. Niño devotion",
+          "Ati-Atihan Festival, Kalibo (Jan) — 'Mother of All Philippine Festivals'",
+          "Tubbataha Reef dive season (Jan–Jun)",
+          "Palawan peak diving and island-hopping season"
+        ],
+        "travel_styles": [
+          "beach",
+          "culture",
+          "adventure",
+          "wildlife"
+        ],
+        "pros": [
+          "Driest and sunniest month — perfect island-hopping and diving conditions",
+          "Sinulog and Ati-Atihan among Asia's most electrifying festivals",
+          "El Nido and Coron beaches at their most stunning",
+          "Tubbataha Reef — UNESCO world heritage dive site accessible"
+        ],
+        "cons": [
+          "Peak prices — El Nido resorts and Palawan tours at yearly high",
+          "Sinulog week Cebu flights and hotels book out 6 months ahead",
+          "Some eastern Visayas areas still affected by northeast monsoon rains"
+        ]
+      },
+      {
+        "month": "January",
+        "country": "Myanmar",
+        "best_cities_or_regions": [
+          "Bagan",
+          "Inle Lake",
+          "Mandalay",
+          "Ngapali Beach"
+        ],
+        "why_visit": "January is Myanmar's finest travel month — cool dry air makes Bagan's 2,000+ temples explorable by e-bike from dawn to dusk without heat exhaustion, Inle Lake's floating villages and markets are draped in morning mist, and Ngapali Beach offers deserted white sand in perfect sunshine. The entire country is at its most accessible.",
+        "climate": {
+          "avg_temp_c": "15–28",
+          "rainfall_level": "low",
+          "humidity": "low"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "60–130",
+        "season_type": "high",
+        "crowd_level": "high",
+        "key_events": [
+          "Ananda Temple Festival, Bagan (Jan) — thousands of monks and pilgrims",
+          "Inle Lake Balloon Festival (Jan) — hot air balloons over the lake",
+          "Kakku Pagoda Festival (Pa-O ethnic minority, Jan)",
+          "Ngapali Beach peak beach season"
+        ],
+        "travel_styles": [
+          "culture",
+          "nature",
+          "wellness",
+          "beach"
+        ],
+        "pros": [
+          "Coolest and driest conditions for temple exploration in Bagan",
+          "Inle Lake morning mist and floating market at their most atmospheric",
+          "Ananda Temple Festival — one of Myanmar's most important Buddhist events",
+          "Ngapali Beach serene, warm, and uncrowded by global standards"
+        ],
+        "cons": [
+          "Current political situation requires careful research and up-to-date advisories",
+          "Some border regions and tourist areas restricted",
+          "International payment options limited — bring sufficient cash (USD)"
         ]
       }
     ],
@@ -3955,6 +4405,92 @@ const TRAVEL_DATA = {
           "Chilly evenings in northern Spain",
           "Some coastal towns in mainland Spain quiet and half-closed"
         ]
+      },
+      {
+        "month": "February",
+        "country": "Taiwan",
+        "best_cities_or_regions": [
+          "Taipei",
+          "Alishan",
+          "Wuling Farm",
+          "Pingxi"
+        ],
+        "why_visit": "February is Taiwan's most romantically spectacular month — Wuling Farm's 20,000 cherry trees create a sea of pink in the mountain valley (peak mid-to-late February), while the Pingxi Sky Lantern Festival (Lantern Festival, 15th day of Lunar New Year) sends thousands of glowing lanterns into the night sky above the old coal-mining valley.",
+        "climate": {
+          "avg_temp_c": "15–20",
+          "rainfall_level": "medium",
+          "humidity": "medium"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "80–160",
+        "season_type": "high",
+        "crowd_level": "high",
+        "key_events": [
+          "Pingxi Sky Lantern Festival (Lantern Festival, 15th day of Lunar New Year)",
+          "Yanshui Beehive Fireworks Festival, Tainan (same night as Lantern Festival)",
+          "Wuling Farm cherry blossom peak (mid-to-late Feb)",
+          "Yangmingshan Flower Festival, Taipei (Feb–Mar)"
+        ],
+        "travel_styles": [
+          "nature",
+          "culture",
+          "food",
+          "wellness"
+        ],
+        "pros": [
+          "Pingxi Lantern Festival — one of Asia's most magical spectacles",
+          "Wuling Farm cherry blossoms: 20,000 trees in a mountain valley",
+          "Yanshui fireworks festival: 15 minutes of continuous fireworks into crowd — exhilarating",
+          "Mild winter temperatures comfortable for city sightseeing"
+        ],
+        "cons": [
+          "Lunar New Year week (before Lantern Festival) — closures and travel chaos",
+          "Wuling Farm on weekends requires early-morning timed entry",
+          "Northern Taiwan can be cold and drizzly"
+        ]
+      },
+      {
+        "month": "February",
+        "country": "Philippines",
+        "best_cities_or_regions": [
+          "El Nido",
+          "Coron",
+          "Siargao",
+          "Vigan"
+        ],
+        "why_visit": "February delivers the Philippines' finest weather — El Nido's hidden lagoons (Big and Small Lagoon) are explored in flat calm turquoise water, Siargao's Cloud 9 surf break offers consistent swells for intermediates, and Vigan's cobblestone colonial streets and heritage mansions are explored in comfortable warmth without Luzon's typhoon risk.",
+        "climate": {
+          "avg_temp_c": "24–31",
+          "rainfall_level": "low",
+          "humidity": "medium"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "70–150",
+        "season_type": "high",
+        "crowd_level": "high",
+        "key_events": [
+          "Panagbenga Flower Festival, Baguio (Feb) — float parade through the city",
+          "Pahiyas Festival preparations (May, but Feb bougainvillea season)",
+          "El Nido diving and island-hopping season peak",
+          "Valentine's Day beach holidays very popular"
+        ],
+        "travel_styles": [
+          "beach",
+          "adventure",
+          "culture",
+          "food"
+        ],
+        "pros": [
+          "El Nido Secret Lagoon and Shimizu Island at their clearest",
+          "Siargao surfing in consistent swell without typhoon threat",
+          "Vigan UNESCO heritage town in cool, dry weather",
+          "Excellent value vs Southeast Asian neighbours for diving and beaches"
+        ],
+        "cons": [
+          "El Nido tour boats crowded during peak season",
+          "Palawan internal flights expensive and limited",
+          "Eastern Visayas still wetter due to northeast monsoon"
+        ]
       }
     ],
     "March": [
@@ -4647,6 +5183,93 @@ const TRAVEL_DATA = {
           "Islands limited — most ferries not yet on full schedule",
           "Occasional rain in northern Greece"
         ]
+      },
+      {
+        "month": "March",
+        "country": "Taiwan",
+        "best_cities_or_regions": [
+          "Jiufen",
+          "Alishan",
+          "Taroko Gorge",
+          "Tainan"
+        ],
+        "why_visit": "March is Taiwan's spring golden month — cherry blossoms spread from low elevations up to Alishan's mountain station in a staggered bloom that lasts the whole month, calla lily fields blanket Zhuzihu valley above Taipei in white, and Taroko Gorge's marble walls glow in clear spring light. The weather is ideal and crowds lower than April.",
+        "climate": {
+          "avg_temp_c": "17–24",
+          "rainfall_level": "medium",
+          "humidity": "medium"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "80–160",
+        "season_type": "shoulder",
+        "crowd_level": "medium",
+        "key_events": [
+          "Alishan cherry blossom season (late Mar–early Apr)",
+          "Zhuzihu Calla Lily Festival, Taipei (Mar–Apr)",
+          "Mazu Pilgrimage begins (lunar calendar, Mar–Apr some years)",
+          "Taipei Marathon and spring sports events"
+        ],
+        "travel_styles": [
+          "nature",
+          "culture",
+          "food",
+          "wellness",
+          "adventure"
+        ],
+        "pros": [
+          "Cherry blossoms across multiple elevations — staggered season lasts weeks",
+          "Calla lily fields at Zhuzihu — unique to Taiwan, photogenic and uncrowded vs Japan",
+          "Taroko Gorge in spring light — best conditions for hiking",
+          "Fewer tourists than Japan's cherry blossom madness at a fraction of the cost"
+        ],
+        "cons": [
+          "Rain possible — spring 'meiyu' can begin late March in north",
+          "Popular mountain sites crowded on weekends",
+          "Typhoon-season residual cool weather in the north"
+        ]
+      },
+      {
+        "month": "March",
+        "country": "Myanmar",
+        "best_cities_or_regions": [
+          "Bagan",
+          "Hsipaw",
+          "Hpa-An",
+          "Mrauk-U"
+        ],
+        "why_visit": "March is Myanmar's last comfortable dry-season month — Hpa-An's limestone cave temples and surrounding karst landscape are at their most dramatic and green, Hsipaw's Shan Hills trekking is ideal before the heat builds, and Mrauk-U's ancient Rakhine kingdom temples are explored in warm-but-bearable conditions.",
+        "climate": {
+          "avg_temp_c": "22–34",
+          "rainfall_level": "low",
+          "humidity": "medium"
+        },
+        "budget_category": "budget",
+        "estimated_daily_cost_usd": "50–110",
+        "season_type": "shoulder",
+        "crowd_level": "medium",
+        "key_events": [
+          "Thingyan (Water Festival) preparations begin (April)",
+          "Shwedagon Pagoda Festival, Yangon (Feb/Mar full moon)",
+          "Taunggyi Balloon Festival aftermath travel",
+          "March dry-season trekking: Kalaw to Inle Lake trail at peak"
+        ],
+        "travel_styles": [
+          "culture",
+          "adventure",
+          "nature",
+          "wellness"
+        ],
+        "pros": [
+          "Hpa-An caves and karst — among Southeast Asia's most atmospheric landscapes",
+          "Kalaw-to-Inle Lake trek perfect conditions",
+          "Fewer crowds than Jan/Feb peak with same dry weather",
+          "One of Asia's most authentic and affordable travel destinations"
+        ],
+        "cons": [
+          "Getting hot — Bagan reaches 35°C by end of March",
+          "Political situation requires ongoing awareness and flexible plans",
+          "Payment and ATM access limited — cash essential"
+        ]
       }
     ],
     "April": [
@@ -5280,6 +5903,93 @@ const TRAVEL_DATA = {
           "Rome accommodation very expensive at Easter",
           "Cinque Terre trails still muddy from winter rains"
         ]
+      },
+      {
+        "month": "April",
+        "country": "Taiwan",
+        "best_cities_or_regions": [
+          "Penghu Islands",
+          "Taroko Gorge",
+          "Sun Moon Lake",
+          "Taipei"
+        ],
+        "why_visit": "April is Taiwan's finest overall travel month — the Penghu International Fireworks Festival launches from the sea with spectacular ocean-facing pyrotechnics, Taroko Gorge's marble walls and forested cliffs are at their spring best, and Sun Moon Lake's cycling paths are alive with blooming lakeside gardens. It's the sweet spot before May's plum rains.",
+        "climate": {
+          "avg_temp_c": "20–27",
+          "rainfall_level": "low",
+          "humidity": "medium"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "80–160",
+        "season_type": "high",
+        "crowd_level": "high",
+        "key_events": [
+          "Penghu International Fireworks Festival (Apr–Jun) — fireworks over the ocean",
+          "Mazu Pilgrimage (9-day, 50-town march — one of Asia's great pilgrimages)",
+          "Spring Scream music festival (Kenting, southern tip)",
+          "Firefly season begins in mountain areas (Apr–May)"
+        ],
+        "travel_styles": [
+          "culture",
+          "nature",
+          "beach",
+          "adventure",
+          "food"
+        ],
+        "pros": [
+          "Best overall weather — warm, mostly dry, and comfortable",
+          "Penghu island beaches before summer crowds surge",
+          "Mazu Pilgrimage: 200,000 devotees carrying a goddess statue for 9 days — extraordinary",
+          "Firefly watching in mountain valleys (Shifen, Alishan)"
+        ],
+        "cons": [
+          "Qingming Festival (early Apr) creates 3-day weekend domestic travel surge",
+          "Penghu inter-island boats book out quickly",
+          "Late April plum rains begin creeping in on north coast"
+        ]
+      },
+      {
+        "month": "April",
+        "country": "Malaysia",
+        "best_cities_or_regions": [
+          "Sabah (Kota Kinabalu)",
+          "Sarawak",
+          "Sipadan Island",
+          "Taman Negara"
+        ],
+        "why_visit": "April is Malaysian Borneo at its best — Sabah's dry season is underway with Sipadan Island (world's top dive site) at maximum clarity for hammerheads and turtles, orangutan encounters in Kinabatangan River at peak activity, and Sarawak's Mulu National Park's cave systems fully accessible before the wetter months.",
+        "climate": {
+          "avg_temp_c": "24–33",
+          "rainfall_level": "low",
+          "humidity": "medium"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "80–170",
+        "season_type": "high",
+        "crowd_level": "medium",
+        "key_events": [
+          "Sipadan diving season peak (Apr–Oct)",
+          "Kinabatangan River orangutan season (Apr–Aug)",
+          "Kota Kinabalu Mount Kinabalu climbing season opens (permits easier)",
+          "Sarawak rainforest dry trekking season"
+        ],
+        "travel_styles": [
+          "wildlife",
+          "adventure",
+          "nature",
+          "beach"
+        ],
+        "pros": [
+          "Sipadan Island — consistently ranked world's #1 dive site, hammerhead sharks and green turtles",
+          "Orangutan encounters in Kinabatangan River at their most reliable",
+          "Mount Kinabalu ascent in stable, clear conditions",
+          "Mulu Caves — world's largest cave chamber accessible without flood risk"
+        ],
+        "cons": [
+          "Sipadan dive permits very limited (120/day) — book 6 months ahead",
+          "Kota Kinabalu accommodation limited — book ahead",
+          "Humid despite dry season — Borneo always warm"
+        ]
       }
     ],
     "May": [
@@ -5613,9 +6323,12 @@ const TRAVEL_DATA = {
           "Tbilisi",
           "Kazbegi",
           "Kakheti Wine Region",
-          "Batumi"
+          "Batumi",
+          "Kazbegi (Stepantsminda)",
+          "Kakheti",
+          "Mtskheta"
         ],
-        "why_visit": "Spring in Georgia is extraordinary — Kazbegi's mountain passes open, Kakheti's vineyards are lush, and Tbilisi's outdoor café culture blooms. One of Europe's best hidden value destinations.",
+        "why_visit": "May is Georgia's most beautiful spring month — Kazbegi's mountain passes reopen, Gergeti Trinity Church is framed by snow-capped Kazbek and wildflower meadows, and Tbilisi's Old Town is explored in warm sunshine. The New Wine Festival fills Mtatsminda Park with qvevri-aged amber wine, live music, and supra feasting.",
         "climate": {
           "avg_temp_c": "12–24",
           "rainfall_level": "medium",
@@ -5628,7 +6341,11 @@ const TRAVEL_DATA = {
         "key_events": [
           "Tbilisoba City Festival (Oct, but spring events too)",
           "Wine Tourism Day (2nd Sun of May)",
-          "Kazbegi hiking season opens"
+          "Kazbegi hiking season opens",
+          "New Wine Festival, Tbilisi (May) — qvevri wine, live folk music, dancing",
+          "Georgian Independence Day (May 26) — street festivals, open-air concerts",
+          "Orthodox Easter (Apr/May) — candlelit midnight services at Svetitskhoveli",
+          "Kazbegi mountain passes reopen — Gergeti Trinity Church hike accessible"
         ],
         "travel_styles": [
           "culture",
@@ -5640,12 +6357,19 @@ const TRAVEL_DATA = {
           "Exceptional wine (qvevri amber wine) and khinkali food culture",
           "Stunning Caucasus mountain scenery",
           "Extremely affordable — one of Europe's cheapest",
-          "Warm, welcoming local culture"
+          "Warm, welcoming local culture",
+          "Kazbegi's Gergeti Trinity Church framed by snow and wildflowers — iconic",
+          "New Wine Festival: Georgia is world's oldest wine-making culture — extraordinary",
+          "Tbilisi perfect for exploring: Old Town, sulfur baths, Narikala fortress",
+          "One of Europe's most affordable destinations ($45–90/day)"
         ],
         "cons": [
           "Limited English outside Tbilisi",
           "Infrastructure still developing in rural areas",
-          "Some mountain roads still muddy early May"
+          "Some mountain roads still muddy early May",
+          "Mountain weather unpredictable — afternoon thunderstorms in Kazbegi",
+          "Some high mountain roads (Tusheti, Svaneti) not yet fully open",
+          "May rains can make Tbilisi streets slippery"
         ]
       },
       {
@@ -5945,6 +6669,49 @@ const TRAVEL_DATA = {
           "Chelsea Flower Show tickets expensive and timed",
           "Bank Holiday weekends bring domestic travel surges",
           "Unpredictable weather — warm one day, rainy the next"
+        ]
+      },
+      {
+        "month": "May",
+        "country": "Malaysia",
+        "best_cities_or_regions": [
+          "Perhentian Islands",
+          "Tioman Island",
+          "Penang",
+          "Cameron Highlands"
+        ],
+        "why_visit": "May opens Malaysia's east coast island season — Perhentian Islands' turquoise waters and white sand emerge from their off-season rest with outstanding snorkeling (turtles, reef sharks, rays) at some of Southeast Asia's lowest prices. Penang's legendary street food scene needs no season to shine, and Cameron Highlands' tea plantations are cool and vivid green.",
+        "climate": {
+          "avg_temp_c": "25–33",
+          "rainfall_level": "low",
+          "humidity": "high"
+        },
+        "budget_category": "budget",
+        "estimated_daily_cost_usd": "50–110",
+        "season_type": "shoulder",
+        "crowd_level": "medium",
+        "key_events": [
+          "Perhentian Islands re-opening (chalets open early May)",
+          "Penang Bon Odori Festival (May/Jun)",
+          "Wesak Day (Buddha's Birthday) celebrations across Penang and KL",
+          "Cameron Highlands tea harvest season"
+        ],
+        "travel_styles": [
+          "beach",
+          "food",
+          "nature",
+          "wildlife"
+        ],
+        "pros": [
+          "Perhentian Islands: world-class snorkeling at budget backpacker prices",
+          "East coast diving season opens — excellent visibility",
+          "Penang street food: char kway teow, assam laksa, nasi kandar at its authentic best",
+          "Cameron Highlands tea estates cool (18°C) and lush"
+        ],
+        "cons": [
+          "West coast (Langkawi, Penang coast) entering wet season",
+          "Perhentian boats can be cancelled in rough weather early May",
+          "Humidity high throughout the country"
         ]
       }
     ],
@@ -6643,6 +7410,92 @@ const TRAVEL_DATA = {
           "London very crowded and expensive in peak summer",
           "British summer weather can disappoint — rain is always possible"
         ]
+      },
+      {
+        "month": "June",
+        "country": "Georgia",
+        "best_cities_or_regions": [
+          "Svaneti (Mestia, Ushguli)",
+          "Kazbegi",
+          "Tusheti",
+          "Batumi"
+        ],
+        "why_visit": "June unlocks Georgia's crown jewel — Svaneti's medieval tower villages (Ushguli, Europe's highest permanently inhabited settlement at 2,200m) are accessible after winter snowmelt, and the 4-day Mestia-Ushguli trail offers some of the Caucasus's most dramatic trekking under snow-capped peaks. Batumi's Black Sea velvet season begins.",
+        "climate": {
+          "avg_temp_c": "18–28",
+          "rainfall_level": "medium",
+          "humidity": "medium"
+        },
+        "budget_category": "budget",
+        "estimated_daily_cost_usd": "50–100",
+        "season_type": "high",
+        "crowd_level": "medium",
+        "key_events": [
+          "Svaneti trekking season opens fully — Mestia to Ushguli trail",
+          "Tusheti road opens (late Jun) — Georgia's most remote mountain region",
+          "Tbilisi Open Air Music Festival (Jun) — Georgia's largest music festival",
+          "Batumi MusicFest (Jun) — classical music on the Black Sea"
+        ],
+        "travel_styles": [
+          "adventure",
+          "culture",
+          "nature",
+          "beach"
+        ],
+        "pros": [
+          "Svaneti's medieval tower villages among Europe's most dramatic and authentic",
+          "Mestia-Ushguli trek: Europe's highest permanently inhabited village via mountain pass",
+          "Tusheti road opens — one of world's most dangerous and spectacular roads",
+          "Batumi Black Sea beginning — warm enough to swim"
+        ],
+        "cons": [
+          "Svaneti accommodation very limited — book homestays well ahead",
+          "Mountain weather volatile — afternoon thunderstorms common",
+          "Tbilisi summer heat building (28°C+)"
+        ]
+      },
+      {
+        "month": "June",
+        "country": "Kyrgyzstan",
+        "best_cities_or_regions": [
+          "Karakol",
+          "Issyk-Kul Lake",
+          "Song-Kul Lake",
+          "Ala-Archa NP"
+        ],
+        "why_visit": "June opens Kyrgyzstan's trekking season as snow melts from mountain passes — Issyk-Kul Lake warms for swimming, Song-Kul's high alpine lake (3,016m) becomes accessible with nomadic yurt camps opening, and Ala-Archa's glaciers are at their most dramatic. One of Central Asia's last great wild frontiers at genuinely budget prices.",
+        "climate": {
+          "avg_temp_c": "15–28",
+          "rainfall_level": "medium",
+          "humidity": "low"
+        },
+        "budget_category": "budget",
+        "estimated_daily_cost_usd": "40–80",
+        "season_type": "shoulder",
+        "crowd_level": "low",
+        "key_events": [
+          "Song-Kul yurt camp season opens (Jun–Sep)",
+          "Traditional nomadic festivals begin across the Kyrgyz steppe",
+          "Trekking season opens: Tian Shan mountain passes clear of snow",
+          "Bishkek summer cultural events"
+        ],
+        "travel_styles": [
+          "adventure",
+          "culture",
+          "nature",
+          "wildlife"
+        ],
+        "pros": [
+          "Song-Kul: overnight in traditional yurts by an alpine lake at 3,000m — unforgettable",
+          "Issyk-Kul (the world's 2nd-largest alpine lake) begins warming for swimming",
+          "Among the world's least-visited and most affordable adventure destinations",
+          "Nomadic eagle hunter visits and horseback riding in pristine mountain valleys"
+        ],
+        "cons": [
+          "Limited tourist infrastructure — requires self-sufficiency or organised tours",
+          "Mountain weather changes fast — snow possible even in June at altitude",
+          "Roads to Song-Kul rough — 4WD essential"
+        ]
       }
     ],
     "July": [
@@ -7308,6 +8161,92 @@ const TRAVEL_DATA = {
           "Midges (biting insects) at their worst July–August on west coast",
           "Isle of Skye roads congested — very busy at key viewpoints",
           "Accommodation in the Highlands limited and books out months ahead"
+        ]
+      },
+      {
+        "month": "July",
+        "country": "Kyrgyzstan",
+        "best_cities_or_regions": [
+          "Song-Kul Lake",
+          "Karakol",
+          "Jyrgalan Valley",
+          "Tash Rabat"
+        ],
+        "why_visit": "July is Kyrgyzstan at its peak — World Nomad Games legacy activities continue, Song-Kul lake glows at sunset with nomad yurts reflected in glassy water, and the Jyrgalan Valley offers guided multi-day horse treks through meadows where golden eagles still hunt. The entire country is green, warm, and at maximum accessibility.",
+        "climate": {
+          "avg_temp_c": "20–32",
+          "rainfall_level": "low",
+          "humidity": "low"
+        },
+        "budget_category": "budget",
+        "estimated_daily_cost_usd": "40–80",
+        "season_type": "high",
+        "crowd_level": "medium",
+        "key_events": [
+          "World Nomad Games (biennial — check 2026 dates at Issyk-Kul)",
+          "Nooruz Nomad Festival events (traditional sports and culture)",
+          "Eagle hunter cultural tours peak season (Jul–Sep)",
+          "At-Chabysh traditional horse race events"
+        ],
+        "travel_styles": [
+          "adventure",
+          "nature",
+          "culture",
+          "wildlife"
+        ],
+        "pros": [
+          "World Nomad Games (when held) — horse archery, wrestling, eagle hunting competitions",
+          "Eagle hunter homestays in Bokonbaevo — unique cultural immersion",
+          "Tash Rabat Caravanserai: 15th-century Silk Road rest stop in dramatic mountain canyon",
+          "Horseback trekking in pristine alpine meadows — zero commercialisation"
+        ],
+        "cons": [
+          "World Nomad Games years cause accommodation surge — check schedule",
+          "Very limited English outside Bishkek and tourist areas",
+          "Long, rough overland travel between highlights"
+        ]
+      },
+      {
+        "month": "July",
+        "country": "Malaysia",
+        "best_cities_or_regions": [
+          "Perhentian Islands",
+          "Sipadan",
+          "Tioman Island",
+          "Sabah"
+        ],
+        "why_visit": "July is Malaysia's east coast islands at absolute peak — Perhentian's turtle nesting season is underway, Sipadan delivers hammerhead school encounters in crystal visibility, and Tioman Island's coral reefs are alive with snappers, rays, and reef sharks. Malaysia's Borneo east coast joins Southeast Asia's finest dive season.",
+        "climate": {
+          "avg_temp_c": "26–33",
+          "rainfall_level": "low",
+          "humidity": "medium"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "70–150",
+        "season_type": "high",
+        "crowd_level": "high",
+        "key_events": [
+          "Perhentian Islands turtle nesting season (Jul–Sep)",
+          "Sipadan hammerhead school season peak",
+          "Rainforest World Music Festival, Kuching Sarawak (Jul)",
+          "Borneo Cultural Festival, Sibu (Jul)"
+        ],
+        "travel_styles": [
+          "beach",
+          "wildlife",
+          "adventure",
+          "culture"
+        ],
+        "pros": [
+          "Sipadan + Mabul Island: world-class diving — turtles, schools of hammerheads, macro",
+          "Perhentian turtle nesting and hatching — wildlife experience alongside beach relaxation",
+          "Rainforest World Music Festival: world musicians and indigenous Dayak performers in Sarawak jungle",
+          "East coast beaches at their driest and sunniest"
+        ],
+        "cons": [
+          "Sipadan permits must be booked 6+ months ahead",
+          "Perhentian Islands crowded mid-July — school holiday domestic influx",
+          "West coast Malaysia (Langkawi, KL) rainy season in July"
         ]
       }
     ],
@@ -8004,6 +8943,92 @@ const TRAVEL_DATA = {
           "Warsaw Rising commemoration events affect some city areas",
           "Zakopane Tatra trails crowded on weekends"
         ]
+      },
+      {
+        "month": "August",
+        "country": "Kyrgyzstan",
+        "best_cities_or_regions": [
+          "Issyk-Kul Lake",
+          "Song-Kul Lake",
+          "Karakol",
+          "Sary-Chelek"
+        ],
+        "why_visit": "August is Kyrgyzstan's warmest month — Issyk-Kul Lake (saltier than normal ocean, never freezes) reaches 22°C for swimming, Karakol's mountain hikes are at peak accessibility, and Sary-Chelek's walnut forest biosphere reserve is a lush hidden gem. The country is still green and golden before September's cooler mornings.",
+        "climate": {
+          "avg_temp_c": "22–34",
+          "rainfall_level": "low",
+          "humidity": "low"
+        },
+        "budget_category": "budget",
+        "estimated_daily_cost_usd": "40–80",
+        "season_type": "high",
+        "crowd_level": "medium",
+        "key_events": [
+          "Issyk-Kul summer beach season peak",
+          "Karakol hiking: Altyn Arashan Valley and Ala-Kul Pass",
+          "Traditional Kyrgyz kok-boru (horse polo with goat carcass) games",
+          "Sary-Chelek walnut forest wild fruit harvest"
+        ],
+        "travel_styles": [
+          "adventure",
+          "nature",
+          "beach",
+          "wildlife"
+        ],
+        "pros": [
+          "Issyk-Kul Lake swimming in an ancient volcanic-filled alpine lake",
+          "Ala-Kul Pass (3,860m) trek: most dramatic mountain lake in Central Asia",
+          "Altyn Arashan: hot springs in a flower-filled valley — perfect end to a tough hike",
+          "One of Asia's last untouched frontiers — minimal tourists"
+        ],
+        "cons": [
+          "Short daylight window for high-altitude hikes — early starts essential",
+          "Thunderstorms possible on high passes",
+          "Issyk-Kul resort areas very basic by international standards"
+        ]
+      },
+      {
+        "month": "August",
+        "country": "Georgia",
+        "best_cities_or_regions": [
+          "Svaneti",
+          "Kazbegi",
+          "Tusheti",
+          "Batumi"
+        ],
+        "why_visit": "August is Georgia's mountain trekking peak — all high passes are open, Tusheti's remote medieval tower villages are accessible via Georgia's most spectacular road, and Batumi's Black Sea beach is packed with Georgian families for a uniquely festive local summer experience. Svaneti trails are at their most vivid.",
+        "climate": {
+          "avg_temp_c": "20–35",
+          "rainfall_level": "medium",
+          "humidity": "medium"
+        },
+        "budget_category": "budget",
+        "estimated_daily_cost_usd": "50–100",
+        "season_type": "high",
+        "crowd_level": "high",
+        "key_events": [
+          "Tusheti Festival (Tushetoba) — folk music and traditional mountain ceremonies",
+          "Batumi Black Sea peak season",
+          "Svaneti Folk Festival, Mestia",
+          "All mountain regions at maximum accessibility"
+        ],
+        "travel_styles": [
+          "adventure",
+          "nature",
+          "culture",
+          "beach"
+        ],
+        "pros": [
+          "All mountain roads and passes open — including Tusheti (Georgia's most remote region)",
+          "Tusheti medieval towers: 14th-century refuge architecture in mountain splendor",
+          "Batumi: Georgian seaside resort culture — casinos, beaches, and adjarian cuisine",
+          "Long daylight hours for high-altitude trekking"
+        ],
+        "cons": [
+          "Tbilisi very hot (35°C) — not ideal for city sightseeing",
+          "Accommodation in Kazbegi and Mestia fully booked — reserve 2 months ahead",
+          "Tusheti road landslide risk — hire local driver"
+        ]
       }
     ],
     "September": [
@@ -8667,6 +9692,93 @@ const TRAVEL_DATA = {
           "Azores weather unpredictable — pack layers",
           "Douro harvest accommodation books out quickly",
           "First autumn rains possible in the north late September"
+        ]
+      },
+      {
+        "month": "September",
+        "country": "Taiwan",
+        "best_cities_or_regions": [
+          "Sun Moon Lake",
+          "Alishan",
+          "Hualien",
+          "Taichung"
+        ],
+        "why_visit": "September brings Taiwan's post-typhoon golden season — the air is crystal clear, silvergrass plumes blanket Hualien's East Rift Valley in white, and Sun Moon Lake's International Cycling Festival (early October, but September preparations) draws tens of thousands of cyclists to Taiwan's most beautiful lake. Mid-Autumn Festival celebrates with outdoor barbecues.",
+        "climate": {
+          "avg_temp_c": "24–30",
+          "rainfall_level": "medium",
+          "humidity": "medium"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "80–160",
+        "season_type": "shoulder",
+        "crowd_level": "medium",
+        "key_events": [
+          "Mid-Autumn (Moon) Festival (Sep 2026) — family barbecues and mooncake sharing",
+          "Hualien silvergrass season (Sep–Nov) — white plumes in the East Rift Valley",
+          "Keelung Ghost Festival (lunar 7th month) — lanterns released on the sea",
+          "Sun Moon Lake cycling preparations"
+        ],
+        "travel_styles": [
+          "nature",
+          "culture",
+          "adventure",
+          "food"
+        ],
+        "pros": [
+          "Clear post-typhoon skies — best photography conditions of the year",
+          "Silvergrass plumes in Hualien valley — uniquely Taiwanese autumn spectacle",
+          "Mid-Autumn Festival outdoor barbecues nationwide — join local families",
+          "Typhoon risk dropping dramatically from late September"
+        ],
+        "cons": [
+          "Early September still has typhoon risk — check forecasts",
+          "Mid-Autumn Festival weekend domestic transport chaos",
+          "Some mountain hiking trails still recovering from typhoon damage"
+        ]
+      },
+      {
+        "month": "September",
+        "country": "Georgia",
+        "best_cities_or_regions": [
+          "Kakheti",
+          "Tbilisi",
+          "Batumi",
+          "Kazbegi"
+        ],
+        "why_visit": "September is Georgia's finest month — Rtveli grape harvest fills Kakheti's vineyards with family celebration, ancient qvevri clay pots are filled with new wine, and Tbilisi's Old Town glows in warm autumn light. The Velvet Season begins on the Black Sea coast: Batumi's beaches empty out but the water stays warm at 24°C.",
+        "climate": {
+          "avg_temp_c": "15–27",
+          "rainfall_level": "medium",
+          "humidity": "medium"
+        },
+        "budget_category": "budget",
+        "estimated_daily_cost_usd": "45–90",
+        "season_type": "high",
+        "crowd_level": "medium",
+        "key_events": [
+          "Rtveli grape harvest (Sep–Oct) — Kakheti's most important cultural event",
+          "Tbilisoba Festival (Oct, but Sep prep events) — Tbilisi's birthday celebration",
+          "Batumi Velvet Season begins (Sep–Oct) — warm sea, empty beaches",
+          "Kazbegi autumn colours and last good trekking conditions"
+        ],
+        "travel_styles": [
+          "food",
+          "culture",
+          "nature",
+          "adventure",
+          "wellness"
+        ],
+        "pros": [
+          "Rtveli harvest: stomp grapes, fill qvevri, feast at supra with winemaker families",
+          "Sighnaghi 'City of Love' in Kakheti in harvest season — most romantic Georgian town",
+          "Batumi Velvet Season: warm sea with 90% fewer tourists than August",
+          "Best wine touring in the world (Georgia has 8,000 years of winemaking history)"
+        ],
+        "cons": [
+          "Rain can begin in late September in western Georgia",
+          "Mountain roads in Tusheti start closing from mid-September",
+          "Tbilisi accommodation prices rising for Tbilisoba festival in October"
         ]
       }
     ],
@@ -9392,6 +10504,92 @@ const TRAVEL_DATA = {
           "Atlantic coast (San Sebastián, Bilbao) can be rainy",
           "Some beach resorts on Mediterranean coast quietening down"
         ]
+      },
+      {
+        "month": "October",
+        "country": "Taiwan",
+        "best_cities_or_regions": [
+          "Sun Moon Lake",
+          "Taroko Gorge",
+          "Jiufen",
+          "Taipei"
+        ],
+        "why_visit": "October is Taiwan's absolute best month — the typhoon season ends, skies turn deep blue, temperatures drop to perfect 22–26°C, and Sun Moon Lake's International Cycling Festival draws 15,000 cyclists for a dawn circuit of the lake. National Day (Oct 10) brings military jets over Taipei 101 and a grand parade.",
+        "climate": {
+          "avg_temp_c": "20–26",
+          "rainfall_level": "low",
+          "humidity": "medium"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "80–160",
+        "season_type": "high",
+        "crowd_level": "high",
+        "key_events": [
+          "Sun Moon Lake International Cycling Festival (early Oct) — 15,000 cyclists at dawn",
+          "National Day (Oct 10 — Double Ten) — air show and military parade",
+          "Taroko Gorge Marathon (Oct)",
+          "Silvergrass blooming in Hualien and Yangmingshan NP"
+        ],
+        "travel_styles": [
+          "nature",
+          "culture",
+          "adventure",
+          "food"
+        ],
+        "pros": [
+          "Perfect weather — Taiwan's most comfortable month",
+          "Sun Moon Lake Cycling Festival: cycling at dawn as lake reflects the sky",
+          "Typhoon season over — all mountain trails fully accessible",
+          "National Day parade and F-16 air show over Taipei 101 — free to watch"
+        ],
+        "cons": [
+          "National Day and cycling festival weekends very crowded",
+          "Sun Moon Lake accommodation books out 3 months for cycling festival",
+          "Popular sites busy as golden-season tourists arrive"
+        ]
+      },
+      {
+        "month": "October",
+        "country": "Georgia",
+        "best_cities_or_regions": [
+          "Tbilisi",
+          "Kakheti",
+          "Sighnaghi",
+          "Borjomi"
+        ],
+        "why_visit": "October is Georgia's most magical month — Tbilisoba Festival celebrates the capital's birthday with free outdoor concerts, khinkali feasts, and traditional polyphonic singing on every plaza, Kakheti's vineyards blaze with autumn colour and new wine flows freely, and Borjomi's mineral spring park glows amber and gold.",
+        "climate": {
+          "avg_temp_c": "10–20",
+          "rainfall_level": "medium",
+          "humidity": "medium"
+        },
+        "budget_category": "budget",
+        "estimated_daily_cost_usd": "45–90",
+        "season_type": "high",
+        "crowd_level": "medium",
+        "key_events": [
+          "Tbilisoba Festival (Oct) — city birthday, free concerts, Georgian food and wine",
+          "Rtveli harvest continues in Kakheti — new wine (rkatsiteli, saperavi)",
+          "Signagi autumn wine festival",
+          "Batumi Rap Festival (music events Oct)"
+        ],
+        "travel_styles": [
+          "culture",
+          "food",
+          "nature",
+          "wellness"
+        ],
+        "pros": [
+          "Tbilisoba: Tbilisi at its most festive — polyphonic choir performances, khinkali stalls",
+          "Kakheti autumn colours with wine harvest at its most colourful",
+          "Affordable prices despite the festival season",
+          "Borjomi mineral spa town in autumn forest — Georgian wellness tradition"
+        ],
+        "cons": [
+          "Mountain hiking season ending — high passes closing",
+          "Rain increasing in western Georgia",
+          "Tbilisoba weekend hotel prices spike"
+        ]
       }
     ],
     "November": [
@@ -9784,9 +10982,11 @@ const TRAVEL_DATA = {
           "Bagan",
           "Inle Lake",
           "Mandalay",
-          "Ngapali Beach"
+          "Ngapali Beach",
+          "Yangon",
+          "Kyaiktiyo"
         ],
-        "why_visit": "November marks Myanmar's ideal travel month — just after monsoon, dry and warm, with Tazaungdaing lantern festival lighting up Bagan's temple silhouettes. Inle Lake's floating villages and markets are at their most photogenic.",
+        "why_visit": "November opens Myanmar's golden travel season — the monsoon has lifted, air is clear, and Bagan's temples are explored in perfect 25°C weather. The Tazaungdaing Festival of Lights (November full moon) transforms Bagan into a sea of hot-air balloons at dawn above illuminated pagodas — one of Southeast Asia's most beautiful sights.",
         "climate": {
           "avg_temp_c": "20–28",
           "rainfall_level": "low",
@@ -9799,24 +10999,36 @@ const TRAVEL_DATA = {
         "key_events": [
           "Tazaungdaing Lantern Festival (Bagan hot air balloons)",
           "Bagan balloon season opens",
-          "Inle Lake harvest festival"
+          "Inle Lake harvest festival",
+          "Tazaungdaing Festival of Lights (Nov full moon) — balloons over Bagan's temples",
+          "Bagan hot air balloon season opens (Oct–Apr)",
+          "Inle Lake water festival aftermath — lake at its clearest",
+          "Kyaiktiyo Golden Rock pilgrimage season opens"
         ],
         "travel_styles": [
           "culture",
           "nature",
           "food",
-          "adventure"
+          "adventure",
+          "wellness"
         ],
         "pros": [
           "Hot-air balloons over Bagan temples at dawn",
           "Ideal temperatures for temple exploration",
           "Inle Lake at its most atmospheric",
-          "One of Southeast Asia's most authentic destinations"
+          "One of Southeast Asia's most authentic destinations",
+          "Bagan hot air balloon at sunrise over 2,000 temples — unmissable",
+          "Tazaungdaing: paper lantern balloons rising over illuminated pagodas",
+          "Post-monsoon clear air — visibility over Bagan plain exceptional",
+          "One of Asia's most deeply authentic Buddhist cultures"
         ],
         "cons": [
           "Current political situation requires careful research",
           "Some border areas restricted to visitors",
-          "Limited international flight options"
+          "Limited international flight options",
+          "Current political situation requires careful research and awareness",
+          "International banking access limited — bring USD cash",
+          "Some popular sites may have restricted access"
         ]
       },
       {
@@ -10120,6 +11332,92 @@ const TRAVEL_DATA = {
           "Dark and cold — only 8 hours of daylight",
           "Rain and wind common from the North Sea"
         ]
+      },
+      {
+        "month": "November",
+        "country": "Taiwan",
+        "best_cities_or_regions": [
+          "Jiufen",
+          "Alishan",
+          "Tainan",
+          "Taipei"
+        ],
+        "why_visit": "November is Taiwan's most underrated month — Jiufen's red lantern-lit teahouses glow in evening mist (the inspiration for Studio Ghibli's Spirited Away), Alishan's forest railway carries visitors through fog-draped ancient cypress groves, and Tainan's temple-dense city is explored in perfect 24°C weather without humidity.",
+        "climate": {
+          "avg_temp_c": "18–24",
+          "rainfall_level": "low",
+          "humidity": "low"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "80–160",
+        "season_type": "shoulder",
+        "crowd_level": "low",
+        "key_events": [
+          "Jiufen teahouse season — misty hillside lanterns at their most atmospheric",
+          "Tainan's ancient temple culture: 300+ temples in Taiwan's oldest city",
+          "Beitou Hot Spring Festival, Taipei (Nov–Feb hot spring season)",
+          "Taiwan Design Expo (Taipei, Nov)"
+        ],
+        "travel_styles": [
+          "culture",
+          "wellness",
+          "food",
+          "nature"
+        ],
+        "pros": [
+          "Jiufen in November mist: the most cinematic and atmospheric moment at this famous village",
+          "Lowest hotel prices of the autumn season",
+          "Tainan's street food (coffin bread, oyster omelette) and temple culture uncrowded",
+          "Hot spring season opens — Beitou and Wulai the most accessible"
+        ],
+        "cons": [
+          "Northern Taiwan can be drizzly and cool",
+          "November typhoon still possible (very rare but documented)",
+          "East coast (Hualien) getting windier"
+        ]
+      },
+      {
+        "month": "November",
+        "country": "Philippines",
+        "best_cities_or_regions": [
+          "Palawan",
+          "Cebu",
+          "Siargao",
+          "Batanes Islands"
+        ],
+        "why_visit": "November is the Philippines' transition month — Palawan and Cebu shift into their dry season as the northeast monsoon clears, making this the year's best value window with peak-quality weather at shoulder prices. Siargao closes for a brief off-season but Palawan is primed for the coming dry season.",
+        "climate": {
+          "avg_temp_c": "25–31",
+          "rainfall_level": "medium",
+          "humidity": "medium"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "65–140",
+        "season_type": "shoulder",
+        "crowd_level": "medium",
+        "key_events": [
+          "Palawan dry season beginning — El Nido island-hopping resumes fully",
+          "Vigan Heritage Lantern Festival (Nov–Dec)",
+          "PBA Basketball League events (Filipino basketball passion)",
+          "All Souls' Day (Nov 1–2) — Filipinos decorate graves with candles and flowers"
+        ],
+        "travel_styles": [
+          "beach",
+          "culture",
+          "adventure",
+          "nature"
+        ],
+        "pros": [
+          "El Nido and Coron primed for peak season at shoulder-season prices",
+          "All Souls' Day cemetery celebrations: uniquely Filipino, atmospheric and welcoming",
+          "Palawan less crowded than December–March peak",
+          "Good transition to explore cultural sites (Vigan, Batanes, Banaue)"
+        ],
+        "cons": [
+          "Some typhoon risk lingers into early November (especially Visayas/Bicol)",
+          "Siargao surf season closing — wave conditions inconsistent",
+          "Eastern Visayas still receiving north-east monsoon rain"
+        ]
       }
     ],
     "December": [
@@ -10368,13 +11666,13 @@ const TRAVEL_DATA = {
           "Cebu",
           "Boracay"
         ],
-        "why_visit": "December is peak season in the Philippines — Palawan's crystal-clear lagoons, Siargao's surf, and the country's legendary Christmas spirit make it Asia's most festive beach destination. Giant lantern festivals in San Fernando are spectacular.",
+        "why_visit": "December launches the Philippines' best season — El Nido's limestone lagoons are at their most pristine and clear, Boracay's White Beach basks in full sunshine with Christmas and New Year festivities, and the world's longest Christmas celebration (which Filipinos begin in September) reaches its joyful climax. Giant Lantern Festival in San Fernando is spectacular.",
         "climate": {
           "avg_temp_c": "24–30",
           "rainfall_level": "low",
           "humidity": "medium"
         },
-        "budget_category": "budget",
+        "budget_category": "mid-range",
         "estimated_daily_cost_usd": "50–120",
         "season_type": "high",
         "crowd_level": "high",
@@ -10382,7 +11680,11 @@ const TRAVEL_DATA = {
           "Giant Lantern Festival San Fernando, Pampanga (mid-Dec)",
           "Sinulog Festival prep (Jan, but activities begin Dec)",
           "Christmas Season — world's longest Christmas (Sep–Jan)",
-          "Panagbenga Festival preparations"
+          "Panagbenga Festival preparations",
+          "Giant Lantern Festival (Ligligan Parul), San Fernando, Pampanga (Dec) — 12 giant parol",
+          "Christmas Season peak — most festive country in Asia",
+          "Boracay New Year fireworks over White Beach",
+          "Sinulog Festival preparations (Jan, but Dec build-up events in Cebu)"
         ],
         "travel_styles": [
           "beach",
@@ -10394,12 +11696,19 @@ const TRAVEL_DATA = {
           "World-class island scenery and marine biodiversity",
           "Warmest and most joyful Christmas atmosphere in Asia",
           "Affordable — great value for Southeast Asia",
-          "Excellent diving and snorkeling in clear December waters"
+          "Excellent diving and snorkeling in clear December waters",
+          "El Nido in peak condition — flat calm turquoise lagoons perfect for kayaking",
+          "Philippines' warm Christmas hospitality — most joyful festive season in Asia",
+          "Giant Lantern Festival San Fernando: 12 enormous star lanterns competing for most spectacular",
+          "Boracay at its most energetic with international NYE crowd"
         ],
         "cons": [
           "Popular islands very crowded",
           "El Nido island-hopping tours fully booked",
-          "Typhoon season theoretically ending but still possible in eastern Visayas"
+          "Typhoon season theoretically ending but still possible in eastern Visayas",
+          "Peak prices — El Nido and Boracay accommodation doubles for Christmas/NYE",
+          "Domestic flights expensive and fully booked",
+          "Eastern Visayas (Leyte, Samar) still may receive typhoon aftermath rains"
         ]
       },
       {
@@ -10788,6 +12097,49 @@ const TRAVEL_DATA = {
           "London extremely expensive in December — among the priciest Christmas destinations",
           "Hyde Park Winter Wonderland massively crowded on weekends",
           "NYE London fireworks tickets ballot — no guarantee of getting in"
+        ]
+      },
+      {
+        "month": "December",
+        "country": "Myanmar",
+        "best_cities_or_regions": [
+          "Bagan",
+          "Inle Lake",
+          "Mandalay",
+          "Ngapali Beach"
+        ],
+        "why_visit": "December is Myanmar at its absolute best — cool, dry, and completely clear. Bagan's temple plain at sunrise with hot air balloons drifting above golden spires is one of Southeast Asia's most iconic experiences, Inle Lake's leg-rowing fishermen perform against still misty water, and Ngapali Beach offers pristine white sand at the quietest and most pristine beach in mainland Southeast Asia.",
+        "climate": {
+          "avg_temp_c": "14–28",
+          "rainfall_level": "low",
+          "humidity": "low"
+        },
+        "budget_category": "mid-range",
+        "estimated_daily_cost_usd": "60–130",
+        "season_type": "high",
+        "crowd_level": "high",
+        "key_events": [
+          "Bagan hot air balloon season peak (Oct–Apr)",
+          "Inle Lake boat festival preparations",
+          "Ngapali Beach peak dry season",
+          "Mandalay Ananda Temple pagoda lighting ceremony"
+        ],
+        "travel_styles": [
+          "culture",
+          "nature",
+          "beach",
+          "wellness"
+        ],
+        "pros": [
+          "Coolest and driest month — Bagan comfortably explorable all day (28°C)",
+          "Hot air balloon over 2,000 temples at sunrise: most iconic Southeast Asia experience",
+          "Inle Lake stillest and clearest — leg-rowing fishermen photography conditions perfect",
+          "Ngapali Beach near-deserted compared to Thai and Balinese alternatives"
+        ],
+        "cons": [
+          "Political situation requires careful up-to-date research",
+          "International credit cards unreliable — USD cash essential",
+          "Bagan balloon season books out during Christmas/NYE window"
         ]
       }
     ]

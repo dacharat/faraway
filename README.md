@@ -1,15 +1,15 @@
 # Faraway 🌍
 
 A monthly compass for your next trip — a fully static travel recommendation
-site covering **189 destinations across 12 months in 68 countries**, with
+site covering **211 destinations across 12 months in 71 countries**, with
 sticky filters, a card grid, a 🌗 dark mode, and an interactive Leaflet world
 map of every recommended city.
 
 🔗 **Live:** https://dacharat.github.io/faraway/
 
 ![tech](https://img.shields.io/badge/stack-vanilla%20HTML%2FCSS%2FJS-orange)
-![data](https://img.shields.io/badge/destinations-189-f97316)
-![countries](https://img.shields.io/badge/countries-68-22c55e)
+![data](https://img.shields.io/badge/destinations-211-f97316)
+![countries](https://img.shields.io/badge/countries-71-22c55e)
 ![map](https://img.shields.io/badge/map-Leaflet-3b82f6)
 
 ---
@@ -148,8 +148,10 @@ Source: `main` / `/ (root)`).
 
 ## Dataset
 
-- **189 entries** across the 12 months (≈15–16 / month)
-- **68 countries** covered, from Argentina to Vietnam — including the full
-  EU/UK cluster, the Nordics, East Asia, and recently Russia / South Korea
-- **563 city / region coordinates** backing the map view
+- **211 entries** across the 12 months (≈17–18 / month)
+- **71 countries** covered, from Argentina to Vietnam — including the full
+  EU/UK cluster, the Nordics, East Asia, Russia / South Korea, and recently
+  Taiwan, Malaysia, the Philippines, Myanmar, Georgia (Caucasus), and
+  Kyrgyzstan
+- **651 city / region coordinates** backing the map view
 - Sourced from curated travel datasets (`dataset_version: 2026.04`)
