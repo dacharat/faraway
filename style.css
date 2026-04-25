@@ -459,11 +459,25 @@ input:focus-visible,
     z-index: 50;
     background: var(--card);
     border-top: 1px solid var(--border);
-    padding: 8px 0 calc(20px + env(safe-area-inset-bottom)) 0;
+    padding: 8px 0 max(12px, env(safe-area-inset-bottom)) 0;
     justify-content: space-around;
   }
-  .results { padding-bottom: calc(96px + env(safe-area-inset-bottom)); }
+  /* iOS Safari hides/shows its bottom toolbar on scroll. position:fixed uses
+     the layout viewport, which doesn't shrink with the toolbar — so when the
+     toolbar collapses, a slice of the visual viewport opens up below the nav
+     and page content bleeds through. This pseudo-element extends the nav's
+     background past bottom:0 so that slice still reads as nav, not as a gap. */
+  .bottom-nav::after {
+    content: '';
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    height: 120px;
+    background: var(--card);
+    pointer-events: none;
+  }
 }
+/* Mobile-only override for results padding — placed AFTER the
+   .results shorthand below so the cascade doesn't reset our bottom value. */
 .bn-btn {
   background: transparent;
   border: 0;
@@ -1036,6 +1050,10 @@ input:focus-visible,
   max-width: 1200px;
   margin: 0 auto;
   padding: 24px 16px 64px;
+}
+@media (max-width: 639px) {
+  /* Reserve space for the fixed bottom-nav (incl. iOS home-indicator inset). */
+  .results { padding-bottom: calc(110px + env(safe-area-inset-bottom)); }
 }
 .stats-bar {
   display: flex;

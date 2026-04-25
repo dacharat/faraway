@@ -180,6 +180,15 @@ The site has two distinct shells; switch happens at `640px`.
   (`#filterSheetCount`). Backdrop dim is `#filterBackdrop`.
 - **`#bottomNav`** fixed at bottom with Browse / Map / Search / Saved
   (`aria-current="page"` on active). `Saved` shows a count badge.
+  - iOS Safari quirk: `position: fixed; bottom: 0` is anchored to the
+    *layout* viewport, but Safari's bottom toolbar retracts on scroll,
+    exposing extra *visual* viewport below it. Without compensation, page
+    content bleeds through that gap below the nav. We fix this with a
+    `.bottom-nav::after` pseudo-element that extends the nav's background
+    120px past `bottom: 0`. Don't remove it.
+  - `.results` padding-bottom (`calc(110px + env(safe-area-inset-bottom))`)
+    is set in a media query placed **after** the base `.results` rule so the
+    `padding` shorthand doesn't reset it via cascade.
 
 ### Desktop (`≥ 640px`)
 - **`#desktopToolbar`** sticky 56px row: logo · view tabs (Browse / Map /
