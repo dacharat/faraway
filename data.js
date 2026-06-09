@@ -1534,6 +1534,10 @@ const TRAVEL_DATA = {
       30.57,
       104.07
     ],
+    "Mount Siguniang": [
+      31.13,
+      102.89
+    ],
     "Jiuzhaigou": [
       33.26,
       103.92
@@ -4140,7 +4144,8 @@ const TRAVEL_DATA = {
           "Chinese New Year celebrations unlike anything else in Asia",
           "Fireworks and lantern displays across every city",
           "Harbin Ice Festival still at peak beauty",
-          "Chengdu hotpot and Sichuan street food at their most festive"
+          "Chengdu hotpot and Sichuan street food at their most festive",
+          "Sichuan opera 'face-changing' shows and lingering winter cold that keeps pandas active"
         ],
         "cons": [
           "Transport fully booked weeks ahead around CNY week",
@@ -5741,7 +5746,7 @@ const TRAVEL_DATA = {
           "Xi'an",
           "Hangzhou"
         ],
-        "why_visit": "April is one of China's finest travel months — Chengdu's baby panda cubs are newly visible at the Giant Panda Base, Jiuzhaigou's turquoise lakes shine with spring melt, and Xi'an's Terracotta Army can be explored in mild weather without summer hordes.",
+        "why_visit": "April is one of China's finest travel months — Chengdu's baby panda cubs are newly visible at the Giant Panda Base, Jiuzhaigou's turquoise lakes shine with spring melt, and Xi'an's Terracotta Army can be explored in mild weather without summer hordes. Chengdu itself rewards a 3–5 day stay: a UNESCO City of Gastronomy famed for hotpot and mapo tofu, with Sichuan opera 'face-changing' shows, People's Park tea houses, and easy day trips to the Leshan Giant Buddha (1hr by bullet train) and the 2,000-year-old Dujiangyan irrigation works.",
         "climate": {
           "avg_temp_c": "12–22",
           "rainfall_level": "medium",
@@ -5755,7 +5760,8 @@ const TRAVEL_DATA = {
           "Giant Panda breeding season — new cubs visible (Apr–Jun)",
           "Qingming Festival (tomb-sweeping, early Apr)",
           "Tulip and peony gardens peak bloom (Luoyang, Beijing)",
-          "Jiuzhaigou spring thaw — waterfalls and lakes at their clearest"
+          "Jiuzhaigou spring thaw — waterfalls and lakes at their clearest",
+          "Chengdu International Panda Festival activities (spring)"
         ],
         "travel_styles": [
           "wildlife",
@@ -5765,13 +5771,17 @@ const TRAVEL_DATA = {
         ],
         "pros": [
           "Baby giant pandas viewable at Chengdu Research Base",
-          "Jiuzhaigou's rainbow lakes at their most vibrant",
+          "Pandas most active at morning feeding — arrive 8:30–9:30am before the midday 'bamboo coma'",
+          "Day trips from Chengdu: Leshan Giant Buddha and Dujiangyan / Qingcheng Mountain",
+          "Chengdu — UNESCO City of Gastronomy: hotpot, mapo tofu, Kuanzhai Alley tea houses",
+          "Jiuzhaigou's rainbow lakes at their most vibrant — Five Flower Lake and Nuorilang Waterfall",
           "Xi'an Terracotta Warriors without summer crowd surge",
           "Pleasant spring temperatures across the country"
         ],
         "cons": [
           "Qingming holiday (early Apr) creates short domestic travel surge",
           "Jiuzhaigou permits can sell out — book 2–3 weeks ahead",
+          "Pandas nap high in the trees after ~10:30am — go early or you'll miss the action",
           "Southern China still rainy and humid"
         ]
       },
@@ -7160,9 +7170,10 @@ const TRAVEL_DATA = {
           "Lhasa",
           "Yamdrok Lake",
           "Namtso Lake",
-          "Shangri-La"
+          "Shangri-La",
+          "Mount Siguniang"
         ],
-        "why_visit": "June opens the Tibetan Plateau's best travel window — roads are clear, skies are intensely blue at altitude, and the Tibetan landscape explodes with wildflowers before July's monsoon edges in. Shangri-La (Deqin) in Yunnan offers a gentler high-altitude alternative with blooming alpine meadows.",
+        "why_visit": "June opens the Tibetan Plateau's best travel window — roads are clear, skies are intensely blue at altitude, and the Tibetan landscape explodes with wildflowers before July's monsoon edges in. Shangri-La (Deqin) in Yunnan offers a gentler high-altitude alternative with blooming alpine meadows. Closer to Chengdu, Mount Siguniang's Changping and Shuangqiao valleys fill with early-summer wildflowers beneath snow peaks — the 'Oriental Alps' at their greenest, and far easier to reach than Tibet.",
         "climate": {
           "avg_temp_c": "8–22",
           "rainfall_level": "low",
@@ -7188,12 +7199,14 @@ const TRAVEL_DATA = {
           "Tibet at its most accessible with clear mountain views",
           "Potala Palace and Jokhang Temple in spectacular high-altitude light",
           "Wildflowers carpet the plateau — extraordinary photography",
-          "Saga Dawa pilgrimage season — deeply spiritual atmosphere"
+          "Saga Dawa pilgrimage season — deeply spiritual atmosphere",
+          "Mount Siguniang wildflower meadows under snow peaks — no permit needed, reachable from Chengdu in a day"
         ],
         "cons": [
           "Tibet requires a special Tibet Travel Permit (arrange 2–4 weeks ahead)",
           "Altitude sickness risk — Lhasa sits at 3,650m",
-          "Expensive guided tours mandatory throughout Tibet"
+          "Expensive guided tours mandatory throughout Tibet",
+          "Mount Siguniang also sits high (3,200m+) — acclimatise and bring warm layers for cold nights"
         ]
       },
       {
@@ -9486,9 +9499,11 @@ const TRAVEL_DATA = {
           "Zhangjiajie",
           "Beijing",
           "Pingyao",
-          "Xi'an"
+          "Xi'an",
+          "Jiuzhaigou",
+          "Mount Siguniang"
         ],
-        "why_visit": "September is the golden month for northern China — Beijing's Summer Palace and Temple of Heaven glow in warm autumn light, Pingyao's ancient walled city is explored in comfortable temperatures, and Zhangjiajie's Avatar pillars begin their first autumn coloring.",
+        "why_visit": "September is the golden month for northern China — Beijing's Summer Palace and Temple of Heaven glow in warm autumn light, Pingyao's ancient walled city is explored in comfortable temperatures, and Zhangjiajie's Avatar pillars begin their first autumn coloring. In western Sichuan the autumn turn is just beginning — Jiuzhaigou's forests start tinting gold and Mount Siguniang's valleys green into early-autumn colour, both with thinner crowds than the October peak.",
         "climate": {
           "avg_temp_c": "15–27",
           "rainfall_level": "low",
@@ -9514,7 +9529,8 @@ const TRAVEL_DATA = {
           "Ideal Beijing weather — clear blue skies and comfortable temperatures",
           "Mid-Autumn Festival mooncake culture rich and authentic",
           "Pingyao Photography Festival world-class event in stunning setting",
-          "Great Wall walks without summer heat and humidity"
+          "Great Wall walks without summer heat and humidity",
+          "Jiuzhaigou and Mount Siguniang easing into autumn — early colour, fewer crowds than October"
         ],
         "cons": [
           "Golden Week (Oct 1–7) booking pressure means Sep fills up fast",
@@ -10211,9 +10227,11 @@ const TRAVEL_DATA = {
           "Guilin",
           "Yuanyang Rice Terraces",
           "Chengdu",
-          "Zhangjiajie"
+          "Zhangjiajie",
+          "Jiuzhaigou",
+          "Mount Siguniang"
         ],
-        "why_visit": "October's Golden Week (Oct 1–7) is China's busiest travel period — but the second half of October offers some of the country's best weather conditions. Guilin and Yangshuo are at peak autumn beauty, Yuanyang's flooded terraces glow gold and amber, and Zhangjiajie's pillars turn fiery red.",
+        "why_visit": "October's Golden Week (Oct 1–7) is China's busiest travel period — but the second half of October offers some of the country's best weather conditions. Guilin and Yangshuo are at peak autumn beauty, Yuanyang's flooded terraces glow gold and amber, and Zhangjiajie's pillars turn fiery red. Chengdu is at its most comfortable too — crisp mild days perfect for the Panda Base and tea houses, with autumn day trips to Mount Emei's golden foliage and the Leshan Giant Buddha. This is also the absolute peak for western Sichuan's alpine scenery: Jiuzhaigou's turquoise lakes mirror golden larch and crimson maple (best Oct 20–Nov 10), and Mount Siguniang — the 'Oriental Alps', a 4–5hr drive west of Chengdu — frames snow peaks above amber valleys.",
         "climate": {
           "avg_temp_c": "12–24",
           "rainfall_level": "low",
@@ -10227,7 +10245,9 @@ const TRAVEL_DATA = {
           "National Day Golden Week (Oct 1–7)",
           "Zhangjiajie autumn foliage peak (mid–late Oct)",
           "Guilin autumn mist and karst scenery peak",
-          "Yuanyang Rice Terraces harvest season"
+          "Yuanyang Rice Terraces harvest season",
+          "Jiuzhaigou autumn foliage peak (Oct 20–Nov 10) — turquoise lakes at their richest",
+          "Mount Siguniang autumn trekking season (Shuangqiao & Changping valleys)"
         ],
         "travel_styles": [
           "nature",
@@ -10239,11 +10259,16 @@ const TRAVEL_DATA = {
           "Zhangjiajie autumn colours among China's most dramatic",
           "Guilin's karst peaks draped in autumn mist — painterly scenery",
           "Yuanyang harvest — terraces a patchwork of gold and amber",
+          "Chengdu's crisp autumn weather ideal for pandas, Leshan Buddha and Mount Emei foliage",
+          "Jiuzhaigou's fairytale lakes ringed by gold and crimson forest — China's finest autumn valley",
+          "Mount Siguniang's snow peaks above amber meadows — easy valley walks to serious trekking",
           "Comfortable temperatures across all of southern China"
         ],
         "cons": [
           "Golden Week Oct 1–7 is China's most crowded travel period — avoid if possible",
           "Accommodation prices peak during National Holiday week",
+          "Jiuzhaigou uses timed-entry reservations — book tickets a week+ ahead, especially weekends",
+          "Mount Siguniang sits at 3,200m+ — pace yourself for altitude, nights are cold",
           "Post-Golden Week excellent — but plan accordingly"
         ]
       },
@@ -11890,9 +11915,10 @@ const TRAVEL_DATA = {
           "Harbin",
           "Sanya",
           "Hong Kong",
-          "Shanghai"
+          "Shanghai",
+          "Chengdu"
         ],
-        "why_visit": "December offers China's most contrasting experiences — Harbin's Ice and Snow Festival begins Dec 24 with illuminated ice palaces covering several square kilometres, while Sanya's tropical beaches rival the Maldives in warmth. Hong Kong's iconic Victoria Harbour Christmas light show is Asia's most spectacular.",
+        "why_visit": "December offers China's most contrasting experiences — Harbin's Ice and Snow Festival begins Dec 24 with illuminated ice palaces covering several square kilometres, while Sanya's tropical beaches rival the Maldives in warmth. Hong Kong's iconic Victoria Harbour Christmas light show is Asia's most spectacular. Winter is also the best time for pandas: in Chengdu's cold months the giant pandas turn their most playful — rolling in the snow and climbing trees for hours instead of napping — and Sichuan hotpot is at its most comforting.",
         "climate": {
           "avg_temp_c": "-20–28",
           "rainfall_level": "low",
@@ -11906,25 +11932,31 @@ const TRAVEL_DATA = {
           "Harbin International Ice and Snow Sculpture Festival (opens Dec 24)",
           "Hong Kong WinterFest — Victoria Harbour light show",
           "Sanya beach high season begins",
-          "Shanghai New Year countdown at The Bund"
+          "Shanghai New Year countdown at The Bund",
+          "Peak panda-activity season — Chengdu Panda Base at its liveliest"
         ],
         "travel_styles": [
           "adventure",
           "beach",
           "culture",
           "nightlife",
-          "nature"
+          "nature",
+          "wildlife",
+          "food"
         ],
         "pros": [
           "Harbin Ice Festival opening (Dec 24) — world's most spectacular ice art",
           "Sanya beaches warm at 28°C — China's tropical island escape",
           "Hong Kong Christmas lights and harbour atmosphere magical",
-          "Shanghai Bund New Year celebration world-class"
+          "Shanghai Bund New Year celebration world-class",
+          "Winter is the best season to see active pandas — Chengdu's cold makes them climb and play for hours",
+          "Chengdu mild and crowd-free (8–10°C) — off-peak hotel rates and unhurried tea houses"
         ],
         "cons": [
           "Harbin's extreme cold (-20°C) — proper Arctic gear essential",
           "December flights expensive as Christmas and CNY approach",
-          "Sanya accommodation peaks in price for beach high season"
+          "Sanya accommodation peaks in price for beach high season",
+          "Chengdu winters are grey and damp — overcast skies more common than sun"
         ]
       },
       {
